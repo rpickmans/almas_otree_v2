@@ -9,6 +9,7 @@
 - cognitive_ability
 - joy_of_destruction
 - charity_donation
+- survey
 
 
 ## How to
