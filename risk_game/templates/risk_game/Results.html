@@ -1,0 +1,34 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+          <p>You choose
+            <strong>
+            {% if decision == 'Coin 1' %}
+                Coin 1: KSh 80 if heads and KSh 80 if tails
+            {% elif decision == 'Coin 2' %}
+                Coin 2: KSh 70 if heads and KSh 110 if tails
+            {% elif decision == 'Coin 3' %}
+                Coin 3: KSh 60 if heads and KSh 140 if tails
+            {% elif decision == 'Coin 4' %}
+                Coin 4: KSh 50 if heads and KSh 170 if tails
+            {% elif decision == 'Coin 5' %}
+                Coin 5: KSh 40 if heads and KSh 200 if tails
+            {% elif decision == 'Coin 6' %}
+                Coin 6: KSh 30 if heads and KSh 210 if tails
+            {% endif%}
+            </strong></p>
+          <p>The coin was randomly tossed <strong>{{ toss }}.</strong></p>
+      </div>
+    </div>
+
+<p><strong>Please click "Next" to continue</strong></p>
+{% next_button %}
+{% endblock %}

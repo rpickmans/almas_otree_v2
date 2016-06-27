@@ -1,0 +1,8 @@
+venv
+*.pyc
+./db.sqlite3
+.idea
+*.sqlite3
+_coverage_results
+local_settings.py
+migrations

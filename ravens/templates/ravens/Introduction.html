@@ -1,0 +1,27 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Ravens
+{% endblock %}
+
+{% block content %}
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>
+        We will now do a series of practice rounds to get you familiar with the puzzles we will be
+        doing in this game. For each puzzle, there is a piece missing - it is your task to identify the
+        correct piece. We will do 2 practice puzzles and then you will be given 6 real tasks. Your
+        earnings from this task will be given in air time vouchers, and your earnings will depend on
+        the number of correct answers.
+        </p>
+        <p>
+        Observe the image below. Then, put your finger on the missing element that completes the
+        image.
+        </p>
+      </div>
+    </div>
+<p><strong>Please click "Next" to continue</strong></p>
+{% next_button %}
+{% endblock %}

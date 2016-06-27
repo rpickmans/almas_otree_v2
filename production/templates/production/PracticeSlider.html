@@ -1,0 +1,26 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Practice Tasks
+{% endblock %}
+
+{% block content %}
+    <div class="panel panel-default">
+        <div class="alert alert-info" role="alert">
+          Drag slider until the slider is on the figure indicated on the left. The better your performance, the higher your chance of winning the lottery.
+        </div>
+      <div class="panel-body">
+          <table class="table">
+          <tr>
+              <td>{{ practice_random_slider_value_one }}{% formfield player.practice_slider_value_one with label="" %}</td>
+              <td>{{ practice_random_slider_value_two }}{% formfield player.practice_slider_value_two with label="" %}</td>
+          </tr>
+          </table>
+
+      </div>
+    </div>
+
+    <p><strong>Please click "Next" to continue</strong></p>
+    {% next_button %}
+{% endblock %}

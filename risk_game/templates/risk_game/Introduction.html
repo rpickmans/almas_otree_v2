@@ -1,0 +1,23 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Risk Game
+{% endblock %}
+
+{% block content %}
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>
+          In this task, you will be asked a set of questions, which ask you about different amounts of
+          money you can receive with a game of coin toss. You have the choice between six coin tosses
+          and you will need to choose the one you would like to play. Each toss is the same except
+          for differing amounts of money you can win depending on the result of the coin toss. After
+          you choose, we will actually play the toss you chose and pay you depending on the result.
+        </p>
+      </div>
+    </div>
+<p><strong>Please click "Next" to continue</strong></p>
+{% next_button %}
+{% endblock %}

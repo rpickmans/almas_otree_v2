@@ -1,0 +1,79 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Guess
+{% endblock %}
+
+{% block content %}
+<div class="panel panel-default">
+    <div class="panel-body">
+    {% if player.id_in_group == 1%}
+        <p>
+            In the range of 0 to 75, what do you think player player 2 contributed?
+        </p>
+        {% formfield player.guess_one with label="His/Her payoff would be" %}
+        <br>
+        <p>
+            In the range of 0 to 75, what do you think player player 3 contributed?
+        </p>
+        {% formfield player.guess_two with label="His/Her payoff would be" %}
+    {% elif player.id_in_group == 2 %}
+        <p>
+            In the range of 0 to 75, what do you think player player 1 contributed?
+        </p>
+        {% formfield player.guess_one with label="His/Her payoff would be" %}
+        <br>
+        <p>
+            In the range of 0 to 75, what do you think player player 3 contributed?
+        </p>
+        {% formfield player.guess_two with label="His/Her payoff would be" %}
+    {% elif player.id_in_group == 3 %}
+        <p>
+            In the range of 0 to 75, what do you think player player 1 contributed?
+        </p>
+        {% formfield player.guess_one with label="His/Her payoff would be" %}
+        <br>
+        <p>
+            In the range of 0 to 75, what do you think player player 2 contributed?
+        </p>
+        {% formfield player.guess_two with label="His/Her payoff would be" %}
+    {% elif player.id_in_group == 4 %}
+         <p>
+            In the range of 0 to 75, what do you think player player 2 contributed?
+        </p>
+        {% formfield player.guess_one with label="His/Her payoff would be" %}
+        <br>
+        <p>
+            In the range of 0 to 75, what do you think player player 3 contributed?
+        </p>
+        {% formfield player.guess_two with label="His/Her payoff would be" %}
+    {% elif player.id_in_group == 5 %}
+        <p>
+            In the range of 0 to 75, what do you think player player 1 contributed?
+        </p>
+        {% formfield player.guess_one with label="His/Her payoff would be" %}
+        <br>
+        <p>
+            In the range of 0 to 75, what do you think player player 3 contributed?
+        </p>
+        {% formfield player.guess_two with label="His/Her payoff would be" %}
+    {% elif player.id_in_group == 6 %}
+        <p>
+            In the range of 0 to 75, what do you think player player 1 contributed?
+        </p>
+        {% formfield player.guess_one with label="His/Her payoff would be" %}
+        <br>
+        <p>
+            In the range of 0 to 75, what do you think player player 2 contributed?
+        </p>
+        {% formfield player.guess_two with label="His/Her payoff would be" %}
+    {% endif %}
+    </div>
+</div>
+    <p><strong>Click Next to continue.</strong></p>
+    {% next_button %}
+
+
+
+{% endblock %}

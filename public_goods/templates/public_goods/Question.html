@@ -1,0 +1,24 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Understanding Question
+{% endblock %}
+
+{% block content %}
+<div class="panel panel-default">
+    <div class="panel-body">
+        <p>
+            If you contribute 60 KSh, the second player contributes 30 KSh and the third player contributes 60 KSh,
+            how much money would you get in the end?
+        </p>
+        <p>
+            {% formfield player.question with label="How much would your payoff be?" %}
+        </p>
+    </div>
+</div>
+<p><strong>Click Next to continue.</strong></p>
+
+{% next_button %}
+
+{% endblock %}

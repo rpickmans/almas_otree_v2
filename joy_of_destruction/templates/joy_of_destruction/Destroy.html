@@ -1,0 +1,22 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Your Choice
+{% endblock %}
+
+{% block content %}
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>
+                Your partner has {{Constants.vouchers}}. How many of their vouchers would you like to destroy?
+            </p>
+            <p>
+                {% formfield player.amount_to_destroy with label="Please enter a number from 0 to 3:" %}
+            </p>
+        </div>
+    </div>
+<p><strong>Please click "Next" to continue</strong></p>
+{% next_button %}
+{% endblock %}

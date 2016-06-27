@@ -1,0 +1,17 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Trust Game
+{% endblock %}
+
+{% block content %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>Are You Ready For Round Two?</p>
+        </div>
+    </div>
+
+    <p><strong>Please click "Next" to continue</strong></p>
+    {% next_button %}
+{% endblock %}

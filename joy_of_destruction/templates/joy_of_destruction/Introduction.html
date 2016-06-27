@@ -1,0 +1,26 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Joy of Destruction
+{% endblock %}
+
+{% block content %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>
+                You and another participant are now paired. You have both completed the Raven's matrices
+                and earned some airtime vouchers. <strog>1 voucher is equivalent to 1KSh.</strog>
+            </p>
+            <p>We will now give you the opportunity to destroy some of
+                your partner's vouchers. This will happen anonymously, so that your choices will never be
+                revealed to any other participant.
+            </p>
+            <p>After your choice has been made, the computer will also
+                randomly destroy some of the other players vouchers.
+            </p>
+        </div>
+    </div>
+    <p><strong>Please click "Next" to continue</strong></p>
+    {% next_button %}
+{% endblock %}

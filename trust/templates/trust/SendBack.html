@@ -1,0 +1,20 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Your Choice
+{% endblock %}
+
+{% block content %}
+<div class="panel panel-default">
+    <div class="panel-body">
+        <p>
+        You are {{ role }}. Player One sent you {{ group.sent_amount}} and you received {{tripled_amount}}. Now you have {{tripled_amount}}. How many KSH will you send to Player One?
+        </p>
+
+            {% formfield group.sent_back_amount with label=prompt %}
+    </div>
+</div>
+<p><strong>Please click "Next" to continue</strong></p>
+<p>{% next_button %}</p>
+{% endblock %}

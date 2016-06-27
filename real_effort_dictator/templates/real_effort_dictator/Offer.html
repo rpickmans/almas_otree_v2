@@ -1,0 +1,16 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Your Offer
+{% endblock %}
+
+{% block content %}
+    <p>
+        From the <strong>{{ Constants.endowment }}</strong> you have,
+        how much will you keep?
+    </p>
+    {% formfield player.keep with label="" %}
+    <p><strong>Please click "Next" to continue</strong></p>
+    {% next_button %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Feedback
+{% endblock %}
+
+{% block content %}
+<div class="panel panel-default">
+    <div class="panel-body">
+        <p>
+            Your answer <span  class="text-info">{{ player.answer }}</span> was {% if player.answer_correct %}<span class="text-success">correct</span>
+            {% else %}<span class="text-danger">incorrect.</span>{% endif %}
+        </p>
+    </div>
+</div>
+<p></p>
+<p><strong>Now we go on to real questions. Are you ready? Please click "Next" to continue</strong></p>
+{% next_button %}
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Real Effort Dictator Game
+{% endblock %}
+
+{% block content %}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <p>
+            You and another participant are now paired. You have both worked on the slider tasks and
+            earned 25 (75). Together you have earned 50 (150). You are now going to determine how
+            much of the 50 you suggest for yourself and how much you suggest for the other participant.
+            You are free to choose any amount in whole shillings between 0 and 50. Examples:
+        </p>
+        <p>
+            1. If you assign 50 KSh (150 KSh) to you, the other participant gets 0 KSh (0 KSh).
+        </p>
+            2. If you assign 25 KSh (75 KSh) to you, the other participant gets 25 KSh (75 KSh).
+        </p>
+        <p>
+            3. If you assign 0 KSh (0 KSh) to you, the other participant gets 50 KSh (150 KSh).
+         </p>
+        <p>
+
+        <p>
+            On the next page, you will have to answer one question to make sure you understand the instructions correctly.
+        </p>
+    </div>
+</div>
+<p><strong>Please click "Next" to continue</strong></p>
+{% next_button %}
+{% endblock %}

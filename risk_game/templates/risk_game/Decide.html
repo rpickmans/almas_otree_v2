@@ -1,0 +1,20 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Decide
+{% endblock %}
+
+{% block content %}
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>
+            {% formfield player.decision with label="Choose One" %}
+        </p>
+      </div>
+    </div>
+
+<p><strong>Please click "Next" to continue</strong></p>
+{% next_button %}
+{% endblock %}

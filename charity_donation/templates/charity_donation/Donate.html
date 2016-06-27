@@ -1,0 +1,30 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Charity Donations
+{% endblock %}
+
+{% block content %}
+
+    <div class="panel panel-success">
+      <div class="panel-body">
+        <p>
+            You have earned xxx. You can either keep this entire amount, or you can donate parts of
+            it to a charity.
+        </p>
+        <p>
+            You will now have the opportunity to donate to a charity organization helping children and
+            youth in Kenya, <strong>{{ charity }}</strong>.
+        </p>
+        <p>
+        You can decide to donate 0, 50, 100, 150,200 or 250 KSh.
+        </p>
+        <p>
+             {% formfield player.donated_amount with label="Please make your donation now?" %}
+        </p>
+      </div>
+    </div>
+    <p><strong>Please click "Next" to continue</strong></p>
+    {% next_button %}
+{% endblock %}

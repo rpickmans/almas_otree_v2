@@ -1,0 +1,64 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load static %}
+
+{% block title %}
+Play
+{% endblock %}
+{% block content %}
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="container">
+            <div class="row">
+                <img src="{{STATIC_URL}}ravens/raven_four/raven4.png" alt="">
+            </div>
+        </div>
+        <div class="form-group required">
+            <div class="controls  field-raven_4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="radio-inline" for="id_raven_4_1">
+                            <input id="id_raven_4_1" value="one" name="raven_4" required="" type="radio">
+                            <img src="{{STATIC_URL}}ravens/raven_four/one.png" alt="">
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="radio-inline" for="id_raven_4_2">
+                            <input id="id_raven_4_2" value="two" name="raven_4" required="" type="radio">
+                            <img src="{{STATIC_URL}}ravens/raven_four/two.png" alt="" />
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="radio-inline" for="id_raven_4_3">
+                            <input id="id_raven_4_3" value="three" name="raven_4" required="" type="radio">
+                            <img src="{{STATIC_URL}}ravens/raven_four/three.png" alt="">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="radio-inline" for="id_raven_4_4">
+                            <input id="id_raven_4_4" value="four" name="raven_4" required="" type="radio">
+                            <img src="{{STATIC_URL}}ravens/raven_four/four.png" alt="">
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="radio-inline" for="id_raven_4_5">
+                            <input id="id_raven_4_5" value="five" name="raven_4" required="" type="radio">
+                            <img src="{{STATIC_URL}}ravens/raven_four/five.png" alt="">
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="radio-inline" for="id_raven_4_6">
+                            <input id="id_raven_4_6" value="six" name="raven_4" required="" type="radio">
+                            <img src="{{STATIC_URL}}ravens/raven_four/six.png" alt="">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p><strong>Please click "Next" to continue</strong></p>
+{% next_button %}
+{% endblock %}
