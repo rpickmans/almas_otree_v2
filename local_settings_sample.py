@@ -185,4 +185,25 @@ SESSION_CONFIGS = [
         ],
     },
 ]
-"""
+
+# DB settings
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'test',
+        'USER': 'test',
+        'PASSWORD': 'test',
+    }
+}
+
+OR
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+    )
+}
+
+'''
+

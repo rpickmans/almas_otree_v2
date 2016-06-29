@@ -32,12 +32,6 @@ PAGE_FOOTER = ''
 # postgres://USER:PASSWORD@HOST:PORT/NAME
 # mysql://USER:PASSWORD@HOST:PORT/NAME
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-    )
-}
-
 # AUTH_LEVEL:
 # If you are launching a study and want visitors to only be able to
 # play your app if you provided them with a start link, set the
