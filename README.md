@@ -15,7 +15,7 @@
 ## How to
 
 ```
-git clone git@bitbucket.org:busaracenter/temperature_otree.git
+git clone https://github.com/busaracenter/almasotree.git
 pip install -r requirements.txt
 otree resetdb
 otree runserver
