@@ -12,30 +12,30 @@ class Introduction(Page):
     pass
 
 
-class PracticeOne(Page):
-    form_model = models.Player
-    form_fields = ["raven_p1"]
-
-    def is_displayed(self):
-        return True
-
-
-class FeedbackOne(Page):
-    def is_displayed(self):
-        return True
-
-
-class PracticeTwo(Page):
-    form_model = models.Player
-    form_fields = ["raven_p2"]
-
-    def is_displayed(self):
-        return True
-
-
-class FeedbackTwo(Page):
-    def is_displayed(self):
-        return True
+# class PracticeOne(Page):
+#     form_model = models.Player
+#     form_fields = ["raven_p1"]
+#
+#     def is_displayed(self):
+#         return True
+#
+#
+# class FeedbackOne(Page):
+#     def is_displayed(self):
+#         return True
+#
+#
+# class PracticeTwo(Page):
+#     form_model = models.Player
+#     form_fields = ["raven_p2"]
+#
+#     def is_displayed(self):
+#         return True
+#
+#
+# class FeedbackTwo(Page):
+#     def is_displayed(self):
+#         return True
 
 
 class RavenOne(Page):
@@ -88,10 +88,10 @@ class RavenSix(Page):
 
 page_sequence = [
     Introduction,
-    PracticeOne,
-    FeedbackOne,
-    PracticeTwo,
-    FeedbackTwo,
+    # PracticeOne,
+    # FeedbackOne,
+    # PracticeTwo,
+    # FeedbackTwo,
     RavenOne,
     RavenTwo,
     RavenThree,
