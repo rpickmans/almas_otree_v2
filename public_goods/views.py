@@ -10,19 +10,19 @@ class Introduction(Page):
     """Description of the game: How to play and returns expected"""
     pass
 
-
-class Question(Page):
-
-    def is_displayed(self):
-        return True
-
-    form_model = models.Player
-    form_fields = ['question']
-
-
-class Feedback(Page):
-    def is_displayed(self):
-        return True
+#
+# class Question(Page):
+#
+#     def is_displayed(self):
+#         return True
+#
+#     form_model = models.Player
+#     form_fields = ['question']
+#
+#
+# class Feedback(Page):
+#     def is_displayed(self):
+#         return True
 
 
 class Contribute(Page):
@@ -80,8 +80,8 @@ class ResultsWaitPage(WaitPage):
 #             }
 
 page_sequence = [Introduction,
-                 Question,
-                 Feedback,
+                 # Question,
+                 # Feedback,
                  Contribute,
                  ContributeWaitPage,
                  Guess,

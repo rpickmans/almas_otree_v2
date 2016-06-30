@@ -26,8 +26,8 @@ class Constants(BaseConstants):
     efficiency_factor = 2
 
     guess_correct = c(30)
-
-    question_answer = c(100)
+    #
+    # question_answer = c(100)
 
 
 class Subsession(BaseSubsession):
@@ -74,5 +74,5 @@ class Player(BasePlayer):
             p1, p2 = self.get_others_in_group()[0], self.get_others_in_group()[1]
             return self.guess_one == p1.contribution and self.guess_two == p2.contribution
 
-    def question_correct(self):
-        return self.question == Constants.question_answer
+    # def question_correct(self):
+    #     return self.question == Constants.question_answer

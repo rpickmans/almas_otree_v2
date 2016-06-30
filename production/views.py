@@ -65,22 +65,22 @@ class ResultsWaitPage(WaitPage):
         self.group.view_participant_vars()
 
 
-class Results(Page):
-
-    def is_displayed(self):
-        return self.subsession.round_number == Constants.num_rounds
-
-    def vars_for_template(self):
-
-        total = 0
-
-        for p in self.player.in_all_rounds():
-            if p.payoff:
-                total += p.payoff
-
-        return {
-            "correct_sliders": self.player.correct_sliders,
-        }
+# class Results(Page):
+#
+#     def is_displayed(self):
+#         return self.subsession.round_number == Constants.num_rounds
+#
+#     def vars_for_template(self):
+#
+#         total = 0
+#
+#         for p in self.player.in_all_rounds():
+#             if p.payoff:
+#                 total += p.payoff
+#
+#         return {
+#             "correct_sliders": self.player.correct_sliders,
+#         }
 
 
 page_sequence = [
@@ -89,5 +89,5 @@ page_sequence = [
     WaitPage,
     Slider,
     ResultsWaitPage,
-    Results
+    # Results
 ]

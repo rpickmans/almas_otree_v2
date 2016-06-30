@@ -11,19 +11,18 @@ from .models import Constants
 class Intro(Page):
     pass
 
-
-class Question(Page):
-    form_model = models.Player
-    form_fields = ["answer"]
-
-    def is_displayed(self):
-        return True
-
-
-class Feedback(Page):
-
-    def is_displayed(self):
-        return True
+# class Question(Page):
+#     form_model = models.Player
+#     form_fields = ["answer"]
+#
+#     def is_displayed(self):
+#         return True
+#
+#
+# class Feedback(Page):
+#
+#     def is_displayed(self):
+#         return True
 
 
 class Offer(Page):
@@ -55,8 +54,6 @@ class ResultsWaitPage(WaitPage):
 
 page_sequence = [
     Intro,
-    Question,
-    Feedback,
     Offer,
     OfferWaitPage,
     ResultsWaitPage,
