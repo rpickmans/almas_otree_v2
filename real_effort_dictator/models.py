@@ -34,25 +34,35 @@ class Subsession(BaseSubsession):
 class Group(BaseGroup):
 
     def player_one_decision(self):
+        # for p in self.get_players():
+        #     if p.participant.vars["rank"] == "high":
+        #         if p.id == 1:
+        #             p.payoff = c(150) - p.keep
+        #     elif p.participant.vars["rank"] == "low":
+        #         p.payoff = c(50) - p.keep
         p1 = self.get_player_by_id(1)
         p2 = self.get_player_by_id(2)
-        p1.payoff = p1.keep
-        p2.payoff = Constants.endowment - p1.keep
-        p1.contribution = Constants.endowment - p1.keep
-        p2.contribution = Constants.endowment - p2.keep
-        print("decision for player one, P1 Payoff: {}, P2 Payoff: {}".format(p1.payoff, p2.payoff))
+        if p2.participant.vars["rank"] == "high":
+            p2.payoff = c(150) - p1.keep
+            p1.payoff = c(150) - p1.keep
+        elif p1.participant.vars["rank"] == "low":
+            p2.payoff = c(50) - p1.keep
+            p1.payoff = c(50) - p2.keep
 
     def player_two_decision(self):
-        p1 = self.get_player_by_id(1)
-        p2 = self.get_player_by_id(2)
-        p2.payoff = p2.keep
-        p1.payoff = Constants.endowment - p2.keep
-        p1.contribution = Constants.endowment - p1.keep
-        p2.contribution = Constants.endowment - p2.keep
-        print("decision for player two, P1 Payoff: {}, P2 Payoff: {}".format(p1.payoff, p2.payoff))
+        p1 = self.get_player_by_id(2)
+        p2 = self.get_player_by_id(1)
+        if p2.participant.vars["rank"] == "high":
+            p2.payoff = c(150) - p1.keep
+            p1.payoff = c(150) - p2.keep
+        elif p1.participant.vars["rank"] == "low":
+            p2.payoff = c(50) - p1.keep
+            p1.payoff = c(50) - p2.keep
 
     def set_payoffs(self):
         choice([self.player_one_decision, self.player_two_decision])()
+        for p in self.get_players():
+            print("player id {} has payoff us {}".format(p.id, p.payoff))
 
 
 class Player(BasePlayer):

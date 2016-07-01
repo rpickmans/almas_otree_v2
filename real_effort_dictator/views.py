@@ -80,6 +80,7 @@ class ResultsWaitPage(WaitPage):
 
 
 
+
 page_sequence = [
     ShuffleWaitPage,
     Intro,
