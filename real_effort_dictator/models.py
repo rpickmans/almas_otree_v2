@@ -59,8 +59,5 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     keep = models.CurrencyField()
-    answer = models.CurrencyField()
     contribution = models.CurrencyField()
 
-    def answer_correct(self):
-        return self.answer == Constants.answer

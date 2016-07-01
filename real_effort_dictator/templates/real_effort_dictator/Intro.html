@@ -9,21 +9,40 @@
 
 <div class="panel panel-default">
     <div class="panel-body">
-        <p>
-            You and another participant are now paired. You have both worked on the slider tasks and
-            earned 25. Together you have earned 50. You are now going to determine how
-            much of the 50 you suggest for yourself and how much you suggest for the other participant.
-            You are free to choose any amount in whole shillings between 0 and 50. Examples:
-        </p>
-        <p>
-            1. If you assign 50 KSh to you, the other participant gets 0 KSh.
-        </p>
-            2. If you assign 25 KSh to you, the other participant gets 25 KSh.
-        </p>
-        <p>
-            3. If you assign 0 KSh to you, the other participant gets 50 KSh.
-         </p>
-        <p>
+        {% if rank == "high" %}
+            <p>
+                You and another participant are now paired. You have both worked on the slider tasks and
+                earned KSh 75. Together you have earned KSh 150. You are now going to determine how
+                much of the KSh 150 you suggest for yourself and how much you suggest for the other participant.
+                You are free to choose any amount in whole shillings between KSh 0 and KSh 150. Examples:
+            </p>
+            <p>
+                1. If you assign KSh 150 to you, the other participant gets KSh 0.
+            </p>
+                2. If you assign KSh 75 to you, the other participant gets KSh 75.
+            </p>
+            <p>
+                3. If you assign KSh 0 to you, the other participant gets KSh 150.
+             </p>
+            <p>
+        {% elif rank == "low"%}
+            <p>
+                You and another participant are now paired. You have both worked on the slider tasks and
+                earned KSh 25. Together you have earned KSh 50. You are now going to determine how
+                much of the KSh 50 you suggest for yourself and how much you suggest for the other participant.
+                You are free to choose any amount in whole shillings between KSh 0 and KSh 50. Examples:
+            </p>
+            <p>
+                1. If you assign KSh 50 to you, the other participant gets KSh 0.
+            </p>
+                2. If you assign KSh 25 to you, the other participant gets KSh 25.
+            </p>
+            <p>
+                3. If you assign KSh 0 to you, the other participant gets KSh 50.
+             </p>
+            <p>
+        {% endif %}
+
     </div>
 </div>
 <p><strong>Please click "Next" to continue</strong></p>

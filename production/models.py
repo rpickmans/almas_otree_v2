@@ -44,10 +44,9 @@ class Subsession(BaseSubsession):
 class Group(BaseGroup):
     lottery_winner = models.IntegerField() # id of player per round
 
-    def set_payoffs(self):
+    def set_correct_sliders(self):
         for p in self.get_players():
             correct = 0
-            total_correct = 0
             if p.player_slider_value_one == p.random_slider_value_one:
                 correct+=1
             if p.player_slider_value_two == p.random_slider_value_two:
@@ -71,46 +70,10 @@ class Group(BaseGroup):
                 correct+=1
 
             p.correct_sliders = correct
-            total_correct += p.correct_sliders
-            print(p.correct_sliders)
 
-            if correct == 10:
-                p.all_correct = True
-
-    def select_winner(self):
-        if not self.lottery_winner:
-
-            # make a list of player ids with 10 correct sliders
-            l = [p.id_in_group for p in self.get_players() if p.all_correct]
-            print (l)
-            print ('the list of all correct slider player id')
-
-            # if list is not empty, choose a random winner and assign them payoff
-            if l:
-                self.lottery_winner = random.choice(l)
-
-                print (self.lottery_winner)
-                print ('yes i won this round')
-
-                for p in self.get_players():
-                    if self.lottery_winner == p.id_in_group:
-                        p.lottery_winner = 'Yes'
-                        p.payoff = 150
-                    else:
-                        p.lottery_winner = 'No'
-                        p.payoff = 0
-
-    def correct_sliders_total(self):
+    def set_sliders_total(self):
         for p in self.get_players():
-            if self.round_number == 1:
-                p.participant.vars["id"] = p.id_in_group
-                p.participant.vars["total_correct"] = p.correct_sliders
-            if self.round_number == 2:
-                p.participant.vars["total_correct"] += p.correct_sliders
-
-    def view_participant_vars(self):
-        for p in self.get_players():
-            print(p.participant.vars)
+            p.participant.vars["total_correct"] = p.correct_sliders
 
 
 class Player(BasePlayer):
@@ -148,8 +111,4 @@ class Player(BasePlayer):
     random_slider_value_nine = models.IntegerField()
     random_slider_value_ten = models.IntegerField()
 
-    # random winner per group
     correct_sliders = models.IntegerField()
-    all_correct = models.BooleanField(default=False)
-
-    lottery_winner = models.CharField(choices=['Yes', 'No'])
