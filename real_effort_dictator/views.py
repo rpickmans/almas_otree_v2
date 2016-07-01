@@ -54,6 +54,12 @@ class Offer(Page):
     form_model = models.Player
     form_fields = ["keep"]
 
+    def vars_for_template(self):
+        participant = self.player.participant
+        return {
+            'rank': participant.vars["rank"]
+        }
+
     def keep_error_message(self, value):
         if self.player.participant.vars["rank"] == "high":
             if not (value == 0 or value == 75 or value == 150):

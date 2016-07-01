@@ -22,11 +22,9 @@ want to transfer to the other participant.
 
 class Constants(BaseConstants):
     name_in_url = 'real_effort_dictator'
-    endowment = c(50)
     players_per_group = 2
     num_rounds = 1
     efficiency_factor = 3
-    answer = 25
 
 
 class Subsession(BaseSubsession):

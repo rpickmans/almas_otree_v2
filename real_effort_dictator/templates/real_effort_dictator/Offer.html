@@ -7,8 +7,7 @@
 
 {% block content %}
     <p>
-        From the <strong>{{ Constants.endowment }}</strong> you have,
-        how much will you keep?
+        From the <strong>{% if rank == "high" %}Ksh 150 {% elif rank == "low"%}Ksh 50 {% endif %}</strong> you have,how much will you keep?
     </p>
     {% formfield player.keep with label="" %}
     <p><strong>Please click "Next" to continue</strong></p>
