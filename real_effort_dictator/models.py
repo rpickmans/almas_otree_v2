@@ -34,29 +34,23 @@ class Subsession(BaseSubsession):
 class Group(BaseGroup):
 
     def player_one_decision(self):
-        # for p in self.get_players():
-        #     if p.participant.vars["rank"] == "high":
-        #         if p.id == 1:
-        #             p.payoff = c(150) - p.keep
-        #     elif p.participant.vars["rank"] == "low":
-        #         p.payoff = c(50) - p.keep
         p1 = self.get_player_by_id(1)
         p2 = self.get_player_by_id(2)
         if p2.participant.vars["rank"] == "high":
+            p1.payoff = p1.keep
             p2.payoff = c(150) - p1.keep
-            p1.payoff = c(150) - p1.keep
-        elif p1.participant.vars["rank"] == "low":
+        elif p2.participant.vars["rank"] == "low":
+            p1.payoff = p1.keep
             p2.payoff = c(50) - p1.keep
-            p1.payoff = c(50) - p2.keep
 
     def player_two_decision(self):
         p1 = self.get_player_by_id(2)
         p2 = self.get_player_by_id(1)
-        if p2.participant.vars["rank"] == "high":
-            p2.payoff = c(150) - p1.keep
+        if p1.participant.vars["rank"] == "high":
+            p2.payoff = p1.keep
             p1.payoff = c(150) - p2.keep
         elif p1.participant.vars["rank"] == "low":
-            p2.payoff = c(50) - p1.keep
+            p2.payoff = p2.keep
             p1.payoff = c(50) - p2.keep
 
     def set_payoffs(self):
