@@ -107,7 +107,7 @@ SESSION_CONFIG_DEFAULTS = {
 
 try:
     from local_settings import *
-except FileNotFoundError:
+except:
     # if on server import prod settings
     from local_settings_prod import *
 
