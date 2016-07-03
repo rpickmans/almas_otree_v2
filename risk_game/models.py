@@ -40,31 +40,41 @@ class Group(BaseGroup):
         for p in self.get_players():
             if p.decision == "Coin 1":
                 p.payoff = 80
+                p.participant.vars["carrying_payoff"] += p.payoff
             elif p.decision == "Coin 2":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 70
+                    p.participant.vars["carrying_payoff"] += p.payoff
                 else:
                     p.payoff = 110
+                    p.participant.vars["carrying_payoff"] += p.payoff
             elif p.decision == "Coin 3":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 60
+                    p.participant.vars["carrying_payoff"] += p.payoff
                 else:
                     p.payoff = 140
             elif p.decision == "Coin 4":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 50
+                    p.participant.vars["carrying_payoff"] += p.payoff
                 else:
                     p.payoff = 170
+                    p.participant.vars["carrying_payoff"] += p.payoff
             elif p.decision == "Coin 5":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 40
+                    p.participant.vars["carrying_payoff"] += p.payoff
                 else:
                     p.payoff = 200
+                    p.participant.vars["carrying_payoff"] += p.payoff
             elif p.decision == "Coin 6":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 30
+                    p.participant.vars["carrying_payoff"] += p.payoff
                 else:
                     p.payoff = 210
+                    p.participant.vars["carrying_payoff"] += p.payoff
 
 
 class Player(BasePlayer):

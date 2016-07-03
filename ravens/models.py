@@ -43,6 +43,7 @@ class Group(BaseGroup):
             if p.raven_6 == "six":
                 p.points += 1
             p.payoff = p.points
+            p.participant.vars["carrying_payoff"] += p.payoff
             print(p.payoff)
 
 

@@ -39,6 +39,8 @@ class Group(BaseGroup):
         p1, p2 = self.get_players()[0], self.get_players()[1]
         p1.payoff = Constants.vouchers - p1.destroyed
         p2.payoff = Constants.vouchers - p2.destroyed
+        p1.participant.vars["carrying_payoff"] += p1.payoff
+        p2.participant.vars["carrying_payoff"] += p2.payoff
 
     def set_player_destroyed(self):
         for p in self.get_players():

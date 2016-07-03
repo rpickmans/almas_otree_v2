@@ -38,8 +38,10 @@ class Group(BaseGroup):
             q1_or_q2 = random.choice(['q1', 'q2'])
             if q1_or_q2 == 'q1':
                 p.payoff = random.choice([p.q11, p.q12, p.q13, p.q14, p.q15])
+                p.participant.vars["carrying_payoff"] += p.payoff
             elif q1_or_q2 == 'q2':
                 p.payoff = random.choice([p.q21, p.q22, p.q23, p.q24, p.q25, p.q26])
+                p.participant.vars["carrying_payoff"] += p.payoff
             else:
                 p.payoff = 0
 

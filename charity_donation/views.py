@@ -23,8 +23,11 @@ class Donate(Page):
                     "Huruma Childrens Home Ngong",
                     "Baraka Childrens Home Mombasa"]
 
+
+
         return {
             'charity': random.choice(charities),
+            'carrying_payoff': self.player.carrying_payoff
         }
 
 class ResultsWaitPage(WaitPage):

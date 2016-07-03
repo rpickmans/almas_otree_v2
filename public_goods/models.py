@@ -31,7 +31,9 @@ class Constants(BaseConstants):
 
 
 class Subsession(BaseSubsession):
-    pass
+    def before_session_starts(self):
+        for p in self.get_players():
+            p.participant.vars["carrying_payoff"] = 0
 
 
 class Group(BaseGroup):
@@ -47,8 +49,10 @@ class Group(BaseGroup):
         for p in self.get_players():
             if p.guess_correct():
                 p.payoff = (Constants.endowment - p.contribution) + self.individual_share + Constants.guess_correct
+                p.participant.vars["carrying_payoff"] += p.payoff
             else:
                 p.payoff = (Constants.endowment - p.contribution) + self.individual_share
+                p.participant.vars["carrying_payoff"] += p.payoff
 
     def log_payoffs(self):
         for p in self.get_players():

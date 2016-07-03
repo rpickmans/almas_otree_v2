@@ -58,15 +58,19 @@ class Group(BaseGroup):
             for p in self.get_players():
                 if p.id == 1:
                     p.payoff = int(Constants.amount_allocated) - int(self.sent_amount) + int(self.sent_back_amount)
+                    p.participant.vars["carrying_payoff"] += p.payoff
                 elif p.id == 2:
                     p.payoff = int(self.sent_amount) * Constants.multiplication_factor - int(self.sent_back_amount)
+                    p.participant.vars["carrying_payoff"] += p.payoff
                 print(p.id, p.payoff)
         elif self.round_number == 2:
             for p in self.get_players():
                 if p.in_previous_rounds()[0].id == 1:
                     p.payoff = int(self.sent_amount) * Constants.multiplication_factor - int(self.sent_back_amount)
+                    p.participant.vars["carrying_payoff"] += p.payoff
                 elif p.in_previous_rounds()[0].id == 2:
                     p.payoff = int(Constants.amount_allocated) - int(self.sent_amount) + int(self.sent_back_amount)
+                    p.participant.vars["carrying_payoff"] += p.payoff
 
     def log_payoffs(self):
         for p in self.get_players():
