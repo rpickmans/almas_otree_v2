@@ -11,6 +11,7 @@ class PaymentInfo(Page):
         return {
             'redemption_code': participant.label or participant.code,
             'payoff': participant.vars["carrying_payoff"],
+            'apoints': participant.vars["ravens_points"]
         }
 
 

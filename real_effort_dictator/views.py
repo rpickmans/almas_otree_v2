@@ -68,10 +68,6 @@ class Offer(Page):
                 return 'Value must be 0, 25, or 50'
 
 
-class OfferWaitPage(WaitPage):
-    pass
-
-
 class ResultsWaitPage(WaitPage):
 
     def after_all_players_arrive(self):
@@ -84,7 +80,5 @@ page_sequence = [
     ShuffleWaitPage,
     Intro,
     Offer,
-    OfferWaitPage,
     ResultsWaitPage,
-    # Results,
 ]
