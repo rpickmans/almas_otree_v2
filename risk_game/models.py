@@ -79,12 +79,12 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     decision_choices = (
-            ("Coin 1", "Coin 1: KSh 80 if heads and KSh 80 if tails"),
-            ("Coin 2", "Coin 2: KSh 70 if heads and KSh 110 if tails"),
-            ("Coin 3", "Coin 3: KSh 60 if heads and KSh 140 if tails"),
-            ("Coin 4", "Coin 4: KSh 50 if heads and KSh 170 if tails"),
-            ("Coin 5", "Coin 5: KSh 40 if heads and KSh 200 if tails"),
-            ("Coin 6", "Coin 6: KSh 30 if heads and KSh 210 if tails"),
+            ("Coin 1", "Coin 1: KSH 80 if heads and KSH 80 if tails"),
+            ("Coin 2", "Coin 2: KSH 70 if heads and KSH 110 if tails"),
+            ("Coin 3", "Coin 3: KSH 60 if heads and KSH 140 if tails"),
+            ("Coin 4", "Coin 4: KSH 50 if heads and KSH 170 if tails"),
+            ("Coin 5", "Coin 5: KSH 40 if heads and KSH 200 if tails"),
+            ("Coin 6", "Coin 6: KSH 30 if heads and KSH 210 if tails"),
         )
     decision = models.CharField(choices=decision_choices, widget=widgets.RadioSelect())
     random_coin_toss = models.CharField()

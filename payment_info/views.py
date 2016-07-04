@@ -10,7 +10,7 @@ class PaymentInfo(Page):
         participant = self.player.participant
         return {
             'redemption_code': participant.label or participant.code,
-            'participant': participant,
+            'payoff': participant.vars["carrying_payoff"],
         }
 
 

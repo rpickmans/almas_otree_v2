@@ -42,8 +42,6 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    lottery_winner = models.IntegerField() # id of player per round
-
     def set_correct_sliders(self):
         for p in self.get_players():
             correct = 0

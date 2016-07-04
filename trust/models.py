@@ -13,11 +13,11 @@ import random
 
 doc = """
 In the trust game, the participants are matched in pairs where
-one of them, participant A, is given a fixed amount of money, say X KSh and the other,
+one of them, participant A, is given a fixed amount of money, say X KSH and the other,
 participant B, is not given any money. Participant A can decide to keep the money, in
-which case player A will receive the actual payment of X KSh and player B will receive
+which case player A will receive the actual payment of X KSH and player B will receive
 nothing. Participant A can also decide to send part or all of the money, Y <= X to
-player B in which case player B will receive 3Y KSh. In this case player B is given the
+player B in which case player B will receive 3Y KSH. In this case player B is given the
 option to send money back to player A (any amount he or she likes). If participant A
 trusts that some money will be sent back, he or she will benefit from sending the money
 to participant B. If, on the other hand, the trust is lower, participant A may decide

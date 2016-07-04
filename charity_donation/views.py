@@ -13,6 +13,10 @@ class Donate(Page):
     form_model = models.Player
     form_fields = ['donated_amount']
 
+    def donated_amount_error_message(self, value):
+        if self.player.participant.vars["carrying_payoff"] < value:
+            return 'Amount to donate should be less than what you have!'
+
     def vars_for_template(self):
 
         charities = ["Kiambu Orphans Initiative",
