@@ -54,15 +54,6 @@ class Group(BaseGroup):
                 p.payoff = (Constants.endowment - p.contribution) + self.individual_share
                 p.participant.vars["carrying_payoff"] += p.payoff
 
-    def log_payoffs(self):
-        for p in self.get_players():
-            if p.guess_correct():
-                print("player {} payoff is: {}, and contribution was: {} and points for guess: {}".
-                      format(p.id, p.payoff, p.contribution, Constants.guess_correct))
-            else:
-                print("player {} payoff is: {}, and contribution was: {}".
-                      format(p.id, p.payoff, p.contribution))
-
 
 class Player(BasePlayer):
     contribution = models.CurrencyField(
@@ -77,6 +68,3 @@ class Player(BasePlayer):
     def guess_correct(self):
             p1, p2 = self.get_others_in_group()[0], self.get_others_in_group()[1]
             return self.guess_one == p1.contribution and self.guess_two == p2.contribution
-
-    # def question_correct(self):
-    #     return self.question == Constants.question_answer

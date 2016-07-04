@@ -18,10 +18,9 @@ class ShuffleWaitPage(WaitPage):
             self.subsession.get_players(),
             key=lambda player: player.participant.vars['total_correct']
         )
-        print (sorted_players)
 
         if len(sorted_players) == 3:
-            print ("Only three - can't find median")
+            pass
         else:
             # assuming 6, 12, 0r 18 players
             median_sort = len(sorted_players) / 2

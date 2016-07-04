@@ -42,7 +42,6 @@ class Group(BaseGroup):
                 p.points += 10
             p.payoff = p.points
             p.participant.vars["carrying_payoff"] += p.payoff
-            print(p.payoff)
 
 
 class Player(BasePlayer):
