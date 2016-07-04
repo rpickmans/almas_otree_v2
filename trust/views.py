@@ -78,8 +78,6 @@ class ResultsWaitPage(WaitPage):
 
     def after_all_players_arrive(self):
         self.group.set_payoffs()
-        if self.round_number == 2:
-            self.group.log_payoffs()
 
 
 class RoundNumber(Page):
@@ -89,7 +87,7 @@ class RoundNumber(Page):
             return True
         else:
             return False
-        
+
 page_sequence = [
         Introduction,
         Send,

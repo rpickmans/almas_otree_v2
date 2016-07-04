@@ -55,11 +55,8 @@ class Group(BaseGroup):
 
     def set_payoffs(self):
         choice([self.player_one_decision, self.player_two_decision])()
-        for p in self.get_players():
-            print("player id {} has payoff us {}".format(p.id, p.payoff))
 
 
 class Player(BasePlayer):
     keep = models.CurrencyField()
-    contribution = models.CurrencyField()
 

@@ -25,21 +25,10 @@ class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
         self.group.set_player_destroyed()
         self.group.set_payoffs()
-        self.group.log_payoffs()
-
-
-# class Results(Page):
-#     def vars_for_template(self):
-#         return {
-#             "vouchers": int(self.player.payoff - self.player.destroyed),
-#             "destroyed": int(self.player.destroyed),
-#
-#         }
 
 
 page_sequence = [
     Introduction,
     Destroy,
     ResultsWaitPage,
-    # Results
 ]

@@ -46,10 +46,6 @@ class Group(BaseGroup):
         for p in self.get_players():
             p.destroyed = p.amount_to_destroy + random.randrange(1, 4)
 
-    def log_payoffs(self):
-        for p in self.get_players():
-            print("player {} payoff is: {}, and vouchers destroyed are: {}".format(p.id, int(p.payoff), p.destroyed))
-
 
 class Player(BasePlayer):
     amount_to_destroy = models.IntegerField(
