@@ -18,8 +18,6 @@ class Constants(BaseConstants):
     name_in_url = 'ravens'
     players_per_group = None
     num_rounds = 1
-    practice_one_answer = "four"
-    practice_two_answer = "four"
 
 
 class Subsession(BaseSubsession):
@@ -31,17 +29,17 @@ class Group(BaseGroup):
     def set_payoffs(self):
         for p in self.get_players():
             if p.raven_1 == "four":
-                p.points += 1
+                p.points += 10
             if p.raven_2 == "four":
-                p.points += 1
+                p.points += 10
             if p.raven_3 == "one":
-                p.points += 1
+                p.points += 10
             if p.raven_4 == "three":
-                p.points += 1
+                p.points += 10
             if p.raven_5 == "eight":
-                p.points += 1
+                p.points += 10
             if p.raven_6 == "six":
-                p.points += 1
+                p.points += 10
             p.payoff = p.points
             p.participant.vars["carrying_payoff"] += p.payoff
             print(p.payoff)
@@ -54,17 +52,9 @@ class Player(BasePlayer):
     CHOICES_8 = [("one", ""), ("two", ""), ("three", ""), ("four", ""),
                  ("five", ""), ("six", ""), ("seven", ""), ("eight", "")]
 
-    raven_p1 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES_8)
-    raven_p2 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES)
     raven_1 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES)
     raven_2 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES_8)
     raven_3 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES)
     raven_4 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES)
     raven_5 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES_8)
     raven_6 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES_8)
-
-    def practice_one(self):
-        return self.raven_p1 == Constants.practice_one_answer
-
-    def practice_two(self):
-        return self.raven_p2 == Constants.practice_two_answer
