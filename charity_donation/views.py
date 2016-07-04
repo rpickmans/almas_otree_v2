@@ -23,17 +23,17 @@ class Donate(Page):
                     "Huruma Childrens Home Ngong",
                     "Baraka Childrens Home Mombasa"]
 
-
-
         return {
             'charity': random.choice(charities),
-            'carrying_payoff': self.player.carrying_payoff
+            'carrying_payoff': self.player.participant.vars["carrying_payoff"]
         }
+
 
 class ResultsWaitPage(WaitPage):
 
     def after_all_players_arrive(self):
         pass
+
 
 class Results(Page):
     def vars_for_template(self):
