@@ -36,7 +36,7 @@ class Donate(Page):
 class ResultsWaitPage(WaitPage):
 
     def after_all_players_arrive(self):
-        pass
+        self.player.participant.vars["carrying_payoff"] -= self.player.donated_amount
 
 
 class Results(Page):
