@@ -33,7 +33,6 @@ class Subsession(BaseSubsession):
             p.carrying_payoff = p.participant.vars["carrying_payoff"]
 
 
-
 class Group(BaseGroup):
     pass
 
