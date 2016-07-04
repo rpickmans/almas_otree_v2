@@ -37,10 +37,10 @@ class Group(BaseGroup):
 
     def set_payoffs(self):
         p1, p2 = self.get_players()[0], self.get_players()[1]
-        p1.payoff = Constants.vouchers - p1.destroyed
-        p2.payoff = Constants.vouchers - p2.destroyed
-        p1.participant.vars["carrying_payoff"] += p1.payoff
-        p2.participant.vars["carrying_payoff"] += p2.payoff
+        p1.points = Constants.vouchers - p1.destroyed
+        p2.points = Constants.vouchers - p2.destroyed
+        p1.participant.vars["ravens_points"] += p1.points
+        p2.participant.vars["ravens_points"] += p2.points
 
     def set_player_destroyed(self):
         for p in self.get_players():
@@ -54,4 +54,6 @@ class Player(BasePlayer):
     )
 
     destroyed = models.IntegerField(default=0)
+
+    points = models.IntegerField(default=0)
 

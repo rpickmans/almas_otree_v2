@@ -40,8 +40,7 @@ class Group(BaseGroup):
                 p.points += 10
             if p.raven_6 == "six":
                 p.points += 10
-            p.payoff = p.points
-            p.participant.vars["carrying_payoff"] += p.payoff
+            p.participant.vars["ravens_points"] = p.points
 
 
 class Player(BasePlayer):
