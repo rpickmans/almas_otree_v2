@@ -54,7 +54,7 @@ class Group(BaseGroup):
     )
 
     def set_payoffs(self):
-        if self.round_number == 1:
+        if self.subsession.round_number == 1:
             for p in self.get_players():
                 if p.id == 1:
                     p.payoff = int(Constants.amount_allocated) - int(self.sent_amount) + int(self.sent_back_amount)
@@ -63,7 +63,7 @@ class Group(BaseGroup):
                     p.payoff = int(self.sent_amount) * Constants.multiplication_factor - int(self.sent_back_amount)
                     p.participant.vars["carrying_payoff"] += p.payoff
                 print(p.id, p.payoff)
-        elif self.round_number == 2:
+        elif self.subsession.round_number == 2:
             for p in self.get_players():
                 if p.in_previous_rounds()[0].id == 1:
                     p.payoff = int(self.sent_amount) * Constants.multiplication_factor - int(self.sent_back_amount)
