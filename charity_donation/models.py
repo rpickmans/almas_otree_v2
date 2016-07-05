@@ -34,7 +34,8 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    pass
+    def set_payoffs(self):
+        self.player.participant.vars["carrying_payoff"] -= self.player.donated_amount
 
 
 class Player(BasePlayer):
