@@ -28,16 +28,14 @@ class Constants(BaseConstants):
 
 
 class Subsession(BaseSubsession):
-    def before_session_starts(self):
-        for p in self.get_players():
-            p.carrying_payoff = p.participant.vars["carrying_payoff"]
+    pass
 
 
 class Group(BaseGroup):
-    def set_payoffs(self):
-        self.player.participant.vars["carrying_payoff"] -= self.player.donated_amount
+    def set_payoff(self):
+        for p in self.get_players():
+            p.participant.vars["carrying_payoff"] -= self.player.donated_amount
 
 
 class Player(BasePlayer):
     donated_amount = models.CurrencyField(choices=range(0, 250 + 1, 50))
-    carrying_payoff = models.CurrencyField()
