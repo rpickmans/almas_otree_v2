@@ -60,6 +60,11 @@ class RavenSix(Page):
         return True
 
 
+class ResultsWaitPage(WaitPage):
+
+    def after_all_players_arrive(self):
+        self.group.set_payoffs()
+
 page_sequence = [
     Introduction,
     RavenOne,
@@ -68,4 +73,5 @@ page_sequence = [
     RavenFour,
     RavenFive,
     RavenSix,
+    ResultsWaitPage,
 ]
