@@ -23,18 +23,9 @@ class ResultsWaitPage(WaitPage):
         self.group.make_random_toss()
         self.group.set_payoffs()
 
-# class Results(Page):
-#     def vars_for_template(self):
-#         return {
-#             'decision': self.player.decision,
-#             'payoff': self.player.payoff,
-#             'toss': self.player.random_coin_toss,
-#         }
-
 
 page_sequence = [
     Introduction,
     Decide,
     ResultsWaitPage,
-    # Results
 ]
