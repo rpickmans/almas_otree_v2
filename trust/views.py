@@ -30,7 +30,7 @@ class Introduction(Page):
         return {'amount_allocated': Constants.amount_allocated}
 
     def is_displayed(self):
-        return self.round_number == 1
+        return self.subsession.round_number == 1
 
 
 class Send(Page):

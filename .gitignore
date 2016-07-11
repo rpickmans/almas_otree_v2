@@ -6,9 +6,3 @@ db.sqlite3
 _coverage_results
 local_settings.py
 migrations
-Results.html
-PracticeOne.html
-PracticeTwo.html
-Feedback.html
-FeedbackOne.html
-FeedbackTwo.html
