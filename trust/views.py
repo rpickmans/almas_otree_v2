@@ -90,7 +90,7 @@ class RoundNumber(Page):
 page_sequence = [
         Introduction,
         Send,
-        WaitPage,
+        ShuffleWaitPage,
         SendBack,
         ResultsWaitPage,
         RoundNumber
