@@ -8,9 +8,9 @@
 <div class="panel panel-default">
     <div class="panel-body">
         <p>
-            You are {{ role }}. Player One sent you {{ group.sent_amount}} and you received {{tripled_amount}}. Now you have {{tripled_amount}}. How many KSH will you send to Player One?
+            You are <strong>Player Two</strong>. <strong>Player One</strong> sent you {{ player.get_other_player.sent_amount}} and you received {{tripled_amount}}. Now you have {{tripled_amount}}. How many KSH will you send to Player One?
         </p>
-        {% formfield group.sent_back_amount with label=prompt %}
+        {% formfield player.sent_back_amount with label=prompt %}
     </div>
 </div>
 <p><strong>Please click "Next" to continue</strong></p>

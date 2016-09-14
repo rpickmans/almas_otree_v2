@@ -42,7 +42,12 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
+    def set_payoffs(self):
+        for p in self.get_players():
+            p.payoff = int(Constants.amount_allocated) - int(p.sent_amount) + int(p.get_other_player.sent_back_amount)
+            p.participant.vars["carrying_payoff"] += p.payoff
 
+class Player(BasePlayer):
     sent_amount = models.CurrencyField(
         min=0, max=Constants.amount_allocated,
         doc="""Amount sent by Player One""",
@@ -53,26 +58,6 @@ class Group(BaseGroup):
         min=c(0),
     )
 
-    def set_payoffs(self):
-        if self.subsession.round_number == 1:
-            for p in self.get_players():
-                if p.id == 1:
-                    p.payoff = int(Constants.amount_allocated) - int(self.sent_amount) + int(self.sent_back_amount)
-                    p.participant.vars["carrying_payoff"] += p.payoff
-                elif p.id == 2:
-                    p.payoff = int(self.sent_amount) * Constants.multiplication_factor - int(self.sent_back_amount)
-                    p.participant.vars["carrying_payoff"] += p.payoff
-        elif self.subsession.round_number == 2:
-            for p in self.get_players():
-                if p.in_previous_rounds()[0].id == 2:
-                    p.payoff = int(self.sent_amount) * Constants.multiplication_factor - int(self.sent_back_amount)
-                    p.participant.vars["carrying_payoff"] += p.payoff
-                elif p.in_previous_rounds()[0].id == 1:
-                    p.payoff = int(Constants.amount_allocated) - int(self.sent_amount) + int(self.sent_back_amount)
-                    p.participant.vars["carrying_payoff"] += p.payoff
+    def get_other_player(self):
+        return self.get_others_in_group()[0]
 
-
-class Player(BasePlayer):
-
-    def role(self):
-        return {1: 'Player One', 2: 'Player Two'}[self.id_in_group]
