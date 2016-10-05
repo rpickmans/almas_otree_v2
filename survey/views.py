@@ -5,13 +5,18 @@ from ._builtin import Page, WaitPage
 from otree.common import Currency as c, currency_range
 from .models import Constants
 
+
 class Demographics(Page):
 
     form_model = models.Player
     form_fields = ['q_country',
-                  'q_age',
-                  'q_gender']
-
+                   'q_age',
+                   'q_gender',
+                   'q_occupation',
+                   'q_income',
+                   'q_education_father',
+                   'q_education_mother',
+                   ]
 
 class CognitiveReflectionTest(Page):
 

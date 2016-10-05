@@ -15,6 +15,11 @@
             {% formfield player.q_country %}
             {% formfield player.q_age %}
             {% formfield player.q_gender %}
+            {% formfield player.q_occupation with label="What is your parents' (guardians') main occupation?" %}
+            {% formfield player.q_income with label="What is your parents' (guardians') combined monthly income?" %}
+            {% formfield player.q_education_father with label="What is your father's highest level of education?" %}
+            {% formfield player.q_education_mother with label="What is your mother's highest level of education?" %}
+
         </div>
     </div>
 

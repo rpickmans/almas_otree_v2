@@ -39,13 +39,44 @@ class Player(BasePlayer):
         self.payoff = 0
 
     q_country = CountryField(verbose_name='What is your country of citizenship?')
+
     q_age = models.PositiveIntegerField(verbose_name='What is your age?',
                                         choices=range(13, 125),
                                         initial=None)
+
     q_gender = models.CharField(initial=None,
                                 choices=['Male', 'Female'],
                                 verbose_name='What is your gender?',
                                 widget=widgets.RadioSelect())
+
+    q_occupation = models.CharField(widget=widgets.RadioSelect(),
+                                    choices=["wage-employed", "self-employed", "unemployed"]
+                                    )
+
+    q_income = models.CharField(widget=widgets.RadioSelect(),
+                                choices=["Less than Ksh.10,000",
+                                         "Ksh.10,000 - Ksh. 30,000",
+                                         "Ksh. 30,000 - Ksh. 60,000",
+                                         "Ksh. 60,000 - Ksh.100,000",
+                                         "More than Ksh.100,000",
+                                         "Don’t know",
+                                         ])
+
+    q_education_father = models.CharField(widget=widgets.RadioSelect(),
+                                          choices=["Completed Primary",
+                                                   "Completed Secondary",
+                                                   "Completed technical college",
+                                                   "Completed University",
+                                                   "Other",
+                                                   ])
+
+    q_education_mother = models.CharField(widget=widgets.RadioSelect(),
+                                          choices=["Completed Primary",
+                                                   "Completed Secondary",
+                                                   "Completed technical college",
+                                                   "Completed University",
+                                                   "Other",
+                                                   ])
 
     crt_bat = models.PositiveIntegerField()
     crt_widget = models.PositiveIntegerField()
