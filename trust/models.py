@@ -30,7 +30,7 @@ interesting measure to study in itself.
 class Constants(BaseConstants):
     name_in_url = 'trust'
     players_per_group = 2
-    num_rounds = 2
+    num_rounds = 1
 
     # Initial amount allocated to each player
     amount_allocated = c(50)
@@ -46,6 +46,7 @@ class Group(BaseGroup):
         for p in self.get_players():
             p.payoff = int(Constants.amount_allocated) - int(p.sent_amount) + int(p.get_other_player().sent_back_amount)
             p.participant.vars["carrying_payoff"] += p.payoff
+
 
 class Player(BasePlayer):
     sent_amount = models.CurrencyField(

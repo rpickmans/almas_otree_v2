@@ -80,12 +80,12 @@ class ResultsWaitPage(WaitPage):
         self.group.set_payoffs()
 
 
-class RoundNumber(Page):
-    def is_displayed(self):
-        if self.subsession.round_number == 1:
-            return True
-        else:
-            return False
+# class RoundNumber(Page):
+#     def is_displayed(self):
+#         if self.subsession.round_number == 1:
+#             return True
+#         else:
+#             return False
 
 page_sequence = [
         Introduction,
@@ -93,5 +93,5 @@ page_sequence = [
         ShuffleWaitPage,
         SendBack,
         ResultsWaitPage,
-        RoundNumber
+        # RoundNumber
     ]
