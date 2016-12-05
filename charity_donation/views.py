@@ -29,12 +29,9 @@ class Donate(Page):
 
         charity = random.choice(charities)
         self.player.charity_allocated = charity
-
         return {
             'charity': charity,
             'carrying_payoff': self.player.participant.vars["main_carrying_payoff"]
-        }
-
 
 class ResultsWaitPage(WaitPage):
 

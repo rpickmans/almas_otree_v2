@@ -41,3 +41,4 @@ class Group(BaseGroup):
 class Player(BasePlayer):
     donated_amount = models.CurrencyField(choices=range(0, 250 + 1, 50))
     charity_allocated = models.CharField()
+    charity = models.CharField()
