@@ -35,6 +35,7 @@ class Group(BaseGroup):
     def set_payoff(self):
         for p in self.get_players():
             p.participant.vars["carrying_payoff"] -= p.donated_amount
+            p.participant.vars["main_carrying_payoff"] -= p.donated_amount
 
 
 class Player(BasePlayer):

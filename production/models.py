@@ -73,8 +73,6 @@ class Group(BaseGroup):
     def set_sliders_total(self):
         for p in self.get_players():
             p.participant.vars["total_correct"] = p.correct_sliders
-            p.participant.vars["main_carrying_payoff"] = p.correct_sliders
-
 
 class Player(BasePlayer):
     # pratice sliders
