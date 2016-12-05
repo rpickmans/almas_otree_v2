@@ -32,6 +32,7 @@ class Donate(Page):
         return {
             'charity': charity,
             'carrying_payoff': self.player.participant.vars["main_carrying_payoff"]
+        }
 
 class ResultsWaitPage(WaitPage):
 
