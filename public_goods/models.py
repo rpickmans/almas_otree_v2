@@ -50,9 +50,11 @@ class Group(BaseGroup):
             if p.guess_correct():
                 p.payoff = (Constants.endowment - p.contribution) + self.individual_share + Constants.guess_correct
                 p.participant.vars["carrying_payoff"] += p.payoff
+                p.participant.vars["main_carrying_payoff"] += p.payoff
             else:
                 p.payoff = (Constants.endowment - p.contribution) + self.individual_share
                 p.participant.vars["carrying_payoff"] += p.payoff
+                p.participant.vars["main_carrying_payoff"] += p.payoff
 
 
 class Player(BasePlayer):

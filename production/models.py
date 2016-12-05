@@ -27,6 +27,7 @@ class Constants(BaseConstants):
 class Subsession(BaseSubsession):
     def before_session_starts(self):
         for g in self.get_players():
+            g.participant.vars["main_carrying_payoff"] = 0
             g.random_slider_value_one = random.randint(1,100)
             g.random_slider_value_two = random.randint(1,100)
             g.random_slider_value_three = random.randint(1,100)
@@ -72,6 +73,7 @@ class Group(BaseGroup):
     def set_sliders_total(self):
         for p in self.get_players():
             p.participant.vars["total_correct"] = p.correct_sliders
+            p.participant.vars["main_carrying_payoff"] = p.correct_sliders
 
 
 class Player(BasePlayer):

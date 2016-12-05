@@ -46,6 +46,7 @@ class Group(BaseGroup):
         for p in self.get_players():
             p.payoff = int(Constants.amount_allocated) - int(p.sent_amount) + int(p.get_other_player().sent_back_amount)
             p.participant.vars["carrying_payoff"] += p.payoff
+            p.participant.vars["main_carrying_payoff"] += p.payoff
 
 
 class Player(BasePlayer):

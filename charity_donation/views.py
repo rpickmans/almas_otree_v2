@@ -27,8 +27,11 @@ class Donate(Page):
                     "Huruma Childrens Home Ngong",
                     "Baraka Childrens Home Mombasa"]
 
+        charity = random.choice(charities)
+        self.player.charity_allocated = charity
+
         return {
-            'charity': random.choice(charities),
+            'charity': charity,
             'carrying_payoff': self.player.participant.vars["carrying_payoff"]
         }
 
