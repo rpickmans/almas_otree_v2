@@ -46,7 +46,6 @@ class Group(BaseGroup):
     def set_player_destroyed(self):
         for p in self.get_players():
             p.destroyed = p.amount_to_destroy + random.randrange(1, 4)
-            p.participant.vars["ravens_points"] -= p.amount_to_destroy + random.randrange(1, 4)
 
 
 class Player(BasePlayer):
