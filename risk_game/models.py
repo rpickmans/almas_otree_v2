@@ -42,6 +42,7 @@ class Group(BaseGroup):
                 p.payoff = 80
                 p.participant.vars["carrying_payoff"] += p.payoff
                 p.participant.vars["main_carrying_payoff"] += p.payoff
+
             elif p.decision == "Coin 2":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 70
@@ -51,6 +52,7 @@ class Group(BaseGroup):
                     p.payoff = 110
                     p.participant.vars["carrying_payoff"] += p.payoff
                     p.participant.vars["main_carrying_payoff"] += p.payoff
+
             elif p.decision == "Coin 3":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 60
@@ -58,6 +60,9 @@ class Group(BaseGroup):
                     p.participant.vars["main_carrying_payoff"] += p.payoff
                 else:
                     p.payoff = 140
+                    p.participant.vars["carrying_payoff"] += p.payoff
+                    p.participant.vars["main_carrying_payoff"] += p.payoff
+
             elif p.decision == "Coin 4":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 50
@@ -67,6 +72,7 @@ class Group(BaseGroup):
                     p.payoff = 170
                     p.participant.vars["carrying_payoff"] += p.payoff
                     p.participant.vars["main_carrying_payoff"] += p.payoff
+
             elif p.decision == "Coin 5":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 40
@@ -76,6 +82,7 @@ class Group(BaseGroup):
                     p.payoff = 200
                     p.participant.vars["carrying_payoff"] += p.payoff
                     p.participant.vars["main_carrying_payoff"] += p.payoff
+
             elif p.decision == "Coin 6":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 30

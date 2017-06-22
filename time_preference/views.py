@@ -14,18 +14,19 @@ class Introduction(Page):
         return self.subsession.round_number == 1
 
 
-class  QuestionOne(Page):
+class QuestionOne(Page):
     form_model = models.Player
-    l1=['q11', 'q12', 'q13', 'q14', 'q15', 'q16']
+    l1 = ['q11', 'q12', 'q13', 'q14', 'q15', 'q16']
     shuffle(l1)
     form_fields = l1
 
 
-class  QuestionTwo(Page):
+class QuestionTwo(Page):
     form_model = models.Player
-    l2=['q21', 'q22', 'q23', 'q24', 'q25', 'q26']
+    l2 = ['q21', 'q22', 'q23', 'q24', 'q25', 'q26']
     shuffle(l2)
     form_fields = l2
+
 
 class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
