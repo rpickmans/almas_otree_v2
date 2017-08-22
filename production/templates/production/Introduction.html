@@ -6,23 +6,21 @@
 
 {% block content %}
 
-<div class="panel panel-default">
-  <div class="panel-body">
-        <p>
-              In this part of the experiment, you will earn money from conducting a task.
-              The final payment will depend on your performance and also decisions made by
-              you and another participant after the task. We will now describe the task to you.
-        </p>
-        <p>
-              You will be asked to move a slider to match the goal number given to you.
-              Try to correctly match the number to the goal as many times as you can within
-              the time allotted.
-        </p>
-        <p>
-              If you have any questions, please raise your hand and an assistant will come to you.
-        </p>
-  </div>
-</div>
-<p><strong>Please click "Next" to continue</strong></p>
-{% next_button %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>
+                In this part of the experiment, you earn money from conducting a sequence of tasks over 3 minutes.
+            </p>
+            <p>
+                For each task, you are asked to move a slider on the right to match an image shown to you on the left.
+                Try to correctly move the slider to match the goal as many times as you can, within 3 minutes. The more
+                times you match the slider correctly, the higher your earnings.
+            </p>
+            <p>
+                There will be a practice round before the actual task begins.
+            </p>
+        </div>
+    </div>
+    <p><strong>Please click "Next" to continue</strong></p>
+    {% next_button %}
 {% endblock %}

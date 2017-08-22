@@ -1,0 +1,934 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADMIN_PASSWORD	../settings.py	/^ADMIN_PASSWORD = 'Bus@r@1'$/;"	kind:variable	line:20
+ADMIN_USERNAME	../settings.py	/^ADMIN_USERNAME = 'admin'$/;"	kind:variable	line:19
+AUTH_LEVEL	../settings.py	/^AUTH_LEVEL = environ.get('OTREE_AUTH_LEVEL')$/;"	kind:variable	line:44
+AWS_ACCESS_KEY_ID	../settings.py	/^AWS_ACCESS_KEY_ID = environ.get('AWS_ACCESS_KEY_ID')$/;"	kind:variable	line:47
+AWS_SECRET_ACCESS_KEY	../settings.py	/^AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY')$/;"	kind:variable	line:48
+BASE_DIR	../local_settings_prod.py	/^from settings import BASE_DIR$/;"	kind:namespace	line:2
+BASE_DIR	../settings.py	/^BASE_DIR = os.path.dirname(os.path.abspath(__file__))$/;"	kind:variable	line:10
+BaseConstants	../charity_donation/models.py	/^from otree.constants import BaseConstants$/;"	kind:namespace	line:11
+BaseConstants	../joy_of_destruction/models.py	/^from otree.constants import BaseConstants$/;"	kind:namespace	line:11
+BaseConstants	../payment_info/models.py	/^from otree.constants import BaseConstants$/;"	kind:namespace	line:5
+BaseConstants	../production/models.py	/^from otree.constants import BaseConstants$/;"	kind:namespace	line:11
+BaseConstants	../public_goods/models.py	/^from otree.constants import BaseConstants$/;"	kind:namespace	line:5
+BaseConstants	../ravens/models.py	/^from otree.constants import BaseConstants$/;"	kind:namespace	line:6
+BaseConstants	../real_effort_dictator/models.py	/^from otree.constants import BaseConstants$/;"	kind:namespace	line:11
+BaseConstants	../risk_game/models.py	/^from otree.constants import BaseConstants$/;"	kind:namespace	line:11
+BaseConstants	../survey/models.py	/^from otree.constants import BaseConstants$/;"	kind:namespace	line:5
+BaseConstants	../time_preference/models.py	/^from otree.constants import BaseConstants$/;"	kind:namespace	line:11
+BaseConstants	../trust/models.py	/^from otree.constants import BaseConstants$/;"	kind:namespace	line:5
+BaseGroup	../charity_donation/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BaseGroup	../joy_of_destruction/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BaseGroup	../payment_info/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:6
+BaseGroup	../production/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BaseGroup	../public_goods/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:6
+BaseGroup	../ravens/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:7
+BaseGroup	../real_effort_dictator/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BaseGroup	../risk_game/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BaseGroup	../survey/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:6
+BaseGroup	../time_preference/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BaseGroup	../trust/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:6
+BasePlayer	../charity_donation/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BasePlayer	../joy_of_destruction/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BasePlayer	../payment_info/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:6
+BasePlayer	../production/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BasePlayer	../public_goods/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:6
+BasePlayer	../ravens/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:7
+BasePlayer	../real_effort_dictator/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BasePlayer	../risk_game/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BasePlayer	../survey/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:6
+BasePlayer	../time_preference/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BasePlayer	../trust/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:6
+BaseSubsession	../charity_donation/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BaseSubsession	../joy_of_destruction/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BaseSubsession	../payment_info/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:6
+BaseSubsession	../production/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BaseSubsession	../public_goods/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:6
+BaseSubsession	../ravens/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:7
+BaseSubsession	../real_effort_dictator/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BaseSubsession	../risk_game/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BaseSubsession	../survey/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:6
+BaseSubsession	../time_preference/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:12
+BaseSubsession	../trust/models.py	/^from otree.models import BaseSubsession, BaseGroup, BasePlayer$/;"	kind:namespace	line:6
+Bot	../charity_donation/_builtin/__init__.py	/^class Bot(otree.test.Bot):$/;"	kind:class	line:27
+Bot	../charity_donation/tests.py	/^from ._builtin import Bot$/;"	kind:namespace	line:9
+Bot	../joy_of_destruction/_builtin/__init__.py	/^class Bot(otree.test.Bot):$/;"	kind:class	line:27
+Bot	../joy_of_destruction/tests.py	/^from ._builtin import Bot$/;"	kind:namespace	line:9
+Bot	../payment_info/_builtin/__init__.py	/^class Bot(otree.test.Bot):$/;"	kind:class	line:24
+Bot	../payment_info/tests.py	/^from ._builtin import Bot$/;"	kind:namespace	line:9
+Bot	../production/_builtin/__init__.py	/^class Bot(otree.test.Bot):$/;"	kind:class	line:27
+Bot	../production/tests.py	/^from ._builtin import Bot$/;"	kind:namespace	line:9
+Bot	../public_goods/_builtin/__init__.py	/^class Bot(otree.test.Bot):$/;"	kind:class	line:26
+Bot	../public_goods/tests.py	/^from ._builtin import Bot$/;"	kind:namespace	line:8
+Bot	../ravens/_builtin/__init__.py	/^class Bot(otree.test.Bot):$/;"	kind:class	line:27
+Bot	../ravens/tests.py	/^from ._builtin import Bot$/;"	kind:namespace	line:9
+Bot	../real_effort_dictator/_builtin/__init__.py	/^class Bot(otree.test.Bot):$/;"	kind:class	line:27
+Bot	../real_effort_dictator/tests.py	/^from ._builtin import Bot$/;"	kind:namespace	line:9
+Bot	../risk_game/_builtin/__init__.py	/^class Bot(otree.test.Bot):$/;"	kind:class	line:27
+Bot	../risk_game/tests.py	/^from ._builtin import Bot$/;"	kind:namespace	line:9
+Bot	../survey/_builtin/__init__.py	/^class Bot(otree.test.Bot):$/;"	kind:class	line:25
+Bot	../survey/tests.py	/^from ._builtin import Bot$/;"	kind:namespace	line:9
+Bot	../time_preference/_builtin/__init__.py	/^class Bot(otree.test.Bot):$/;"	kind:class	line:27
+Bot	../time_preference/tests.py	/^from ._builtin import Bot$/;"	kind:namespace	line:9
+Bot	../trust/_builtin/__init__.py	/^class Bot(otree.test.Bot):$/;"	kind:class	line:26
+Bot	../trust/tests.py	/^from ._builtin import Bot$/;"	kind:namespace	line:8
+CHOICES	../ravens/models.py	/^    CHOICES = [("one", ""), ("two", ""), ("three", ""), ("four", ""), ("five", ""), ("six", "")]$/;"	kind:variable	line:49
+CHOICES_8	../ravens/models.py	/^    CHOICES_8 = [("one", ""), ("two", ""), ("three", ""), ("four", ""),$/;"	kind:variable	line:50
+CognitiveReflectionTest	../survey/views.py	/^class CognitiveReflectionTest(Page):$/;"	kind:class	line:20
+Constants	../charity_donation/models.py	/^class Constants(BaseConstants):$/;"	kind:class	line:24
+Constants	../charity_donation/tests.py	/^from .models import Constants$/;"	kind:namespace	line:10
+Constants	../charity_donation/views.py	/^from .models import Constants$/;"	kind:namespace	line:8
+Constants	../joy_of_destruction/models.py	/^class Constants(BaseConstants):$/;"	kind:class	line:25
+Constants	../joy_of_destruction/tests.py	/^from .models import Constants$/;"	kind:namespace	line:10
+Constants	../joy_of_destruction/views.py	/^from .models import Constants$/;"	kind:namespace	line:8
+Constants	../payment_info/models.py	/^class Constants(BaseConstants):$/;"	kind:class	line:20
+Constants	../payment_info/tests.py	/^from .models import Constants$/;"	kind:namespace	line:10
+Constants	../payment_info/views.py	/^from .models import Constants$/;"	kind:namespace	line:6
+Constants	../production/models.py	/^class Constants(BaseConstants):$/;"	kind:class	line:23
+Constants	../production/tests.py	/^from .models import Constants$/;"	kind:namespace	line:10
+Constants	../production/views.py	/^from .models import Constants$/;"	kind:namespace	line:8
+Constants	../public_goods/models.py	/^class Constants(BaseConstants):$/;"	kind:class	line:19
+Constants	../public_goods/tests.py	/^from .models import Constants$/;"	kind:namespace	line:9
+Constants	../public_goods/views.py	/^from .models import Constants$/;"	kind:namespace	line:6
+Constants	../ravens/models.py	/^class Constants(BaseConstants):$/;"	kind:class	line:17
+Constants	../ravens/tests.py	/^from .models import Constants$/;"	kind:namespace	line:10
+Constants	../ravens/views.py	/^from .models import Constants$/;"	kind:namespace	line:8
+Constants	../real_effort_dictator/models.py	/^class Constants(BaseConstants):$/;"	kind:class	line:23
+Constants	../real_effort_dictator/tests.py	/^from .models import Constants$/;"	kind:namespace	line:10
+Constants	../real_effort_dictator/views.py	/^from .models import Constants$/;"	kind:namespace	line:8
+Constants	../risk_game/models.py	/^class Constants(BaseConstants):$/;"	kind:class	line:23
+Constants	../risk_game/tests.py	/^from .models import Constants$/;"	kind:namespace	line:10
+Constants	../risk_game/views.py	/^from .models import Constants$/;"	kind:namespace	line:8
+Constants	../survey/models.py	/^class Constants(BaseConstants):$/;"	kind:class	line:21
+Constants	../survey/tests.py	/^from .models import Constants$/;"	kind:namespace	line:10
+Constants	../survey/views.py	/^from .models import Constants$/;"	kind:namespace	line:6
+Constants	../time_preference/models.py	/^class Constants(BaseConstants):$/;"	kind:class	line:25
+Constants	../time_preference/tests.py	/^from .models import Constants$/;"	kind:namespace	line:10
+Constants	../time_preference/views.py	/^from .models import Constants$/;"	kind:namespace	line:8
+Constants	../trust/models.py	/^class Constants(BaseConstants):$/;"	kind:class	line:30
+Constants	../trust/tests.py	/^from .models import Constants$/;"	kind:namespace	line:9
+Constants	../trust/views.py	/^from .models import Constants$/;"	kind:namespace	line:8
+Contribute	../public_goods/views.py	/^class Contribute(Page):$/;"	kind:class	line:14
+ContributeWaitPage	../public_goods/views.py	/^class ContributeWaitPage(WaitPage):$/;"	kind:class	line:24
+CountryField	../survey/models.py	/^from django_countries.fields import CountryField$/;"	kind:namespace	line:13
+DATABASES	../local_settings_prod.py	/^DATABASES = {$/;"	kind:variable	line:5
+DEBUG	../settings.py	/^    DEBUG = False$/;"	kind:variable	line:15
+DEBUG	../settings.py	/^    DEBUG = True$/;"	kind:variable	line:17
+Decide	../risk_game/views.py	/^class Decide(Page):$/;"	kind:class	line:15
+Demographics	../survey/views.py	/^class Demographics(Page):$/;"	kind:class	line:9
+Destroy	../joy_of_destruction/views.py	/^class Destroy(Page):$/;"	kind:class	line:15
+Donate	../charity_donation/views.py	/^class Donate(Page):$/;"	kind:class	line:12
+Group	../charity_donation/models.py	/^class Group(BaseGroup):$/;"	kind:class	line:34
+Group	../joy_of_destruction/models.py	/^class Group(BaseGroup):$/;"	kind:class	line:36
+Group	../payment_info/models.py	/^class Group(BaseGroup):$/;"	kind:class	line:33
+Group	../production/models.py	/^class Group(BaseGroup):$/;"	kind:class	line:47
+Group	../public_goods/models.py	/^class Group(BaseGroup):$/;"	kind:class	line:39
+Group	../ravens/models.py	/^class Group(BaseGroup):$/;"	kind:class	line:27
+Group	../real_effort_dictator/models.py	/^class Group(BaseGroup):$/;"	kind:class	line:34
+Group	../risk_game/models.py	/^class Group(BaseGroup):$/;"	kind:class	line:33
+Group	../survey/models.py	/^class Group(BaseGroup):$/;"	kind:class	line:31
+Group	../time_preference/models.py	/^class Group(BaseGroup):$/;"	kind:class	line:35
+Group	../trust/models.py	/^class Group(BaseGroup):$/;"	kind:class	line:44
+Guess	../public_goods/views.py	/^class Guess(Page):$/;"	kind:class	line:28
+GuessWaitPage	../public_goods/views.py	/^class GuessWaitPage(WaitPage):$/;"	kind:class	line:36
+INSTALLED_APPS	../settings.py	/^INSTALLED_APPS = []$/;"	kind:variable	line:61
+Intro	../real_effort_dictator/views.py	/^class Intro(Page):$/;"	kind:class	line:43
+Introduction	../joy_of_destruction/views.py	/^class Introduction(Page):$/;"	kind:class	line:11
+Introduction	../production/views.py	/^class Introduction(Page):$/;"	kind:class	line:11
+Introduction	../public_goods/views.py	/^class Introduction(Page):$/;"	kind:class	line:9
+Introduction	../ravens/views.py	/^class Introduction(Page):$/;"	kind:class	line:11
+Introduction	../risk_game/views.py	/^class Introduction(Page):$/;"	kind:class	line:11
+Introduction	../time_preference/views.py	/^class Introduction(Page):$/;"	kind:class	line:12
+Introduction	../trust/views.py	/^class Introduction(Page):$/;"	kind:class	line:11
+LANGUAGE_CODE	../settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	kind:variable	line:58
+Offer	../real_effort_dictator/views.py	/^class Offer(Page):$/;"	kind:class	line:52
+PAGE_FOOTER	../settings.py	/^PAGE_FOOTER = ''$/;"	kind:variable	line:27
+Page	../charity_donation/_builtin/__init__.py	/^class Page(otree.views.Page):$/;"	kind:class	line:9
+Page	../charity_donation/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:7
+Page	../joy_of_destruction/_builtin/__init__.py	/^class Page(otree.views.Page):$/;"	kind:class	line:9
+Page	../joy_of_destruction/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:7
+Page	../payment_info/_builtin/__init__.py	/^class Page(otree.views.Page):$/;"	kind:class	line:6
+Page	../payment_info/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:4
+Page	../production/_builtin/__init__.py	/^class Page(otree.views.Page):$/;"	kind:class	line:9
+Page	../production/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:7
+Page	../public_goods/_builtin/__init__.py	/^class Page(otree.views.Page):$/;"	kind:class	line:8
+Page	../public_goods/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:4
+Page	../ravens/_builtin/__init__.py	/^class Page(otree.views.Page):$/;"	kind:class	line:9
+Page	../ravens/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:7
+Page	../real_effort_dictator/_builtin/__init__.py	/^class Page(otree.views.Page):$/;"	kind:class	line:9
+Page	../real_effort_dictator/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:7
+Page	../risk_game/_builtin/__init__.py	/^class Page(otree.views.Page):$/;"	kind:class	line:9
+Page	../risk_game/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:7
+Page	../survey/_builtin/__init__.py	/^class Page(otree.views.Page):$/;"	kind:class	line:7
+Page	../survey/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:4
+Page	../time_preference/_builtin/__init__.py	/^class Page(otree.views.Page):$/;"	kind:class	line:9
+Page	../time_preference/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:7
+Page	../trust/_builtin/__init__.py	/^class Page(otree.views.Page):$/;"	kind:class	line:8
+Page	../trust/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:6
+PaymentInfo	../payment_info/views.py	/^class PaymentInfo(Page):$/;"	kind:class	line:9
+Player	../charity_donation/models.py	/^class Player(BasePlayer):$/;"	kind:class	line:41
+Player	../joy_of_destruction/models.py	/^class Player(BasePlayer):$/;"	kind:class	line:51
+Player	../payment_info/models.py	/^class Player(BasePlayer):$/;"	kind:class	line:36
+Player	../production/models.py	/^class Player(BasePlayer):$/;"	kind:class	line:88
+Player	../public_goods/models.py	/^class Player(BasePlayer):$/;"	kind:class	line:60
+Player	../ravens/models.py	/^class Player(BasePlayer):$/;"	kind:class	line:46
+Player	../real_effort_dictator/models.py	/^class Player(BasePlayer):$/;"	kind:class	line:77
+Player	../risk_game/models.py	/^class Player(BasePlayer):$/;"	kind:class	line:97
+Player	../survey/models.py	/^class Player(BasePlayer):$/;"	kind:class	line:35
+Player	../time_preference/models.py	/^class Player(BasePlayer):$/;"	kind:class	line:51
+Player	../trust/models.py	/^class Player(BasePlayer):$/;"	kind:class	line:52
+PlayerBot	../charity_donation/tests.py	/^class PlayerBot(Bot):$/;"	kind:class	line:13
+PlayerBot	../joy_of_destruction/tests.py	/^class PlayerBot(Bot):$/;"	kind:class	line:13
+PlayerBot	../payment_info/tests.py	/^class PlayerBot(Bot):$/;"	kind:class	line:13
+PlayerBot	../production/tests.py	/^class PlayerBot(Bot):$/;"	kind:class	line:13
+PlayerBot	../public_goods/tests.py	/^class PlayerBot(Bot):$/;"	kind:class	line:13
+PlayerBot	../ravens/tests.py	/^class PlayerBot(Bot):$/;"	kind:class	line:13
+PlayerBot	../real_effort_dictator/tests.py	/^class PlayerBot(Bot):$/;"	kind:class	line:13
+PlayerBot	../risk_game/tests.py	/^class PlayerBot(Bot):$/;"	kind:class	line:13
+PlayerBot	../survey/tests.py	/^class PlayerBot(Bot):$/;"	kind:class	line:13
+PlayerBot	../time_preference/tests.py	/^class PlayerBot(Bot):$/;"	kind:class	line:13
+PlayerBot	../trust/tests.py	/^class PlayerBot(Bot):$/;"	kind:class	line:13
+PracticeSlider	../production/views.py	/^class PracticeSlider(Page):$/;"	kind:class	line:16
+QuestionOne	../time_preference/views.py	/^class QuestionOne(Page):$/;"	kind:class	line:17
+QuestionTwo	../time_preference/views.py	/^class QuestionTwo(Page):$/;"	kind:class	line:24
+REAL_WORLD_CURRENCY_CODE	../settings.py	/^REAL_WORLD_CURRENCY_CODE = 'KSH '$/;"	kind:variable	line:52
+RavenFive	../ravens/views.py	/^class RavenFive(Page):$/;"	kind:class	line:47
+RavenFour	../ravens/views.py	/^class RavenFour(Page):$/;"	kind:class	line:39
+RavenOne	../ravens/views.py	/^class RavenOne(Page):$/;"	kind:class	line:15
+RavenSix	../ravens/views.py	/^class RavenSix(Page):$/;"	kind:class	line:55
+RavenThree	../ravens/views.py	/^class RavenThree(Page):$/;"	kind:class	line:31
+RavenTwo	../ravens/views.py	/^class RavenTwo(Page):$/;"	kind:class	line:23
+Results	../charity_donation/views.py	/^class Results(Page):$/;"	kind:class	line:43
+ResultsWaitPage	../charity_donation/views.py	/^class ResultsWaitPage(WaitPage):$/;"	kind:class	line:37
+ResultsWaitPage	../joy_of_destruction/views.py	/^class ResultsWaitPage(WaitPage):$/;"	kind:class	line:28
+ResultsWaitPage	../production/views.py	/^class ResultsWaitPage(WaitPage):$/;"	kind:class	line:59
+ResultsWaitPage	../public_goods/views.py	/^class ResultsWaitPage(WaitPage):$/;"	kind:class	line:40
+ResultsWaitPage	../ravens/views.py	/^class ResultsWaitPage(WaitPage):$/;"	kind:class	line:63
+ResultsWaitPage	../real_effort_dictator/views.py	/^class ResultsWaitPage(WaitPage):$/;"	kind:class	line:73
+ResultsWaitPage	../risk_game/views.py	/^class ResultsWaitPage(WaitPage):$/;"	kind:class	line:20
+ResultsWaitPage	../time_preference/views.py	/^class ResultsWaitPage(WaitPage):$/;"	kind:class	line:31
+ResultsWaitPage	../trust/views.py	/^class ResultsWaitPage(WaitPage):$/;"	kind:class	line:77
+SECRET_KEY	../settings.py	/^SECRET_KEY = 'zzzzzzzzzzzzzzzzzzzzzzzzzzz'$/;"	kind:variable	line:25
+SESSION_CONFIGS	../local_settings_prod.py	/^SESSION_CONFIGS = [$/;"	kind:variable	line:12
+SESSION_CONFIGS	../local_settings_sample.py	/^SESSION_CONFIGS = [$/;"	kind:variable	line:1
+SESSION_CONFIG_DEFAULTS	../settings.py	/^SESSION_CONFIG_DEFAULTS = {$/;"	kind:variable	line:99
+STATIC_URL	../settings.py	/^STATIC_URL = "\/static\/"$/;"	kind:variable	line:119
+Send	../trust/views.py	/^class Send(Page):$/;"	kind:class	line:20
+SendBack	../trust/views.py	/^class SendBack(Page):$/;"	kind:class	line:58
+ShuffleWaitPage	../real_effort_dictator/views.py	/^class ShuffleWaitPage(WaitPage):$/;"	kind:class	line:11
+ShuffleWaitPage	../trust/views.py	/^class ShuffleWaitPage(WaitPage):$/;"	kind:class	line:26
+Slider	../production/views.py	/^class Slider(Page):$/;"	kind:class	line:38
+Subsession	../charity_donation/models.py	/^class Subsession(BaseSubsession):$/;"	kind:class	line:30
+Subsession	../joy_of_destruction/models.py	/^class Subsession(BaseSubsession):$/;"	kind:class	line:32
+Subsession	../payment_info/models.py	/^class Subsession(BaseSubsession):$/;"	kind:class	line:25
+Subsession	../production/models.py	/^class Subsession(BaseSubsession):$/;"	kind:class	line:29
+Subsession	../public_goods/models.py	/^class Subsession(BaseSubsession):$/;"	kind:class	line:33
+Subsession	../ravens/models.py	/^class Subsession(BaseSubsession):$/;"	kind:class	line:23
+Subsession	../real_effort_dictator/models.py	/^class Subsession(BaseSubsession):$/;"	kind:class	line:30
+Subsession	../risk_game/models.py	/^class Subsession(BaseSubsession):$/;"	kind:class	line:29
+Subsession	../survey/models.py	/^class Subsession(BaseSubsession):$/;"	kind:class	line:27
+Subsession	../time_preference/models.py	/^class Subsession(BaseSubsession):$/;"	kind:class	line:31
+Subsession	../trust/models.py	/^class Subsession(BaseSubsession):$/;"	kind:class	line:40
+USE_POINTS	../local_settings_prod.py	/^USE_POINTS = False$/;"	kind:variable	line:11
+USE_POINTS	../settings.py	/^USE_POINTS = False$/;"	kind:variable	line:53
+WaitPage	../charity_donation/_builtin/__init__.py	/^class WaitPage(otree.views.WaitPage):$/;"	kind:class	line:18
+WaitPage	../charity_donation/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:7
+WaitPage	../joy_of_destruction/_builtin/__init__.py	/^class WaitPage(otree.views.WaitPage):$/;"	kind:class	line:18
+WaitPage	../joy_of_destruction/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:7
+WaitPage	../payment_info/_builtin/__init__.py	/^class WaitPage(otree.views.WaitPage):$/;"	kind:class	line:15
+WaitPage	../payment_info/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:4
+WaitPage	../production/_builtin/__init__.py	/^class WaitPage(otree.views.WaitPage):$/;"	kind:class	line:18
+WaitPage	../production/views.py	/^class WaitPage(WaitPage):$/;"	kind:class	line:32
+WaitPage	../production/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:7
+WaitPage	../public_goods/_builtin/__init__.py	/^class WaitPage(otree.views.WaitPage):$/;"	kind:class	line:17
+WaitPage	../public_goods/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:4
+WaitPage	../ravens/_builtin/__init__.py	/^class WaitPage(otree.views.WaitPage):$/;"	kind:class	line:18
+WaitPage	../ravens/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:7
+WaitPage	../real_effort_dictator/_builtin/__init__.py	/^class WaitPage(otree.views.WaitPage):$/;"	kind:class	line:18
+WaitPage	../real_effort_dictator/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:7
+WaitPage	../risk_game/_builtin/__init__.py	/^class WaitPage(otree.views.WaitPage):$/;"	kind:class	line:18
+WaitPage	../risk_game/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:7
+WaitPage	../survey/_builtin/__init__.py	/^class WaitPage(otree.views.WaitPage):$/;"	kind:class	line:16
+WaitPage	../survey/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:4
+WaitPage	../time_preference/_builtin/__init__.py	/^class WaitPage(otree.views.WaitPage):$/;"	kind:class	line:18
+WaitPage	../time_preference/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:7
+WaitPage	../trust/_builtin/__init__.py	/^class WaitPage(otree.views.WaitPage):$/;"	kind:class	line:17
+WaitPage	../trust/views.py	/^from ._builtin import Page, WaitPage$/;"	kind:namespace	line:6
+__init__.py	../charity_donation/__init__.py	1;"	kind:file	line:1
+__init__.py	../charity_donation/_builtin/__init__.py	1;"	kind:file	line:1
+__init__.py	../charity_donation/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	../joy_of_destruction/__init__.py	1;"	kind:file	line:1
+__init__.py	../joy_of_destruction/_builtin/__init__.py	1;"	kind:file	line:1
+__init__.py	../joy_of_destruction/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	../payment_info/__init__.py	1;"	kind:file	line:1
+__init__.py	../payment_info/_builtin/__init__.py	1;"	kind:file	line:1
+__init__.py	../payment_info/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	../production/__init__.py	1;"	kind:file	line:1
+__init__.py	../production/_builtin/__init__.py	1;"	kind:file	line:1
+__init__.py	../production/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	../public_goods/__init__.py	1;"	kind:file	line:1
+__init__.py	../public_goods/_builtin/__init__.py	1;"	kind:file	line:1
+__init__.py	../public_goods/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	../ravens/__init__.py	1;"	kind:file	line:1
+__init__.py	../ravens/_builtin/__init__.py	1;"	kind:file	line:1
+__init__.py	../ravens/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	../real_effort_dictator/__init__.py	1;"	kind:file	line:1
+__init__.py	../real_effort_dictator/_builtin/__init__.py	1;"	kind:file	line:1
+__init__.py	../real_effort_dictator/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	../risk_game/__init__.py	1;"	kind:file	line:1
+__init__.py	../risk_game/_builtin/__init__.py	1;"	kind:file	line:1
+__init__.py	../risk_game/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	../survey/__init__.py	1;"	kind:file	line:1
+__init__.py	../survey/_builtin/__init__.py	1;"	kind:file	line:1
+__init__.py	../survey/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	../time_preference/__init__.py	1;"	kind:file	line:1
+__init__.py	../time_preference/_builtin/__init__.py	1;"	kind:file	line:1
+__init__.py	../time_preference/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	../trust/__init__.py	1;"	kind:file	line:1
+__init__.py	../trust/_builtin/__init__.py	1;"	kind:file	line:1
+__init__.py	../trust/migrations/__init__.py	1;"	kind:file	line:1
+after_all_players_arrive	../charity_donation/views.py	/^    def after_all_players_arrive(self):$/;"	kind:member	line:39
+after_all_players_arrive	../joy_of_destruction/views.py	/^    def after_all_players_arrive(self):$/;"	kind:member	line:30
+after_all_players_arrive	../production/views.py	/^    def after_all_players_arrive(self):$/;"	kind:member	line:34
+after_all_players_arrive	../production/views.py	/^    def after_all_players_arrive(self):$/;"	kind:member	line:61
+after_all_players_arrive	../public_goods/views.py	/^    def after_all_players_arrive(self):$/;"	kind:member	line:42
+after_all_players_arrive	../ravens/views.py	/^    def after_all_players_arrive(self):$/;"	kind:member	line:65
+after_all_players_arrive	../real_effort_dictator/views.py	/^    def after_all_players_arrive(self):$/;"	kind:member	line:14
+after_all_players_arrive	../real_effort_dictator/views.py	/^    def after_all_players_arrive(self):$/;"	kind:member	line:75
+after_all_players_arrive	../risk_game/views.py	/^    def after_all_players_arrive(self):$/;"	kind:member	line:22
+after_all_players_arrive	../time_preference/views.py	/^    def after_all_players_arrive(self):$/;"	kind:member	line:32
+after_all_players_arrive	../trust/views.py	/^    def after_all_players_arrive(self):$/;"	kind:member	line:29
+after_all_players_arrive	../trust/views.py	/^    def after_all_players_arrive(self):$/;"	kind:member	line:79
+amount_allocated	../trust/models.py	/^    amount_allocated = c(50)$/;"	kind:variable	line:36
+amount_to_destroy	../joy_of_destruction/models.py	/^    amount_to_destroy = models.IntegerField($/;"	kind:variable	line:52
+author	../charity_donation/models.py	/^author = 'Benson'$/;"	kind:variable	line:15
+author	../joy_of_destruction/models.py	/^author = 'Your name here'$/;"	kind:variable	line:15
+author	../production/models.py	/^author = 'Benson'$/;"	kind:variable	line:16
+author	../ravens/models.py	/^author = 'Benson'$/;"	kind:variable	line:10
+author	../real_effort_dictator/models.py	/^author = 'Your name here'$/;"	kind:variable	line:15
+author	../risk_game/models.py	/^author = 'Benson'$/;"	kind:variable	line:15
+author	../time_preference/models.py	/^author = 'Benson'$/;"	kind:variable	line:15
+before_next_page	../survey/views.py	/^    def before_next_page(self):$/;"	kind:member	line:27
+before_session_starts	../payment_info/models.py	/^    def before_session_starts(self):$/;"	kind:member	line:27
+before_session_starts	../production/models.py	/^    def before_session_starts(self):$/;"	kind:member	line:30
+before_session_starts	../public_goods/models.py	/^    def before_session_starts(self):$/;"	kind:member	line:34
+body_text	../public_goods/views.py	/^    body_text = "Waiting for other participants to contribute."$/;"	kind:variable	line:45
+c	../charity_donation/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+c	../charity_donation/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+c	../charity_donation/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+c	../joy_of_destruction/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+c	../joy_of_destruction/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+c	../joy_of_destruction/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+c	../payment_info/_builtin/__init__.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:4
+c	../payment_info/models.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:9
+c	../payment_info/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+c	../payment_info/views.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:5
+c	../production/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+c	../production/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+c	../production/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+c	../public_goods/_builtin/__init__.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+c	../public_goods/models.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:9
+c	../public_goods/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+c	../public_goods/views.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:5
+c	../ravens/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+c	../ravens/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+c	../real_effort_dictator/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+c	../real_effort_dictator/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+c	../real_effort_dictator/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+c	../risk_game/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+c	../risk_game/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+c	../risk_game/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+c	../survey/_builtin/__init__.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:5
+c	../survey/models.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:9
+c	../survey/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+c	../survey/views.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:5
+c	../time_preference/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+c	../time_preference/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+c	../time_preference/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+c	../trust/_builtin/__init__.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+c	../trust/models.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:9
+c	../trust/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+c	../trust/views.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:4
+charity	../charity_donation/models.py	/^    charity = models.CharField()$/;"	kind:variable	line:44
+charity_allocated	../charity_donation/models.py	/^    charity_allocated = models.CharField()$/;"	kind:variable	line:43
+choice	../real_effort_dictator/models.py	/^from random import randrange as r_range, shuffle, choice$/;"	kind:namespace	line:6
+contribution	../public_goods/models.py	/^    contribution = models.CurrencyField($/;"	kind:variable	line:61
+correct_sliders	../production/models.py	/^    correct_sliders = models.IntegerField()$/;"	kind:variable	line:134
+crt_bat	../survey/models.py	/^    crt_bat = models.PositiveIntegerField()$/;"	kind:variable	line:79
+crt_lake	../survey/models.py	/^    crt_lake = models.PositiveIntegerField()$/;"	kind:variable	line:81
+crt_widget	../survey/models.py	/^    crt_widget = models.PositiveIntegerField()$/;"	kind:variable	line:80
+currency_range	../charity_donation/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+currency_range	../charity_donation/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+currency_range	../charity_donation/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+currency_range	../joy_of_destruction/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+currency_range	../joy_of_destruction/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+currency_range	../joy_of_destruction/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+currency_range	../payment_info/_builtin/__init__.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:4
+currency_range	../payment_info/models.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:9
+currency_range	../payment_info/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+currency_range	../payment_info/views.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:5
+currency_range	../production/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+currency_range	../production/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+currency_range	../production/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+currency_range	../public_goods/_builtin/__init__.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+currency_range	../public_goods/models.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:9
+currency_range	../public_goods/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+currency_range	../public_goods/views.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:5
+currency_range	../ravens/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+currency_range	../ravens/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+currency_range	../real_effort_dictator/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+currency_range	../real_effort_dictator/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+currency_range	../real_effort_dictator/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+currency_range	../risk_game/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+currency_range	../risk_game/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+currency_range	../risk_game/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+currency_range	../survey/_builtin/__init__.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:5
+currency_range	../survey/models.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:9
+currency_range	../survey/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+currency_range	../survey/views.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:5
+currency_range	../time_preference/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+currency_range	../time_preference/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+currency_range	../time_preference/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+currency_range	../trust/_builtin/__init__.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+currency_range	../trust/models.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:9
+currency_range	../trust/tests.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:6
+currency_range	../trust/views.py	/^from otree.common import Currency as c, currency_range$/;"	kind:namespace	line:4
+decision	../risk_game/models.py	/^    decision = models.CharField(choices=decision_choices, widget=widgets.RadioSelect())$/;"	kind:variable	line:106
+decision_choices	../risk_game/models.py	/^    decision_choices = ($/;"	kind:variable	line:98
+default	../local_settings_prod.py	/^        default='sqlite:\/\/\/' + os.path.join(BASE_DIR, 'db.sqlite3')$/;"	kind:variable	line:7
+destroyed	../joy_of_destruction/models.py	/^    destroyed = models.IntegerField(default=0)$/;"	kind:variable	line:57
+division	../charity_donation/models.py	/^from __future__ import division$/;"	kind:namespace	line:3
+division	../charity_donation/tests.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../charity_donation/views.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../joy_of_destruction/models.py	/^from __future__ import division$/;"	kind:namespace	line:3
+division	../joy_of_destruction/tests.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../joy_of_destruction/views.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../payment_info/models.py	/^from __future__ import division$/;"	kind:namespace	line:3
+division	../payment_info/tests.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../payment_info/views.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../production/models.py	/^from __future__ import division$/;"	kind:namespace	line:3
+division	../production/tests.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../production/views.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../public_goods/models.py	/^from __future__ import division$/;"	kind:namespace	line:3
+division	../public_goods/tests.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../public_goods/views.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../ravens/models.py	/^from __future__ import division$/;"	kind:namespace	line:3
+division	../ravens/tests.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../ravens/views.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../real_effort_dictator/models.py	/^from __future__ import division$/;"	kind:namespace	line:3
+division	../real_effort_dictator/tests.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../real_effort_dictator/views.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../risk_game/models.py	/^from __future__ import division$/;"	kind:namespace	line:3
+division	../risk_game/tests.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../risk_game/views.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../survey/models.py	/^from __future__ import division$/;"	kind:namespace	line:3
+division	../survey/tests.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../survey/views.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../time_preference/models.py	/^from __future__ import division$/;"	kind:namespace	line:3
+division	../time_preference/tests.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../time_preference/views.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../trust/models.py	/^from __future__ import division$/;"	kind:namespace	line:3
+division	../trust/tests.py	/^from __future__ import division$/;"	kind:namespace	line:2
+division	../trust/views.py	/^from __future__ import division$/;"	kind:namespace	line:2
+dj_database_url	../local_settings_prod.py	/^import dj_database_url$/;"	kind:namespace	line:3
+dj_database_url	../settings.py	/^import dj_database_url$/;"	kind:namespace	line:4
+donated_amount	../charity_donation/models.py	/^    donated_amount = models.CurrencyField(choices=range(0, 250 + 1, 50))$/;"	kind:variable	line:42
+donated_amount_error_message	../charity_donation/views.py	/^    def donated_amount_error_message(self, value):$/;"	kind:member	line:16
+efficiency_factor	../public_goods/models.py	/^    efficiency_factor = 2$/;"	kind:variable	line:26
+efficiency_factor	../real_effort_dictator/models.py	/^    efficiency_factor = 3$/;"	kind:variable	line:27
+endowment	../public_goods/models.py	/^    endowment = c(75)$/;"	kind:variable	line:25
+environ	../settings.py	/^from os import environ$/;"	kind:namespace	line:2
+execute_from_command_line	../manage.py	/^    from otree.management.cli import execute_from_command_line$/;"	kind:namespace	line:9
+float_as_percentage	../utils.py	/^def float_as_percentage(a):$/;"	kind:function	line:2
+form_fields	../charity_donation/views.py	/^    form_fields = ['donated_amount']$/;"	kind:variable	line:14
+form_fields	../joy_of_destruction/views.py	/^    form_fields = ["amount_to_destroy"]$/;"	kind:variable	line:17
+form_fields	../production/views.py	/^    form_fields = ['player_slider_value_one', 'player_slider_value_two', 'player_slider_value_three', 'player_slider_value_four', 'player_slider_value_five', 'player_slider_value_six', 'player_slider_value_seven', 'player_slider_value_eight', 'player_slider_value_nine', 'player_slider_value_ten']$/;"	kind:variable	line:40
+form_fields	../production/views.py	/^    form_fields = ['practice_slider_value_one', 'practice_slider_value_two']$/;"	kind:variable	line:21
+form_fields	../public_goods/views.py	/^    form_fields = ["guess_one", "guess_two"]$/;"	kind:variable	line:30
+form_fields	../public_goods/views.py	/^    form_fields = ['contribution']$/;"	kind:variable	line:19
+form_fields	../ravens/views.py	/^    form_fields = ["raven_1"]$/;"	kind:variable	line:17
+form_fields	../ravens/views.py	/^    form_fields = ["raven_2"]$/;"	kind:variable	line:25
+form_fields	../ravens/views.py	/^    form_fields = ["raven_3"]$/;"	kind:variable	line:33
+form_fields	../ravens/views.py	/^    form_fields = ["raven_4"]$/;"	kind:variable	line:41
+form_fields	../ravens/views.py	/^    form_fields = ["raven_5"]$/;"	kind:variable	line:49
+form_fields	../ravens/views.py	/^    form_fields = ["raven_6"]$/;"	kind:variable	line:57
+form_fields	../real_effort_dictator/views.py	/^    form_fields = ["keep"]$/;"	kind:variable	line:54
+form_fields	../risk_game/views.py	/^    form_fields = ['decision']$/;"	kind:variable	line:17
+form_fields	../survey/views.py	/^    form_fields = ['crt_bat',$/;"	kind:variable	line:23
+form_fields	../survey/views.py	/^    form_fields = ['q_age',$/;"	kind:variable	line:12
+form_fields	../time_preference/views.py	/^    form_fields = l1$/;"	kind:variable	line:21
+form_fields	../time_preference/views.py	/^    form_fields = l2$/;"	kind:variable	line:28
+form_fields	../trust/views.py	/^    form_fields = ['sent_amount']$/;"	kind:variable	line:23
+form_fields	../trust/views.py	/^    form_fields = ['sent_back_amount']$/;"	kind:variable	line:61
+form_model	../charity_donation/views.py	/^    form_model = models.Player$/;"	kind:variable	line:13
+form_model	../joy_of_destruction/views.py	/^    form_model = models.Player$/;"	kind:variable	line:16
+form_model	../production/views.py	/^    form_model = models.Player$/;"	kind:variable	line:20
+form_model	../production/views.py	/^    form_model = models.Player$/;"	kind:variable	line:39
+form_model	../public_goods/views.py	/^    form_model = models.Player$/;"	kind:variable	line:18
+form_model	../public_goods/views.py	/^    form_model = models.Player$/;"	kind:variable	line:29
+form_model	../ravens/views.py	/^    form_model = models.Player$/;"	kind:variable	line:16
+form_model	../ravens/views.py	/^    form_model = models.Player$/;"	kind:variable	line:24
+form_model	../ravens/views.py	/^    form_model = models.Player$/;"	kind:variable	line:32
+form_model	../ravens/views.py	/^    form_model = models.Player$/;"	kind:variable	line:40
+form_model	../ravens/views.py	/^    form_model = models.Player$/;"	kind:variable	line:48
+form_model	../ravens/views.py	/^    form_model = models.Player$/;"	kind:variable	line:56
+form_model	../real_effort_dictator/views.py	/^    form_model = models.Player$/;"	kind:variable	line:53
+form_model	../risk_game/views.py	/^    form_model = models.Player$/;"	kind:variable	line:16
+form_model	../survey/views.py	/^    form_model = models.Player$/;"	kind:variable	line:11
+form_model	../survey/views.py	/^    form_model = models.Player$/;"	kind:variable	line:22
+form_model	../time_preference/views.py	/^    form_model = models.Player$/;"	kind:variable	line:18
+form_model	../time_preference/views.py	/^    form_model = models.Player$/;"	kind:variable	line:25
+form_model	../trust/views.py	/^    form_model = models.Player$/;"	kind:variable	line:22
+form_model	../trust/views.py	/^    form_model = models.Player$/;"	kind:variable	line:60
+get_other_player	../trust/models.py	/^    def get_other_player(self):$/;"	kind:member	line:63
+guess_correct	../public_goods/models.py	/^    def guess_correct(self):$/;"	kind:member	line:70
+guess_correct	../public_goods/models.py	/^    guess_correct = c(30)$/;"	kind:variable	line:28
+guess_one	../public_goods/models.py	/^    guess_one = models.CurrencyField()$/;"	kind:variable	line:67
+guess_two	../public_goods/models.py	/^    guess_two = models.CurrencyField()$/;"	kind:variable	line:68
+individual_share	../public_goods/models.py	/^    individual_share = models.CurrencyField()$/;"	kind:variable	line:43
+is_displayed	../joy_of_destruction/views.py	/^    def is_displayed(self):$/;"	kind:member	line:19
+is_displayed	../payment_info/views.py	/^    def is_displayed(self):$/;"	kind:member	line:10
+is_displayed	../production/views.py	/^    def is_displayed(self):$/;"	kind:member	line:12
+is_displayed	../production/views.py	/^    def is_displayed(self):$/;"	kind:member	line:17
+is_displayed	../public_goods/views.py	/^    def is_displayed(self):$/;"	kind:member	line:32
+is_displayed	../ravens/views.py	/^    def is_displayed(self):$/;"	kind:member	line:19
+is_displayed	../ravens/views.py	/^    def is_displayed(self):$/;"	kind:member	line:27
+is_displayed	../ravens/views.py	/^    def is_displayed(self):$/;"	kind:member	line:35
+is_displayed	../ravens/views.py	/^    def is_displayed(self):$/;"	kind:member	line:43
+is_displayed	../ravens/views.py	/^    def is_displayed(self):$/;"	kind:member	line:51
+is_displayed	../ravens/views.py	/^    def is_displayed(self):$/;"	kind:member	line:59
+is_displayed	../time_preference/views.py	/^    def is_displayed(self):$/;"	kind:member	line:13
+is_displayed	../trust/views.py	/^    def is_displayed(self):$/;"	kind:member	line:16
+keep	../real_effort_dictator/models.py	/^    keep = models.CurrencyField()$/;"	kind:variable	line:78
+keep_error_message	../real_effort_dictator/views.py	/^    def keep_error_message(self, value):$/;"	kind:member	line:62
+l1	../time_preference/views.py	/^    l1 = ['q11', 'q12', 'q13', 'q14', 'q15', 'q16']$/;"	kind:variable	line:19
+l2	../time_preference/views.py	/^    l2 = ['q21', 'q22', 'q23', 'q24', 'q25', 'q26']$/;"	kind:variable	line:26
+local_settings_prod.py	../local_settings_prod.py	1;"	kind:file	line:1
+local_settings_sample.py	../local_settings_sample.py	1;"	kind:file	line:1
+make_random_toss	../risk_game/models.py	/^    def make_random_toss(self):$/;"	kind:member	line:35
+manage.py	../manage.py	1;"	kind:file	line:1
+min	../trust/models.py	/^        min=c(0),$/;"	kind:variable	line:60
+models	../charity_donation/_builtin/__init__.py	/^from .. import models$/;"	kind:namespace	line:6
+models	../charity_donation/models.py	/^from otree.db import models$/;"	kind:namespace	line:8
+models	../charity_donation/models.py	/^import otree.models$/;"	kind:namespace	line:7
+models	../charity_donation/views.py	/^from . import models$/;"	kind:namespace	line:6
+models	../joy_of_destruction/_builtin/__init__.py	/^from .. import models$/;"	kind:namespace	line:6
+models	../joy_of_destruction/models.py	/^from otree.db import models$/;"	kind:namespace	line:8
+models	../joy_of_destruction/models.py	/^import otree.models$/;"	kind:namespace	line:7
+models	../joy_of_destruction/views.py	/^from . import models$/;"	kind:namespace	line:6
+models	../payment_info/_builtin/__init__.py	/^from .. import models$/;"	kind:namespace	line:1
+models	../payment_info/models.py	/^from otree.db import models$/;"	kind:namespace	line:4
+models	../payment_info/views.py	/^from . import models$/;"	kind:namespace	line:3
+models	../production/_builtin/__init__.py	/^from .. import models$/;"	kind:namespace	line:6
+models	../production/models.py	/^from otree.db import models$/;"	kind:namespace	line:8
+models	../production/models.py	/^import otree.models$/;"	kind:namespace	line:7
+models	../production/views.py	/^from . import models$/;"	kind:namespace	line:6
+models	../public_goods/_builtin/__init__.py	/^from .. import models$/;"	kind:namespace	line:2
+models	../public_goods/models.py	/^from otree.db import models$/;"	kind:namespace	line:4
+models	../public_goods/views.py	/^from . import models$/;"	kind:namespace	line:3
+models	../ravens/_builtin/__init__.py	/^from .. import models$/;"	kind:namespace	line:6
+models	../ravens/models.py	/^from otree.db import models$/;"	kind:namespace	line:4
+models	../ravens/views.py	/^from . import models$/;"	kind:namespace	line:6
+models	../real_effort_dictator/_builtin/__init__.py	/^from .. import models$/;"	kind:namespace	line:6
+models	../real_effort_dictator/models.py	/^from otree.db import models$/;"	kind:namespace	line:8
+models	../real_effort_dictator/models.py	/^import otree.models$/;"	kind:namespace	line:7
+models	../real_effort_dictator/views.py	/^from . import models$/;"	kind:namespace	line:6
+models	../risk_game/_builtin/__init__.py	/^from .. import models$/;"	kind:namespace	line:6
+models	../risk_game/models.py	/^from otree.db import models$/;"	kind:namespace	line:8
+models	../risk_game/models.py	/^import otree.models$/;"	kind:namespace	line:7
+models	../risk_game/views.py	/^from . import models$/;"	kind:namespace	line:6
+models	../survey/_builtin/__init__.py	/^from .. import models$/;"	kind:namespace	line:2
+models	../survey/models.py	/^from otree.db import models$/;"	kind:namespace	line:4
+models	../survey/views.py	/^from . import models$/;"	kind:namespace	line:3
+models	../time_preference/_builtin/__init__.py	/^from .. import models$/;"	kind:namespace	line:6
+models	../time_preference/models.py	/^from otree.db import models$/;"	kind:namespace	line:8
+models	../time_preference/models.py	/^import otree.models$/;"	kind:namespace	line:7
+models	../time_preference/views.py	/^from . import models$/;"	kind:namespace	line:6
+models	../trust/_builtin/__init__.py	/^from .. import models$/;"	kind:namespace	line:2
+models	../trust/models.py	/^from otree.db import models$/;"	kind:namespace	line:4
+models	../trust/views.py	/^from . import models$/;"	kind:namespace	line:7
+models.py	../charity_donation/models.py	1;"	kind:file	line:1
+models.py	../joy_of_destruction/models.py	1;"	kind:file	line:1
+models.py	../payment_info/models.py	1;"	kind:file	line:1
+models.py	../production/models.py	1;"	kind:file	line:1
+models.py	../public_goods/models.py	1;"	kind:file	line:1
+models.py	../ravens/models.py	1;"	kind:file	line:1
+models.py	../real_effort_dictator/models.py	1;"	kind:file	line:1
+models.py	../risk_game/models.py	1;"	kind:file	line:1
+models.py	../survey/models.py	1;"	kind:file	line:1
+models.py	../time_preference/models.py	1;"	kind:file	line:1
+models.py	../trust/models.py	1;"	kind:file	line:1
+mturk_hit_settings	../settings.py	/^mturk_hit_settings = {$/;"	kind:variable	line:77
+multiplication_factor	../trust/models.py	/^    multiplication_factor = 3$/;"	kind:variable	line:37
+name_in_url	../charity_donation/models.py	/^    name_in_url = 'charity_donation'$/;"	kind:variable	line:25
+name_in_url	../joy_of_destruction/models.py	/^    name_in_url = 'joy_of_destruction'$/;"	kind:variable	line:26
+name_in_url	../payment_info/models.py	/^    name_in_url = 'payment_info'$/;"	kind:variable	line:21
+name_in_url	../production/models.py	/^    name_in_url = 'production'$/;"	kind:variable	line:24
+name_in_url	../public_goods/models.py	/^    name_in_url = 'public_goods'$/;"	kind:variable	line:20
+name_in_url	../ravens/models.py	/^    name_in_url = 'ravens'$/;"	kind:variable	line:18
+name_in_url	../real_effort_dictator/models.py	/^    name_in_url = 'real_effort_dictator'$/;"	kind:variable	line:24
+name_in_url	../risk_game/models.py	/^    name_in_url = 'risk_game'$/;"	kind:variable	line:24
+name_in_url	../survey/models.py	/^    name_in_url = 'survey'$/;"	kind:variable	line:22
+name_in_url	../time_preference/models.py	/^    name_in_url = 'time_preference'$/;"	kind:variable	line:26
+name_in_url	../trust/models.py	/^    name_in_url = 'trust'$/;"	kind:variable	line:31
+num_rounds	../charity_donation/models.py	/^    num_rounds = 1$/;"	kind:variable	line:27
+num_rounds	../joy_of_destruction/models.py	/^    num_rounds = 1$/;"	kind:variable	line:28
+num_rounds	../payment_info/models.py	/^    num_rounds = 1$/;"	kind:variable	line:23
+num_rounds	../production/models.py	/^    num_rounds = 1$/;"	kind:variable	line:26
+num_rounds	../public_goods/models.py	/^    num_rounds = 1$/;"	kind:variable	line:22
+num_rounds	../ravens/models.py	/^    num_rounds = 1$/;"	kind:variable	line:20
+num_rounds	../real_effort_dictator/models.py	/^    num_rounds = 1$/;"	kind:variable	line:26
+num_rounds	../risk_game/models.py	/^    num_rounds = 1$/;"	kind:variable	line:26
+num_rounds	../survey/models.py	/^    num_rounds = 1$/;"	kind:variable	line:24
+num_rounds	../time_preference/models.py	/^    num_rounds = 1$/;"	kind:variable	line:28
+num_rounds	../trust/models.py	/^    num_rounds = 1$/;"	kind:variable	line:33
+os	../local_settings_prod.py	/^import os$/;"	kind:namespace	line:1
+os	../manage.py	/^import os$/;"	kind:namespace	line:2
+os	../settings.py	/^import os$/;"	kind:namespace	line:1
+otree	../charity_donation/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+otree	../charity_donation/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+otree	../charity_donation/models.py	/^import otree.models$/;"	kind:namespace	line:7
+otree	../joy_of_destruction/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+otree	../joy_of_destruction/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+otree	../joy_of_destruction/models.py	/^import otree.models$/;"	kind:namespace	line:7
+otree	../payment_info/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:3
+otree	../payment_info/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:2
+otree	../production/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+otree	../production/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+otree	../production/models.py	/^import otree.models$/;"	kind:namespace	line:7
+otree	../public_goods/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:5
+otree	../public_goods/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+otree	../ravens/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+otree	../ravens/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+otree	../real_effort_dictator/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+otree	../real_effort_dictator/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+otree	../real_effort_dictator/models.py	/^import otree.models$/;"	kind:namespace	line:7
+otree	../risk_game/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+otree	../risk_game/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+otree	../risk_game/models.py	/^import otree.models$/;"	kind:namespace	line:7
+otree	../settings.py	/^import otree.settings$/;"	kind:namespace	line:7
+otree	../survey/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+otree	../survey/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+otree	../time_preference/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+otree	../time_preference/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+otree	../time_preference/models.py	/^import otree.models$/;"	kind:namespace	line:7
+otree	../trust/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:5
+otree	../trust/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+page_sequence	../charity_donation/views.py	/^page_sequence = [$/;"	kind:variable	line:49
+page_sequence	../joy_of_destruction/views.py	/^page_sequence = [$/;"	kind:variable	line:35
+page_sequence	../payment_info/views.py	/^page_sequence = [PaymentInfo]$/;"	kind:variable	line:23
+page_sequence	../production/views.py	/^page_sequence = [$/;"	kind:variable	line:67
+page_sequence	../public_goods/views.py	/^page_sequence = [Introduction,$/;"	kind:variable	line:48
+page_sequence	../ravens/views.py	/^page_sequence = [$/;"	kind:variable	line:68
+page_sequence	../real_effort_dictator/views.py	/^page_sequence = [$/;"	kind:variable	line:83
+page_sequence	../risk_game/views.py	/^page_sequence = [$/;"	kind:variable	line:27
+page_sequence	../survey/views.py	/^page_sequence = [$/;"	kind:variable	line:30
+page_sequence	../time_preference/views.py	/^page_sequence = [$/;"	kind:variable	line:36
+page_sequence	../trust/views.py	/^page_sequence = [$/;"	kind:variable	line:90
+play_round	../charity_donation/tests.py	/^    def play_round(self):$/;"	kind:member	line:16
+play_round	../joy_of_destruction/tests.py	/^    def play_round(self):$/;"	kind:member	line:16
+play_round	../payment_info/tests.py	/^    def play_round(self):$/;"	kind:member	line:15
+play_round	../production/tests.py	/^    def play_round(self):$/;"	kind:member	line:16
+play_round	../public_goods/tests.py	/^    def play_round(self):$/;"	kind:member	line:15
+play_round	../ravens/tests.py	/^    def play_round(self):$/;"	kind:member	line:16
+play_round	../real_effort_dictator/tests.py	/^    def play_round(self):$/;"	kind:member	line:16
+play_round	../risk_game/tests.py	/^    def play_round(self):$/;"	kind:member	line:16
+play_round	../survey/tests.py	/^    def play_round(self):$/;"	kind:member	line:15
+play_round	../time_preference/tests.py	/^    def play_round(self):$/;"	kind:member	line:16
+play_round	../trust/tests.py	/^    def play_round(self):$/;"	kind:member	line:15
+player_one_decides	../real_effort_dictator/models.py	/^    def player_one_decides(self):$/;"	kind:member	line:35
+player_slider_value_eight	../production/models.py	/^    player_slider_value_eight = models.IntegerField($/;"	kind:variable	line:110
+player_slider_value_five	../production/models.py	/^    player_slider_value_five = models.IntegerField($/;"	kind:variable	line:104
+player_slider_value_four	../production/models.py	/^    player_slider_value_four = models.IntegerField($/;"	kind:variable	line:102
+player_slider_value_nine	../production/models.py	/^    player_slider_value_nine = models.IntegerField($/;"	kind:variable	line:112
+player_slider_value_one	../production/models.py	/^    player_slider_value_one = models.IntegerField($/;"	kind:variable	line:96
+player_slider_value_seven	../production/models.py	/^    player_slider_value_seven = models.IntegerField($/;"	kind:variable	line:108
+player_slider_value_six	../production/models.py	/^    player_slider_value_six = models.IntegerField($/;"	kind:variable	line:106
+player_slider_value_ten	../production/models.py	/^    player_slider_value_ten = models.IntegerField($/;"	kind:variable	line:114
+player_slider_value_three	../production/models.py	/^    player_slider_value_three = models.IntegerField($/;"	kind:variable	line:100
+player_slider_value_two	../production/models.py	/^    player_slider_value_two = models.IntegerField($/;"	kind:variable	line:98
+player_two_decides	../real_effort_dictator/models.py	/^    def player_two_decides(self):$/;"	kind:member	line:50
+players_per_group	../charity_donation/models.py	/^    players_per_group = None$/;"	kind:variable	line:26
+players_per_group	../joy_of_destruction/models.py	/^    players_per_group = 2$/;"	kind:variable	line:27
+players_per_group	../payment_info/models.py	/^    players_per_group = None$/;"	kind:variable	line:22
+players_per_group	../production/models.py	/^    players_per_group = 3$/;"	kind:variable	line:25
+players_per_group	../public_goods/models.py	/^    players_per_group = 3$/;"	kind:variable	line:21
+players_per_group	../ravens/models.py	/^    players_per_group = None$/;"	kind:variable	line:19
+players_per_group	../real_effort_dictator/models.py	/^    players_per_group = 2$/;"	kind:variable	line:25
+players_per_group	../risk_game/models.py	/^    players_per_group = None$/;"	kind:variable	line:25
+players_per_group	../survey/models.py	/^    players_per_group = None$/;"	kind:variable	line:23
+players_per_group	../time_preference/models.py	/^    players_per_group = None$/;"	kind:variable	line:27
+players_per_group	../trust/models.py	/^    players_per_group = 2$/;"	kind:variable	line:32
+points	../joy_of_destruction/models.py	/^    points = models.IntegerField(default=0)$/;"	kind:variable	line:59
+points	../ravens/models.py	/^    points = models.IntegerField(default=0)$/;"	kind:variable	line:47
+practice_random_slider_value_one	../production/models.py	/^    practice_random_slider_value_one = models.IntegerField()$/;"	kind:variable	line:118
+practice_random_slider_value_two	../production/models.py	/^    practice_random_slider_value_two = models.IntegerField()$/;"	kind:variable	line:119
+practice_slider_value_one	../production/models.py	/^    practice_slider_value_one = models.IntegerField($/;"	kind:variable	line:90
+practice_slider_value_two	../production/models.py	/^    practice_slider_value_two = models.IntegerField($/;"	kind:variable	line:92
+q11	../time_preference/models.py	/^    q11 = models.IntegerField(choices = q11c, verbose_name = "", widget = widgets.RadioSelectHorizontal())$/;"	kind:variable	line:59
+q11c	../time_preference/models.py	/^    q11c = ((100, 'A: 100'),(100, 'B: 100'),)$/;"	kind:variable	line:52
+q12	../time_preference/models.py	/^    q12 = models.IntegerField(choices = q12c, verbose_name = "", widget = widgets.RadioSelectHorizontal())$/;"	kind:variable	line:60
+q12c	../time_preference/models.py	/^    q12c = ((100, 'A: 100'),(120, 'B: 120'),)$/;"	kind:variable	line:53
+q13	../time_preference/models.py	/^    q13 = models.IntegerField(choices = q13c, verbose_name = "", widget = widgets.RadioSelectHorizontal())$/;"	kind:variable	line:61
+q13c	../time_preference/models.py	/^    q13c = ((100, 'A: 100'),(140, 'B: 140'),)$/;"	kind:variable	line:54
+q14	../time_preference/models.py	/^    q14 = models.IntegerField(choices = q14c, verbose_name = "", widget = widgets.RadioSelectHorizontal())$/;"	kind:variable	line:62
+q14c	../time_preference/models.py	/^    q14c = ((100, 'A: 100'),(160, 'B: 160'),)$/;"	kind:variable	line:55
+q15	../time_preference/models.py	/^    q15 = models.IntegerField(choices = q15c, verbose_name = "", widget = widgets.RadioSelectHorizontal())$/;"	kind:variable	line:63
+q15c	../time_preference/models.py	/^    q15c = ((100, 'A: 100'),(180, 'B: 180'),)$/;"	kind:variable	line:56
+q16	../time_preference/models.py	/^    q16 = models.IntegerField(choices = q16c, verbose_name = "", widget = widgets.RadioSelectHorizontal())$/;"	kind:variable	line:64
+q16c	../time_preference/models.py	/^    q16c = ((100, 'A: 100'),(200, 'B: 200'),)$/;"	kind:variable	line:57
+q21	../time_preference/models.py	/^    q21 = models.IntegerField(choices = q11c, verbose_name = "", widget = widgets.RadioSelectHorizontal())$/;"	kind:variable	line:66
+q22	../time_preference/models.py	/^    q22 = models.IntegerField(choices = q12c, verbose_name = "", widget = widgets.RadioSelectHorizontal())$/;"	kind:variable	line:67
+q23	../time_preference/models.py	/^    q23 = models.IntegerField(choices = q13c, verbose_name = "", widget = widgets.RadioSelectHorizontal())$/;"	kind:variable	line:68
+q24	../time_preference/models.py	/^    q24 = models.IntegerField(choices = q14c, verbose_name = "", widget = widgets.RadioSelectHorizontal())$/;"	kind:variable	line:69
+q25	../time_preference/models.py	/^    q25 = models.IntegerField(choices = q15c, verbose_name = "", widget = widgets.RadioSelectHorizontal())$/;"	kind:variable	line:70
+q26	../time_preference/models.py	/^    q26 = models.IntegerField(choices = q16c, verbose_name = "", widget = widgets.RadioSelectHorizontal())$/;"	kind:variable	line:71
+q_age	../survey/models.py	/^    q_age = models.PositiveIntegerField(verbose_name='What is your age?',$/;"	kind:variable	line:41
+q_education_father	../survey/models.py	/^    q_education_father = models.CharField(widget=widgets.RadioSelect(),$/;"	kind:variable	line:63
+q_education_mother	../survey/models.py	/^    q_education_mother = models.CharField(widget=widgets.RadioSelect(),$/;"	kind:variable	line:71
+q_gender	../survey/models.py	/^    q_gender = models.CharField(initial=None,$/;"	kind:variable	line:45
+q_income	../survey/models.py	/^    q_income = models.CharField(widget=widgets.RadioSelect(),$/;"	kind:variable	line:54
+q_occupation	../survey/models.py	/^    q_occupation = models.CharField(widget=widgets.RadioSelect(),$/;"	kind:variable	line:50
+qualification	../settings.py	/^from boto.mturk import qualification$/;"	kind:namespace	line:5
+question	../public_goods/models.py	/^    question = models.CurrencyField()$/;"	kind:variable	line:65
+r_range	../real_effort_dictator/models.py	/^from random import randrange as r_range, shuffle, choice$/;"	kind:namespace	line:6
+random	../charity_donation/models.py	/^import random$/;"	kind:namespace	line:5
+random	../charity_donation/tests.py	/^import random$/;"	kind:namespace	line:4
+random	../charity_donation/views.py	/^import random$/;"	kind:namespace	line:9
+random	../joy_of_destruction/models.py	/^import random$/;"	kind:namespace	line:5
+random	../joy_of_destruction/tests.py	/^import random$/;"	kind:namespace	line:4
+random	../payment_info/models.py	/^import random$/;"	kind:namespace	line:10
+random	../payment_info/tests.py	/^import random$/;"	kind:namespace	line:4
+random	../production/models.py	/^import random$/;"	kind:namespace	line:5
+random	../production/tests.py	/^import random$/;"	kind:namespace	line:4
+random	../public_goods/models.py	/^import random$/;"	kind:namespace	line:10
+random	../public_goods/tests.py	/^import random$/;"	kind:namespace	line:4
+random	../ravens/tests.py	/^import random$/;"	kind:namespace	line:4
+random	../real_effort_dictator/tests.py	/^import random$/;"	kind:namespace	line:4
+random	../risk_game/models.py	/^import random$/;"	kind:namespace	line:5
+random	../risk_game/tests.py	/^import random$/;"	kind:namespace	line:4
+random	../survey/models.py	/^import random$/;"	kind:namespace	line:10
+random	../survey/tests.py	/^import random$/;"	kind:namespace	line:4
+random	../time_preference/models.py	/^import random$/;"	kind:namespace	line:5
+random	../time_preference/tests.py	/^import random$/;"	kind:namespace	line:4
+random	../trust/models.py	/^import random$/;"	kind:namespace	line:10
+random	../trust/tests.py	/^import random$/;"	kind:namespace	line:4
+random_coin_toss	../risk_game/models.py	/^    random_coin_toss = models.CharField()$/;"	kind:variable	line:107
+random_slider_value_eight	../production/models.py	/^    random_slider_value_eight = models.IntegerField()$/;"	kind:variable	line:130
+random_slider_value_five	../production/models.py	/^    random_slider_value_five = models.IntegerField()$/;"	kind:variable	line:126
+random_slider_value_four	../production/models.py	/^    random_slider_value_four = models.IntegerField()$/;"	kind:variable	line:125
+random_slider_value_nine	../production/models.py	/^    random_slider_value_nine = models.IntegerField()$/;"	kind:variable	line:131
+random_slider_value_one	../production/models.py	/^    random_slider_value_one = models.IntegerField()$/;"	kind:variable	line:122
+random_slider_value_seven	../production/models.py	/^    random_slider_value_seven = models.IntegerField()$/;"	kind:variable	line:129
+random_slider_value_six	../production/models.py	/^    random_slider_value_six = models.IntegerField()$/;"	kind:variable	line:128
+random_slider_value_ten	../production/models.py	/^    random_slider_value_ten = models.IntegerField()$/;"	kind:variable	line:132
+random_slider_value_three	../production/models.py	/^    random_slider_value_three = models.IntegerField()$/;"	kind:variable	line:124
+random_slider_value_two	../production/models.py	/^    random_slider_value_two = models.IntegerField()$/;"	kind:variable	line:123
+raven_1	../ravens/models.py	/^    raven_1 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES)$/;"	kind:variable	line:53
+raven_2	../ravens/models.py	/^    raven_2 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES_8)$/;"	kind:variable	line:54
+raven_3	../ravens/models.py	/^    raven_3 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES)$/;"	kind:variable	line:55
+raven_4	../ravens/models.py	/^    raven_4 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES)$/;"	kind:variable	line:56
+raven_5	../ravens/models.py	/^    raven_5 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES_8)$/;"	kind:variable	line:57
+raven_6	../ravens/models.py	/^    raven_6 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES_8)$/;"	kind:variable	line:58
+real_effort_dictator_endowment	../real_effort_dictator/models.py	/^    real_effort_dictator_endowment = models.IntegerField(initial=0)$/;"	kind:variable	line:79
+safe_json	../charity_donation/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+safe_json	../charity_donation/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+safe_json	../joy_of_destruction/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+safe_json	../joy_of_destruction/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+safe_json	../production/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+safe_json	../production/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+safe_json	../ravens/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+safe_json	../real_effort_dictator/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+safe_json	../real_effort_dictator/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+safe_json	../risk_game/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+safe_json	../risk_game/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+safe_json	../time_preference/models.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:10
+safe_json	../time_preference/views.py	/^from otree.common import Currency as c, currency_range, safe_json$/;"	kind:namespace	line:4
+sent_amount	../trust/models.py	/^    sent_amount = models.CurrencyField($/;"	kind:variable	line:53
+sent_back_amount	../trust/models.py	/^    sent_back_amount = models.CurrencyField($/;"	kind:variable	line:58
+sent_back_amount_max	../trust/views.py	/^    def sent_back_amount_max(self):$/;"	kind:member	line:73
+set_correct_sliders	../production/models.py	/^    def set_correct_sliders(self):$/;"	kind:member	line:48
+set_payoff	../charity_donation/models.py	/^    def set_payoff(self):$/;"	kind:member	line:35
+set_payoff	../survey/models.py	/^    def set_payoff(self):$/;"	kind:member	line:37
+set_payoffs	../joy_of_destruction/models.py	/^    def set_payoffs(self):$/;"	kind:member	line:38
+set_payoffs	../public_goods/models.py	/^    def set_payoffs(self):$/;"	kind:member	line:45
+set_payoffs	../ravens/models.py	/^    def set_payoffs(self):$/;"	kind:member	line:29
+set_payoffs	../real_effort_dictator/models.py	/^    def set_payoffs(self):$/;"	kind:member	line:66
+set_payoffs	../risk_game/models.py	/^    def set_payoffs(self):$/;"	kind:member	line:39
+set_payoffs	../time_preference/models.py	/^    def set_payoffs(self):$/;"	kind:member	line:36
+set_payoffs	../trust/models.py	/^    def set_payoffs(self):$/;"	kind:member	line:45
+set_player_destroyed	../joy_of_destruction/models.py	/^    def set_player_destroyed(self):$/;"	kind:member	line:46
+set_sliders_total	../production/models.py	/^    def set_sliders_total(self):$/;"	kind:member	line:83
+settings	../settings.py	/^import otree.settings$/;"	kind:namespace	line:7
+settings.py	../settings.py	1;"	kind:file	line:1
+shuffle	../real_effort_dictator/models.py	/^from random import randrange as r_range, shuffle, choice$/;"	kind:namespace	line:6
+shuffle	../time_preference/views.py	/^from random import shuffle$/;"	kind:namespace	line:9
+sys	../manage.py	/^import sys$/;"	kind:namespace	line:3
+test	../charity_donation/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+test	../joy_of_destruction/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+test	../payment_info/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:3
+test	../production/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+test	../public_goods/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:5
+test	../ravens/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+test	../real_effort_dictator/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+test	../risk_game/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+test	../survey/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+test	../time_preference/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:4
+test	../trust/_builtin/__init__.py	/^import otree.test$/;"	kind:namespace	line:5
+tests.py	../charity_donation/tests.py	1;"	kind:file	line:1
+tests.py	../joy_of_destruction/tests.py	1;"	kind:file	line:1
+tests.py	../payment_info/tests.py	1;"	kind:file	line:1
+tests.py	../production/tests.py	1;"	kind:file	line:1
+tests.py	../public_goods/tests.py	1;"	kind:file	line:1
+tests.py	../ravens/tests.py	1;"	kind:file	line:1
+tests.py	../real_effort_dictator/tests.py	1;"	kind:file	line:1
+tests.py	../risk_game/tests.py	1;"	kind:file	line:1
+tests.py	../survey/tests.py	1;"	kind:file	line:1
+tests.py	../time_preference/tests.py	1;"	kind:file	line:1
+tests.py	../trust/tests.py	1;"	kind:file	line:1
+timeout_seconds	../production/views.py	/^    timeout_seconds = 300$/;"	kind:variable	line:29
+timeout_seconds	../production/views.py	/^    timeout_seconds = 300$/;"	kind:variable	line:56
+timeout_submission	../public_goods/views.py	/^    timeout_submission = {'contribution': c(Constants.endowment\/2)}$/;"	kind:variable	line:21
+total_carrying_payoff	../real_effort_dictator/models.py	/^    def total_carrying_payoff(self):$/;"	kind:member	line:69
+total_contribution	../public_goods/models.py	/^    total_contribution = models.CurrencyField()$/;"	kind:variable	line:41
+utils.py	../utils.py	1;"	kind:file	line:1
+validate_play	../charity_donation/tests.py	/^    def validate_play(self):$/;"	kind:member	line:20
+validate_play	../joy_of_destruction/tests.py	/^    def validate_play(self):$/;"	kind:member	line:20
+validate_play	../payment_info/tests.py	/^    def validate_play(self):$/;"	kind:member	line:18
+validate_play	../production/tests.py	/^    def validate_play(self):$/;"	kind:member	line:20
+validate_play	../public_goods/tests.py	/^    def validate_play(self):$/;"	kind:member	line:27
+validate_play	../ravens/tests.py	/^    def validate_play(self):$/;"	kind:member	line:20
+validate_play	../real_effort_dictator/tests.py	/^    def validate_play(self):$/;"	kind:member	line:20
+validate_play	../risk_game/tests.py	/^    def validate_play(self):$/;"	kind:member	line:20
+validate_play	../survey/tests.py	/^    def validate_play(self):$/;"	kind:member	line:28
+validate_play	../time_preference/tests.py	/^    def validate_play(self):$/;"	kind:member	line:20
+validate_play	../trust/tests.py	/^    def validate_play(self):$/;"	kind:member	line:35
+vars_for_template	../charity_donation/views.py	/^    def vars_for_template(self):$/;"	kind:member	line:20
+vars_for_template	../charity_donation/views.py	/^    def vars_for_template(self):$/;"	kind:member	line:44
+vars_for_template	../joy_of_destruction/views.py	/^    def vars_for_template(self):$/;"	kind:member	line:22
+vars_for_template	../payment_info/views.py	/^    def vars_for_template(self):$/;"	kind:member	line:14
+vars_for_template	../production/views.py	/^    def vars_for_template(self):$/;"	kind:member	line:23
+vars_for_template	../production/views.py	/^    def vars_for_template(self):$/;"	kind:member	line:42
+vars_for_template	../real_effort_dictator/views.py	/^    def vars_for_template(self):$/;"	kind:member	line:45
+vars_for_template	../real_effort_dictator/views.py	/^    def vars_for_template(self):$/;"	kind:member	line:56
+vars_for_template	../trust/views.py	/^    def vars_for_template(self):$/;"	kind:member	line:13
+vars_for_template	../trust/views.py	/^    def vars_for_template(self):$/;"	kind:member	line:63
+views	../charity_donation/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+views	../charity_donation/tests.py	/^from . import views$/;"	kind:namespace	line:8
+views	../joy_of_destruction/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+views	../joy_of_destruction/tests.py	/^from . import views$/;"	kind:namespace	line:8
+views	../payment_info/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:2
+views	../payment_info/tests.py	/^from . import views$/;"	kind:namespace	line:8
+views	../production/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+views	../production/tests.py	/^from . import views$/;"	kind:namespace	line:8
+views	../public_goods/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+views	../public_goods/tests.py	/^from . import views$/;"	kind:namespace	line:10
+views	../ravens/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+views	../ravens/tests.py	/^from . import views$/;"	kind:namespace	line:8
+views	../real_effort_dictator/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+views	../real_effort_dictator/tests.py	/^from . import views$/;"	kind:namespace	line:8
+views	../risk_game/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+views	../risk_game/tests.py	/^from . import views$/;"	kind:namespace	line:8
+views	../survey/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+views	../survey/tests.py	/^from . import views$/;"	kind:namespace	line:8
+views	../time_preference/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+views	../time_preference/tests.py	/^from . import views$/;"	kind:namespace	line:8
+views	../trust/_builtin/__init__.py	/^import otree.views$/;"	kind:namespace	line:3
+views	../trust/tests.py	/^from . import views$/;"	kind:namespace	line:10
+views.py	../charity_donation/views.py	1;"	kind:file	line:1
+views.py	../joy_of_destruction/views.py	1;"	kind:file	line:1
+views.py	../payment_info/views.py	1;"	kind:file	line:1
+views.py	../production/views.py	1;"	kind:file	line:1
+views.py	../public_goods/views.py	1;"	kind:file	line:1
+views.py	../ravens/views.py	1;"	kind:file	line:1
+views.py	../real_effort_dictator/views.py	1;"	kind:file	line:1
+views.py	../risk_game/views.py	1;"	kind:file	line:1
+views.py	../survey/views.py	1;"	kind:file	line:1
+views.py	../time_preference/views.py	1;"	kind:file	line:1
+views.py	../trust/views.py	1;"	kind:file	line:1
+vouchers	../joy_of_destruction/models.py	/^    vouchers = 6$/;"	kind:variable	line:29
+wait_for_all_groups	../real_effort_dictator/views.py	/^    wait_for_all_groups = True$/;"	kind:variable	line:12
+wait_for_all_groups	../trust/views.py	/^    wait_for_all_groups = True$/;"	kind:variable	line:27
+widget	../production/models.py	/^        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))$/;"	kind:variable	line:101
+widget	../production/models.py	/^        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))$/;"	kind:variable	line:103
+widget	../production/models.py	/^        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))$/;"	kind:variable	line:105
+widget	../production/models.py	/^        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))$/;"	kind:variable	line:107
+widget	../production/models.py	/^        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))$/;"	kind:variable	line:109
+widget	../production/models.py	/^        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))$/;"	kind:variable	line:111
+widget	../production/models.py	/^        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))$/;"	kind:variable	line:113
+widget	../production/models.py	/^        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))$/;"	kind:variable	line:115
+widget	../production/models.py	/^        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))$/;"	kind:variable	line:91
+widget	../production/models.py	/^        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))$/;"	kind:variable	line:93
+widget	../production/models.py	/^        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))$/;"	kind:variable	line:97
+widget	../production/models.py	/^        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))$/;"	kind:variable	line:99
+widgets	../charity_donation/models.py	/^from otree import widgets$/;"	kind:namespace	line:9
+widgets	../joy_of_destruction/models.py	/^from otree import widgets$/;"	kind:namespace	line:9
+widgets	../payment_info/models.py	/^from otree import widgets$/;"	kind:namespace	line:8
+widgets	../production/models.py	/^from otree import widgets$/;"	kind:namespace	line:9
+widgets	../public_goods/models.py	/^from otree import widgets$/;"	kind:namespace	line:8
+widgets	../ravens/models.py	/^from otree import widgets$/;"	kind:namespace	line:5
+widgets	../real_effort_dictator/models.py	/^from otree import widgets$/;"	kind:namespace	line:9
+widgets	../risk_game/models.py	/^from otree import widgets$/;"	kind:namespace	line:9
+widgets	../survey/models.py	/^from otree import widgets$/;"	kind:namespace	line:8
+widgets	../time_preference/models.py	/^from otree import widgets$/;"	kind:namespace	line:9
+widgets	../trust/models.py	/^from otree import widgets$/;"	kind:namespace	line:8
+z_autocomplete	../charity_donation/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:12
+z_autocomplete	../charity_donation/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:22
+z_autocomplete	../charity_donation/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:29
+z_autocomplete	../joy_of_destruction/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:12
+z_autocomplete	../joy_of_destruction/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:22
+z_autocomplete	../joy_of_destruction/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:29
+z_autocomplete	../payment_info/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:19
+z_autocomplete	../payment_info/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:26
+z_autocomplete	../payment_info/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:9
+z_autocomplete	../production/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:12
+z_autocomplete	../production/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:22
+z_autocomplete	../production/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:29
+z_autocomplete	../public_goods/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:11
+z_autocomplete	../public_goods/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:21
+z_autocomplete	../public_goods/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:28
+z_autocomplete	../ravens/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:12
+z_autocomplete	../ravens/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:22
+z_autocomplete	../ravens/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:29
+z_autocomplete	../real_effort_dictator/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:12
+z_autocomplete	../real_effort_dictator/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:22
+z_autocomplete	../real_effort_dictator/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:29
+z_autocomplete	../risk_game/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:12
+z_autocomplete	../risk_game/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:22
+z_autocomplete	../risk_game/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:29
+z_autocomplete	../survey/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:10
+z_autocomplete	../survey/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:20
+z_autocomplete	../survey/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:27
+z_autocomplete	../time_preference/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:12
+z_autocomplete	../time_preference/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:22
+z_autocomplete	../time_preference/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:29
+z_autocomplete	../trust/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:11
+z_autocomplete	../trust/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:21
+z_autocomplete	../trust/_builtin/__init__.py	/^    def z_autocomplete(self):$/;"	kind:member	line:28
+z_models	../charity_donation/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:10
+z_models	../charity_donation/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:20
+z_models	../joy_of_destruction/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:10
+z_models	../joy_of_destruction/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:20
+z_models	../payment_info/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:17
+z_models	../payment_info/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:7
+z_models	../production/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:10
+z_models	../production/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:20
+z_models	../public_goods/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:19
+z_models	../public_goods/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:9
+z_models	../ravens/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:10
+z_models	../ravens/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:20
+z_models	../real_effort_dictator/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:10
+z_models	../real_effort_dictator/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:20
+z_models	../risk_game/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:10
+z_models	../risk_game/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:20
+z_models	../survey/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:18
+z_models	../survey/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:8
+z_models	../time_preference/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:10
+z_models	../time_preference/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:20
+z_models	../trust/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:19
+z_models	../trust/_builtin/__init__.py	/^    z_models = models$/;"	kind:variable	line:9

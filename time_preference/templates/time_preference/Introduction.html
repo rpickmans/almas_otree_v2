@@ -6,30 +6,124 @@
 
 {% block content %}
 
-<div class="panel panel-default">
-  <div class="panel-body">
-        <p>On the following screens you will find a series of questions. In each question, you are asked
-        to choose between Option A and Option B.
-        </p>
-        <p>
-        If you choose Option A, you will get a smaller amount but sooner. If you choose Option B,
-        you will get a larger amount but later. Please choose the option you prefer. There are no
-        right or wrong answers.
-        </p>
-        <p>
-              After you make all your choices, the computer will randomly pick one of the choices and your payment will be
-              what you chose in this situation.
-              Remember that the computer will pick only one question and any question could be picked.
-        </p>
-        <p>
-        Therefore, it is in your interest to answer each question as if it is the only question you are
-        answering.
-        </p>
-  </div>
-</div>
-
-<p><strong>Please click "Next" to continue</strong></p>
- {% next_button %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>
+                On the following screens you will find a series of four questions. In each question, you will be asked
+                to make decisions involving payments over time. Each row will feature a series of options. Each option
+                consists of a sooner payment and a later payment. There is a trade-off between the sooner payment and
+                the later payment across the options. As the sooner payment goes down, the later payment goes up. Please
+                choose the option you prefer. There are no right or wrong answers.
+            </p>
+            <p>
+                After you make all your choices, the computer will randomly select one of the questions. Your earnings
+                from this part of the experiment will be your choice for the question selected by the computer.
+            </p>
+            <br>
+            <div class="col-md-12">
+                <h5>Choice List A</h5>
+                <table class="table table-responsive table-bordered">
+                    <tbody>
+                        <tr>
+                            <td><strong>Payment Today</strong></td>
+                            <td>Ksh 280</td>
+                            <td>Ksh 252</td>
+                            <td>Ksh 168</td>
+                            <td>Ksh 112</td>
+                            <td>Ksh 56</td>
+                            <td>Ksh 0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>And Payment in 3 Weeks</strong></td>
+                            <td>Ksh 0</td>
+                            <td>Ksh 40</td>
+                            <td>Ksh 160</td>
+                            <td>Ksh 240</td>
+                            <td>Ksh 320</td>
+                            <td>Ksh 400</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-12">
+                <h5>Choice List B</h5>
+                <table class="table table-responsive table-bordered">
+                    <tbody>
+                        <tr>
+                            <td><strong>Payment Today</strong></td>
+                            <td>Ksh 340</td>
+                            <td>Ksh 272</td>
+                            <td>Ksh 204</td>
+                            <td>Ksh 136</td>
+                            <td>Ksh 68</td>
+                            <td>Ksh 0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>And Payment in 3 Weeks</strong></td>
+                            <td>Ksh 0</td>
+                            <td>Ksh 68</td>
+                            <td>Ksh 136</td>
+                            <td>Ksh 204</td>
+                            <td>Ksh 272</td>
+                            <td>Ksh 340</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-12">
+                <h5>Choice List C</h5>
+                <table class="table table-responsive table-bordered">
+                    <tbody>
+                        <tr>
+                            <td><strong>Payment in 3 Weeks</strong></td>
+                            <td>Ksh 280</td>
+                            <td>Ksh 252</td>
+                            <td>Ksh 168</td>
+                            <td>Ksh 112</td>
+                            <td>Ksh 56</td>
+                            <td>Ksh 0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>And Payment in 7 Weeks</strong></td>
+                            <td>Ksh 0</td>
+                            <td>Ksh 40</td>
+                            <td>Ksh 160</td>
+                            <td>Ksh 240</td>
+                            <td>Ksh 320</td>
+                            <td>Ksh 400</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-12">
+                <h5>Choice List D</h5>
+                <table class="table table-responsive table-bordered">
+                    <tbody>
+                        <tr>
+                            <td><strong>Payment in 3 Weeks</strong></td>
+                            <td>Ksh 340</td>
+                            <td>Ksh 272</td>
+                            <td>Ksh 204</td>
+                            <td>Ksh 136</td>
+                            <td>Ksh 68</td>
+                            <td>Ksh 0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>And Payment in 7 Weeks</strong></td>
+                            <td>Ksh 0</td>
+                            <td>Ksh 68</td>
+                            <td>Ksh 136</td>
+                            <td>Ksh 204</td>
+                            <td>Ksh 272</td>
+                            <td>Ksh 340</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <p><strong>Please click "Next" to continue</strong></p>
+    {% next_button %}
 {% endblock %}
 
 

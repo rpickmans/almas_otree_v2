@@ -6,28 +6,34 @@
 
 {% block content %}
 
-<div class="panel panel-default">
-    <div class="panel-body">
-        {% if rank == "high" %}
-            <p>
-                You and another participant are now paired. You have both worked on the slider task
-                and each earned <strong>75 KSH</strong>, depending on your performance. You are now going to
-                determine how much of the total money that the two of you have earned you suggest
-                for yourself and how much you suggest for the other participant. You are free to
-                choose any amount in whole shillings between 0 and the total amount.
-            </p>
-        {% elif rank == "low"%}
-            <p>
-                You and another participant are now paired. You have both worked on the slider task
-                and each earned <strong>25 KSH</strong>, depending on your performance. You are now going to
-                determine how much of the total money that the two of you have earned you suggest
-                for yourself and how much you suggest for the other participant. You are free to
-                choose any amount in whole shillings between 0 and the total amount.
-            </p>
-        {% endif %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            {% if rank == "high" %}
+                <p>
+                    You and another participant are now paired. You have both worked on the slider task and each earned
+                    <strong>75 KSH</strong>, based on your performance. Together you have earned <strong>150
+                    KSH</strong>. You will now decide how much of the <strong>150 KSH</strong> you suggest for yourself
+                    and how much you suggest for the other participant.
+                </p>
+                <p>
+                    You are free to choose any amounts in [cents/ whole shillings] between 0 and <strong>150
+                    KSH</strong>,
+                </p>
+            {% elif rank == "low" %}
+                <p>
+                    You and another participant are now paired. You have both worked on the slider task and each earned
+                    <strong>25 KSH</strong>, based on your performance. Together you have earned <strong>50
+                    KSH</strong>. You will now decide how much of the <strong>50 KSH</strong> you suggest for yourself
+                    and how much you suggest for the other participant.
+                </p>
+                <p>
+                    You are free to choose any amounts in [cents/ whole shillings] between 0 and <strong>50
+                    KSH</strong>,
+                </p>
+            {% endif %}
 
+        </div>
     </div>
-</div>
-<p><strong>Please click "Next" to continue</strong></p>
-{% next_button %}
+    <p><strong>Please click "Next" to continue</strong></p>
+    {% next_button %}
 {% endblock %}
