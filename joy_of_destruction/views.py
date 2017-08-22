@@ -19,6 +19,11 @@ class Destroy(Page):
     def is_displayed(self):
         return True
 
+    def vars_for_template(self):
+        return {
+            "raven_points": self.player.participant.vars["ravens_points"],
+        }
+
 
 class ResultsWaitPage(WaitPage):
 

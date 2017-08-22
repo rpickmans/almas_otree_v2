@@ -74,9 +74,10 @@ class ResultsWaitPage(WaitPage):
 
     def after_all_players_arrive(self):
         self.group.set_payoffs()
-
-    def before_next_page(self):
         self.group.total_carrying_payoff()
+
+    # def before_next_page(self):
+    #     self.group.total_carrying_payoff()
 
 
 page_sequence = [

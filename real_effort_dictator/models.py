@@ -32,48 +32,46 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
+    def player_one_decides(self):
+        p1 = self.get_player_by_id(1)
+        p2 = self.get_player_by_id(2)
+        if p1.participant.vars["rank"] == "high":
+            p1.payoff = p1.keep
+            p2.payoff = 150 - p1.keep
+            p1.participant.vars["dictator_payoff"] = p1.payoff
+            p2.participant.vars["dictator_payoff"] = p2.payoff
 
-    def player_one_decision(self):
+        elif p1.participant.vars["rank"] == "low":
+            p1.payoff = p1.keep
+            p2.payoff = 50 - p1.keep
+            p1.participant.vars["dictator_payoff"] = p1.payoff
+            p2.participant.vars["dictator_payoff"] = p2.payoff
+
+    def player_two_decides(self):
         p1 = self.get_player_by_id(1)
         p2 = self.get_player_by_id(2)
         if p2.participant.vars["rank"] == "high":
-            p1.payoff = p1.keep
-            p2.payoff = c(150) - p1.keep
-            p1.real_effort_dictator_endowment = 150
-            p1.participant.vars["dictator_payoff_p1"] = p1.keep
-            p2.participant.vars["dictator_payoff_p2"] = c(150) - p1.keep
-        elif p2.participant.vars["rank"] == "low":
-            p1.payoff = p1.keep
-            p2.payoff = c(50) - p1.keep
-            p1.real_effort_dictator_endowment = 50
-            p1.participant.vars["dictator_payoff_p1"] = p1.keep
-            p2.participant.vars["dictator_payoff_p2"] = c(50) - p1.keep
-
-    def player_two_decision(self):
-        p1 = self.get_player_by_id(2)
-        p2 = self.get_player_by_id(1)
-        if p1.participant.vars["rank"] == "high":
-            p2.payoff = p1.keep
-            p1.payoff = c(150) - p2.keep
-            p2.real_effort_dictator_endowment = 150
-            p2.participant.vars["dictator_payoff_p2"] = p1.keep
-            p1.participant.vars["dictator_payoff_p1"] = c(50) - p2.keep
-        elif p1.participant.vars["rank"] == "low":
             p2.payoff = p2.keep
-            p1.payoff = c(50) - p2.keep
-            p2.real_effort_dictator_endowment = 50
-            p2.participant.vars["dictator_payoff_p2"] = p1.keep
-            p1.participant.vars["dictator_payoff_p1"] = c(50) - p2.keep
+            p1.payoff = 150 - p2.keep
+            p1.participant.vars["dictator_payoff"] = p1.payoff
+            p2.participant.vars["dictator_payoff"] = p2.payoff
+
+        elif p2.participant.vars["rank"] == "low":
+            p2.payoff = p2.keep
+            p1.payoff = 50 - p2.keep
+            p1.participant.vars["dictator_payoff"] = p1.payoff
+            p2.participant.vars["dictator_payoff"] = p2.payoff
+
 
     def set_payoffs(self):
-        choice([self.player_one_decision, self.player_two_decision])()
+        choice([self.player_one_decides, self.player_two_decides])()
 
     def total_carrying_payoff(self):
         for p in self.get_players():
             if p.id_in_group == 1:
-                p.participant.vars["main_carrying_payoff"] += p.participant.vars["dictator_payoff_p1"]
+                p.participant.vars["main_carrying_payoff"] += p.participant.vars["dictator_payoff"]
             elif p.id_in_group == 2:
-                p.participant.vars["main_carrying_payoff"] += p.participant.vars["dictator_payoff_p2"]
+                p.participant.vars["main_carrying_payoff"] += p.participant.vars["dictator_payoff"]
 
 
 class Player(BasePlayer):
