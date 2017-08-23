@@ -10,12 +10,10 @@
           Drag slider until the slider is on the figure indicated on the left.
         </div>
       <div class="panel-body">
-          <table class="table">
-          <tr>
-              <td>{{ practice_random_slider_value_one }}{% formfield player.practice_slider_value_one with label="" %}</td>
-              <td>{{ practice_random_slider_value_two }}{% formfield player.practice_slider_value_two with label="" %}</td>
-          </tr>
-          </table>
+
+         <div class="col-md-12" align="center">
+              {{ practice_random_slider_value_two }}{% formfield player.practice_slider_value_two with label="" %}
+        </div>
 
       </div>
     </div>
