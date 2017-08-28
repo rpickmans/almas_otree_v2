@@ -33,7 +33,7 @@ class Constants(BaseConstants):
     num_rounds = 1
 
     # Initial amount allocated to each player
-    amount_allocated = c(50)
+    amount_allocated = 175
     multiplication_factor = 3
 
 
@@ -45,20 +45,15 @@ class Group(BaseGroup):
     def set_payoffs(self):
         for p in self.get_players():
             p.payoff = int(Constants.amount_allocated) - int(p.sent_amount) + int(p.get_other_player().sent_back_amount)
+            p.participant.vars["game_payoff"]["trust_game"] = p.payoff
             p.participant.vars["carrying_payoff"] += p.payoff
             p.participant.vars["main_carrying_payoff"] += p.payoff
 
 
 class Player(BasePlayer):
-    sent_amount = models.CurrencyField(
-        min=0, max=Constants.amount_allocated,
-        doc="""Amount sent by Player One""",
-    )
+    sent_amount = models.IntegerField(min=0, max=175)
 
-    sent_back_amount = models.CurrencyField(
-        doc="""Amount sent back by Player Two""",
-        min=c(0),
-    )
+    sent_back_amount = models.IntegerField()
 
     def get_other_player(self):
         return self.get_others_in_group()[0]

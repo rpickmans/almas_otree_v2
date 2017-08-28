@@ -28,6 +28,20 @@ class QuestionTwo(Page):
     form_fields = l2
 
 
+class QuestionThree(Page):
+    form_model = models.Player
+    l3 = ['q31', 'q32', 'q33', 'q34', 'q35', 'q36']
+    shuffle(l3)
+    form_fields = l3
+
+
+class QuestionFour(Page):
+    form_model = models.Player
+    l4 = ['q41', 'q42', 'q43', 'q44', 'q45', 'q46']
+    shuffle(l4)
+    form_fields = l4
+
+
 class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
         self.group.set_payoffs()
@@ -37,5 +51,7 @@ page_sequence = [
     Introduction,
     QuestionOne,
     QuestionTwo,
+    QuestionThree,
+    QuestionFour,
     ResultsWaitPage,
 ]

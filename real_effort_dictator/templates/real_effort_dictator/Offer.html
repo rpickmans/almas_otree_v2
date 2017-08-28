@@ -6,7 +6,14 @@
 
 {% block content %}
     <p>
-        From the <strong>{% if rank == "high" %}KSH 150 {% elif rank == "low"%}KSH 50 {% endif %}</strong> you have,how much will you keep?
+        From the
+        <strong>
+        {% if rank == "high" %}
+            2400 Tokens
+        {% elif rank == "low" %}
+            1200 Tokens {% endif %}
+        </strong>
+        you have,how much will you keep?
     </p>
     {% formfield player.keep with label="" %}
     <p><strong>Please click "Next" to continue</strong></p>

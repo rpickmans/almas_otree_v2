@@ -39,69 +39,99 @@ class Group(BaseGroup):
     def set_payoffs(self):
         for p in self.get_players():
             if p.decision == "Coin 1":
-                p.payoff = 80
-                # p.participant.vars["carrying_payoff"] += p.payoff
-                # p.participant.vars["main_carrying_payoff"] += p.payoff
-
-            elif p.decision == "Coin 2":
                 if p.random_coin_toss == "Heads":
-                    p.payoff = 70
+                    p.payoff = 0
+                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
                     # p.participant.vars["carrying_payoff"] += p.payoff
                     # p.participant.vars["main_carrying_payoff"] += p.payoff
                 else:
-                    p.payoff = 110
+                    p.payoff = 2880
+                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
+                    # p.participant.vars["carrying_payoff"] += p.payoff
+                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+
+            elif p.decision == "Coin 2":
+                if p.random_coin_toss == "Heads":
+                    p.payoff = 240
+                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
+                    # p.participant.vars["carrying_payoff"] += p.payoff
+                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                else:
+                    p.payoff = 2400
+                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
                     # p.participant.vars["carrying_payoff"] += p.payoff
                     # p.participant.vars["main_carrying_payoff"] += p.payoff
 
             elif p.decision == "Coin 3":
                 if p.random_coin_toss == "Heads":
-                    p.payoff = 60
+                    p.payoff = 480
+                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
                     # p.participant.vars["carrying_payoff"] += p.payoff
                     # p.participant.vars["main_carrying_payoff"] += p.payoff
                 else:
-                    p.payoff = 140
+                    p.payoff = 1920
+                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
                     # p.participant.vars["carrying_payoff"] += p.payoff
                     # p.participant.vars["main_carrying_payoff"] += p.payoff
 
             elif p.decision == "Coin 4":
                 if p.random_coin_toss == "Heads":
-                    p.payoff = 50
+                    p.payoff = 720
+                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
                     # p.participant.vars["carrying_payoff"] += p.payoff
                     # p.participant.vars["main_carrying_payoff"] += p.payoff
                 else:
-                    p.payoff = 170
+                    p.payoff = 1440
+                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
                     # p.participant.vars["carrying_payoff"] += p.payoff
                     # p.participant.vars["main_carrying_payoff"] += p.payoff
 
             elif p.decision == "Coin 5":
                 if p.random_coin_toss == "Heads":
-                    p.payoff = 40
+                    p.payoff = 840
+                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
                     # p.participant.vars["carrying_payoff"] += p.payoff
                     # p.participant.vars["main_carrying_payoff"] += p.payoff
                 else:
-                    p.payoff = 200
+                    p.payoff = 1200
+                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
                     # p.participant.vars["carrying_payoff"] += p.payoff
                     # p.participant.vars["main_carrying_payoff"] += p.payoff
 
             elif p.decision == "Coin 6":
                 if p.random_coin_toss == "Heads":
-                    p.payoff = 30
+                    p.payoff = 960
+                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
                     # p.participant.vars["carrying_payoff"] += p.payoff
                     # p.participant.vars["main_carrying_payoff"] += p.payoff
                 else:
-                    p.payoff = 210
+                    p.payoff = 960
+                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
+                    # p.participant.vars["carrying_payoff"] += p.payoff
+                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+
+            elif p.decision == "Coin 7":
+                if p.random_coin_toss == "Heads":
+                    p.payoff = 1080
+                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
+                    # p.participant.vars["carrying_payoff"] += p.payoff
+                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                else:
+                    p.payoff = 720
+                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
                     # p.participant.vars["carrying_payoff"] += p.payoff
                     # p.participant.vars["main_carrying_payoff"] += p.payoff
 
 
 class Player(BasePlayer):
     decision_choices = (
-            ("Coin 1", "Coin 1: KSH 80 if heads and KSH 80 if tails"),
-            ("Coin 2", "Coin 2: KSH 70 if heads and KSH 110 if tails"),
-            ("Coin 3", "Coin 3: KSH 60 if heads and KSH 140 if tails"),
-            ("Coin 4", "Coin 4: KSH 50 if heads and KSH 170 if tails"),
-            ("Coin 5", "Coin 5: KSH 40 if heads and KSH 200 if tails"),
-            ("Coin 6", "Coin 6: KSH 30 if heads and KSH 210 if tails"),
+            ("Coin 1", "Coin 1: 0 Tokens if heads and 2880 Tokens if tails"),
+            ("Coin 2", "Coin 2: 240 Tokens if heads and 2400 Tokens if tails"),
+            ("Coin 3", "Coin 3: 480 Tokens if heads and 1920 Tokens if tails"),
+            ("Coin 4", "Coin 4: 720 Tokens if heads and 1440 Tokens if tails"),
+            ("Coin 5", "Coin 5: 840 Tokens if heads and 1200 Tokens if tails"),
+            ("Coin 6", "Coin 6: 960 Tokens if heads and 960 Tokens if tails"),
+            ("Coin 7", "Coin 6: 1080 Tokens if heads and 720 Tokens if tails"),
         )
     decision = models.CharField(choices=decision_choices, widget=widgets.RadioSelect())
     random_coin_toss = models.CharField()

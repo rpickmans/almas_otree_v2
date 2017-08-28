@@ -12,6 +12,27 @@ class Introduction(Page):
     pass
 
 
+class PracticeOne(Page):
+    form_model = models.Player
+    form_fields = ["practise_one"]
+
+    def is_displayed(self):
+        return True
+
+
+class PracticeTwo(Page):
+    form_model = models.Player
+    form_fields = ["practise_two"]
+
+    def is_displayed(self):
+        return True
+
+
+class WaitPage(WaitPage):
+    def after_all_players_arrive(self):
+        pass
+
+
 class RavenOne(Page):
     form_model = models.Player
     form_fields = ["raven_1"]
@@ -61,12 +82,15 @@ class RavenSix(Page):
 
 
 class ResultsWaitPage(WaitPage):
-
     def after_all_players_arrive(self):
         self.group.set_payoffs()
 
+
 page_sequence = [
     Introduction,
+    PracticeOne,
+    PracticeTwo,
+    WaitPage,
     RavenOne,
     RavenTwo,
     RavenThree,

@@ -8,6 +8,7 @@ from otree.models import BaseSubsession, BaseGroup, BasePlayer
 from otree import widgets
 from otree.common import Currency as c, currency_range
 import random
+
 # </standard imports>
 
 doc = """
@@ -37,7 +38,6 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-
     total_contribution = models.CurrencyField()
 
     individual_share = models.CurrencyField()
@@ -49,24 +49,57 @@ class Group(BaseGroup):
         for p in self.get_players():
             if p.guess_correct():
                 p.payoff = (Constants.endowment - p.contribution) + self.individual_share + Constants.guess_correct
+                p.participant.vars["game_payoff"]["public_goods_game"] = p.payoff
                 p.participant.vars["carrying_payoff"] += p.payoff
-                p.participant.vars["main_carrying_payoff"] += p.payoff
+                # p.participant.vars["main_carrying_payoff"] += p.payoff
             else:
                 p.payoff = (Constants.endowment - p.contribution) + self.individual_share
+                p.participant.vars["game_payoff"]["public_goods_game"] = p.payoff
                 p.participant.vars["carrying_payoff"] += p.payoff
-                p.participant.vars["main_carrying_payoff"] += p.payoff
+                # p.participant.vars["main_carrying_payoff"] += p.payoff
 
 
 class Player(BasePlayer):
+
+    GUESS_CHOICES = [
+        ("1", "Ksh. 0"),
+        ("2", "Ksh. 1-10"),
+        ("3", "Ksh. 11-20"),
+        ("4", "Ksh. 21-30"),
+        ("5", "Ksh. 31-40"),
+        ("6", "Ksh. 41-49"),
+        ("7", "Ksh. 50-59"),
+        ("8", "Ksh. 60-69"),
+        ("9", "Ksh. 70-74"),
+        ("10", "Ksh. 75"),
+    ]
+
     contribution = models.CurrencyField(
         min=0, max=Constants.endowment,
         doc="""The amount contributed by the player""",
     )
     question = models.CurrencyField()
 
-    guess_one = models.CurrencyField()
-    guess_two = models.CurrencyField()
+    guess_one = models.CharField(widget=widgets.RadioSelect(), choices=GUESS_CHOICES)
+    guess_two = models.CharField(widget=widgets.RadioSelect(), choices=GUESS_CHOICES)
 
     def guess_correct(self):
-            p1, p2 = self.get_others_in_group()[0], self.get_others_in_group()[1]
-            return self.guess_one == p1.contribution and self.guess_two == p2.contribution
+
+        guess_choices = {
+            1: [0],
+            2: [list(range(1, 11))],
+            3: [list(range(11, 21))],
+            4: [list(range(21, 31))],
+            5: [list(range(31, 41))],
+            6: [list(range(41, 51))],
+            7: [list(range(51, 61))],
+            8: [list(range(61, 71))],
+            9: [list(range(71, 75))],
+            10: [75]
+        }
+
+        px, py = self.get_others_in_group()
+        return px.contribution in guess_choices[int(self.guess_one)] and \
+            py.contribution in guess_choices[int(self.guess_two)]
+
+

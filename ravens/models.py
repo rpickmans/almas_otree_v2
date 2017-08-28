@@ -21,7 +21,9 @@ class Constants(BaseConstants):
 
 
 class Subsession(BaseSubsession):
-    pass
+    def before_session_starts(self):
+        for p in self.get_players():
+            p.participant.vars["ravens_points"] = None
 
 
 class Group(BaseGroup):
@@ -41,6 +43,7 @@ class Group(BaseGroup):
             if p.raven_6 == "six":
                 p.points += 1
             p.participant.vars["ravens_points"] = p.points
+            p.participant.vars["ravens_points"] = p.points
 
 
 class Player(BasePlayer):
@@ -50,9 +53,12 @@ class Player(BasePlayer):
     CHOICES_8 = [("one", ""), ("two", ""), ("three", ""), ("four", ""),
                  ("five", ""), ("six", ""), ("seven", ""), ("eight", "")]
 
+    practise_one = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES_8)
+    practise_two = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES)
     raven_1 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES)
     raven_2 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES_8)
     raven_3 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES)
     raven_4 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES)
     raven_5 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES_8)
     raven_6 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES_8)
+
