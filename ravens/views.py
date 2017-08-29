@@ -16,19 +16,14 @@ class PracticeOne(Page):
     form_model = models.Player
     form_fields = ["practise_one"]
 
-    def is_displayed(self):
-        return True
 
 
 class PracticeTwo(Page):
     form_model = models.Player
     form_fields = ["practise_two"]
 
-    def is_displayed(self):
-        return True
 
-
-class WaitPage(WaitPage):
+class Wait(WaitPage):
     def after_all_players_arrive(self):
         pass
 
@@ -37,48 +32,34 @@ class RavenOne(Page):
     form_model = models.Player
     form_fields = ["raven_1"]
 
-    def is_displayed(self):
-        return True
 
 
 class RavenTwo(Page):
     form_model = models.Player
     form_fields = ["raven_2"]
 
-    def is_displayed(self):
-        return True
 
 
 class RavenThree(Page):
     form_model = models.Player
     form_fields = ["raven_3"]
 
-    def is_displayed(self):
-        return True
 
 
 class RavenFour(Page):
     form_model = models.Player
     form_fields = ["raven_4"]
 
-    def is_displayed(self):
-        return True
 
 
 class RavenFive(Page):
     form_model = models.Player
     form_fields = ["raven_5"]
 
-    def is_displayed(self):
-        return True
-
 
 class RavenSix(Page):
     form_model = models.Player
     form_fields = ["raven_6"]
-
-    def is_displayed(self):
-        return True
 
 
 class ResultsWaitPage(WaitPage):
@@ -90,7 +71,7 @@ page_sequence = [
     Introduction,
     PracticeOne,
     PracticeTwo,
-    WaitPage,
+    Wait,
     RavenOne,
     RavenTwo,
     RavenThree,

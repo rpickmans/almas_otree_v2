@@ -23,7 +23,7 @@ class Constants(BaseConstants):
 class Subsession(BaseSubsession):
     def before_session_starts(self):
         for p in self.get_players():
-            p.participant.vars["ravens_points"] = None
+            p.participant.vars["ravens_points"] = 0
 
 
 class Group(BaseGroup):
@@ -42,7 +42,6 @@ class Group(BaseGroup):
                 p.points += 1
             if p.raven_6 == "six":
                 p.points += 1
-            p.participant.vars["ravens_points"] = p.points
             p.participant.vars["ravens_points"] = p.points
 
 

@@ -44,19 +44,18 @@ class Group(BaseGroup):
         p1.participant.vars["ravens_points"] += p1.points
         p2.participant.vars["ravens_points"] += p2.points
 
-    def set_player_destroyed(self):
-        for p in self.get_players():
-            p.destroyed = p.amount_to_destroy + random.randrange(1, 4)
-
 
 class Player(BasePlayer):
-    def get_raven_points(self):
-        Constants.points = self.participant.vars["ravens_points"]
 
-    amount_to_destroy = models.IntegerField(
-        min=0, max=Constants.points,
-        doc="""Amount of your partner's vouchers you set to destroy.""",
-    )
+    def set_player_destroyed(self):
+
+        points = self.get_others_in_group()[0].participant.vars["ravens_points"]
+        if points <= self.amount_to_destroy:
+            self.destroyed = self.amount_to_destroy
+        else:
+            self.destroyed = self.amount_to_destroy + random.randrange(1, points - self.amount_to_destroy + 1)
+
+    amount_to_destroy = models.IntegerField(min=0)
 
     destroyed = models.IntegerField(default=0)
 
