@@ -2,10 +2,11 @@
 from __future__ import division
 
 from otree.common import Currency as c, currency_range, safe_json
+from otree.models import BaseGroup
 
 from . import models
 from ._builtin import Page, WaitPage
-from .models import Constants
+from .models import Constants, Player
 import time
 
 
@@ -40,8 +41,10 @@ class PracticeSliderTwo(Page):
         }
 
 
-class WaitPage(WaitPage):
-    pass
+class Wait(WaitPage):
+    def after_all_players_arrive(self):
+        for p in self.group.get_players():
+            p.participant.vars["expiry_timestamp"] = time.time() + 3 * 60
 
 
 class SliderOne(Page):
@@ -53,10 +56,11 @@ class SliderOne(Page):
             'random_slider_value_one': self.player.random_slider_value_one
         }
 
-    def before_next_page(self):
-        # user has 3 minutes to complete as many pages as possible
-        print("niiice")
-        self.participant.vars['expiry_timestamp'] = time.time() + 3 * 60
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
 
 
 class SliderTwo(Page):
@@ -70,9 +74,11 @@ class SliderTwo(Page):
 
     timer_text = 'Time left to complete this section:'
 
-    # timeout_seconds = 180
     def get_timeout_seconds(self):
         return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
 
 
 class SliderThree(Page):
@@ -86,9 +92,11 @@ class SliderThree(Page):
 
     timer_text = 'Time left to complete this section:'
 
-    # timeout_seconds = 180
     def get_timeout_seconds(self):
         return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
 
 
 class SliderFour(Page):
@@ -102,9 +110,11 @@ class SliderFour(Page):
 
     timer_text = 'Time left to complete this section:'
 
-    # timeout_seconds = 180
     def get_timeout_seconds(self):
         return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
 
 
 class SliderFive(Page):
@@ -116,13 +126,11 @@ class SliderFive(Page):
             'random_slider_value_five': self.player.random_slider_value_five
         }
 
-        print("hhhhh")
-
-    timer_text = 'Time left to complete this section:'
-
-    # timeout_seconds = 180
     def get_timeout_seconds(self):
         return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
 
 
 class SliderSix(Page):
@@ -134,11 +142,11 @@ class SliderSix(Page):
             'random_slider_value_six': self.player.random_slider_value_six
         }
 
-    timer_text = 'Time left to complete this section:'
-
-    # timeout_seconds = 180
     def get_timeout_seconds(self):
         return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
 
 
 class SliderSeven(Page):
@@ -150,11 +158,11 @@ class SliderSeven(Page):
             'random_slider_value_seven': self.player.random_slider_value_seven,
         }
 
-    timer_text = 'Time left to complete this section:'
-
-    # timeout_seconds = 180
     def get_timeout_seconds(self):
         return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
 
 
 class SliderEight(Page):
@@ -166,11 +174,11 @@ class SliderEight(Page):
             'random_slider_value_eight': self.player.random_slider_value_eight,
         }
 
-    timer_text = 'Time left to complete this section:'
-
-    # timeout_seconds = 180
     def get_timeout_seconds(self):
         return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
 
 
 class SliderNine(Page):
@@ -182,11 +190,11 @@ class SliderNine(Page):
             'random_slider_value_nine': self.player.random_slider_value_nine,
         }
 
-    timer_text = 'Time left to complete this section:'
-
-    # timeout_seconds = 180
     def get_timeout_seconds(self):
         return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
 
 
 class SliderTen(Page):
@@ -198,11 +206,11 @@ class SliderTen(Page):
             'random_slider_value_ten': self.player.random_slider_value_ten,
         }
 
-    timer_text = 'Time left to complete this section:'
-
-    # timeout_seconds = 180
     def get_timeout_seconds(self):
         return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
 
 
 class ResultsWaitPage(WaitPage):
@@ -215,7 +223,7 @@ page_sequence = [
     Introduction,
     PracticeSliderOne,
     PracticeSliderTwo,
-    WaitPage,
+    Wait,
     SliderOne,
     SliderTwo,
     SliderThree,

@@ -105,6 +105,8 @@ SESSION_CONFIG_DEFAULTS = {
     # 'random_start_order': True,
 }
 
+STATIC_URL = "/static/"
+
 try:
     from local_settings import *
 except:
@@ -116,4 +118,4 @@ except:
 otree.settings.augment_settings(globals())
 
 
-STATIC_URL = "/static/"
+
