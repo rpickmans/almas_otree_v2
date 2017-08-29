@@ -27,6 +27,7 @@ class Constants(BaseConstants):
     players_per_group = 2
     num_rounds = 1
     vouchers = 6
+    points = 0
 
 
 class Subsession(BaseSubsession):
@@ -49,8 +50,11 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
+    def get_raven_points(self):
+        Constants.points = self.participant.vars["ravens_points"]
+
     amount_to_destroy = models.IntegerField(
-        min=0, max=3,
+        min=0, max=Constants.points,
         doc="""Amount of your partner's vouchers you set to destroy.""",
     )
 

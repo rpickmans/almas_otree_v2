@@ -23,10 +23,23 @@ class Constants(BaseConstants):
     num_rounds = 1
 
     """Amount allocated to each player"""
-    endowment = c(75)
+    endowment = 75
     efficiency_factor = 2
 
-    guess_correct = c(30)
+    guess_correct = 30
+
+    GUESS_CHOICE = {
+        1: [0],
+        2: [list(range(1, 11))],
+        3: [list(range(11, 21))],
+        4: [list(range(21, 31))],
+        5: [list(range(31, 41))],
+        6: [list(range(41, 51))],
+        7: [list(range(51, 61))],
+        8: [list(range(61, 71))],
+        9: [list(range(71, 75))],
+        10: [75]
+    }
     #
     # question_answer = c(100)
 
@@ -74,7 +87,7 @@ class Player(BasePlayer):
         ("10", "Ksh. 75"),
     ]
 
-    contribution = models.CurrencyField(
+    contribution = models.IntegerField(
         min=0, max=Constants.endowment,
         doc="""The amount contributed by the player""",
     )
@@ -85,18 +98,7 @@ class Player(BasePlayer):
 
     def guess_correct(self):
 
-        guess_choices = {
-            1: [0],
-            2: [list(range(1, 11))],
-            3: [list(range(11, 21))],
-            4: [list(range(21, 31))],
-            5: [list(range(31, 41))],
-            6: [list(range(41, 51))],
-            7: [list(range(51, 61))],
-            8: [list(range(61, 71))],
-            9: [list(range(71, 75))],
-            10: [75]
-        }
+        guess_choices = Constants.GUESS_CHOICE
 
         px, py = self.get_others_in_group()
         return px.contribution in guess_choices[int(self.guess_one)] and \
