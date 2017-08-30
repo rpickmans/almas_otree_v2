@@ -16,35 +16,37 @@ class Introduction(Page):
 
 class QuestionOne(Page):
     form_model = models.Player
-    l1 = ['q11', 'q12', 'q13', 'q14', 'q15', 'q16']
+    l1 = ['menu_a_q1', 'menu_a_q2', 'menu_a_q3', 'menu_a_q4', 'menu_a_q5', 'menu_a_q6']
     shuffle(l1)
     form_fields = l1
 
 
 class QuestionTwo(Page):
     form_model = models.Player
-    l2 = ['q21', 'q22', 'q23', 'q24', 'q25', 'q26']
+    l2 = ['menu_b_q1', 'menu_b_q2', 'menu_b_q3', 'menu_b_q4', 'menu_b_q5', 'menu_b_q6']
     shuffle(l2)
     form_fields = l2
 
 
 class QuestionThree(Page):
     form_model = models.Player
-    l3 = ['q31', 'q32', 'q33', 'q34', 'q35', 'q36']
+    l3 = ['menu_c_q1', 'menu_c_q2', 'menu_c_q3', 'menu_c_q4', 'menu_c_q5', 'menu_c_q6']
     shuffle(l3)
     form_fields = l3
 
 
 class QuestionFour(Page):
     form_model = models.Player
-    l4 = ['q41', 'q42', 'q43', 'q44', 'q45', 'q46']
+    l4 = ['menu_d_q1', 'menu_d_q2', 'menu_d_q3', 'menu_d_q4', 'menu_d_q5', 'menu_d_q6']
     shuffle(l4)
     form_fields = l4
 
 
 class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
-        self.group.set_payoffs()
+        for p in self.group.get_players():
+            p.select_payoff()
+            print(p.participant.vars["chosen_future"], p.payoff)
 
 
 page_sequence = [

@@ -32,50 +32,48 @@ class Constants(BaseConstants):
 class Subsession(BaseSubsession):
     def before_session_starts(self):
         for p in self.get_players():
-            p.participant.vars["chosen_future"] = None
+            p.participant.vars["chosen_future"] = list()
 
 
 class Group(BaseGroup):
-    def set_payoffs(self):
-        for p in self.get_players():
-            q1_or_q2_q3_q4 = random.choice(['q1', 'q2', 'q3', 'q4'])
-            if q1_or_q2_q3_q4 == 'q1':
-                x = random.choice([p.q11, p.q12, p.q13, p.q14, p.q15, p.q16])
-                select_payoff(p, x)
-                p.participant.vars["carrying_payoff"] += p.payoff
-
-            elif q1_or_q2_q3_q4 == 'q2':
-                x = random.choice([p.q21, p.q22, p.q23, p.q24, p.q25, p.q26])
-                select_payoff(p, x)
-                p.participant.vars["carrying_payoff"] += p.payoff
-
-            elif q1_or_q2_q3_q4 == 'q3':
-                x = random.choice([p.q31, p.q32, p.q33, p.q34, p.q35, p.q36])
-                select_payoff(p, x)
-                p.participant.vars["carrying_payoff"] += p.payoff
-
-            elif q1_or_q2_q3_q4 == 'q4':
-                x = random.choice([p.q41, p.q42, p.q43, p.q44, p.q45, p.q46])
-                select_payoff(p, x)
-                p.participant.vars["carrying_payoff"] += p.payoff
-
-            else:
-                p.payoff = 0
-
-
-def select_payoff(player, x):
-    if "now" in str(x):
-        x = int(str(x).split("_")[0])
-        player.payoff = x
-        player.participant.vars["game_payoff"]["time_preference"] = x
-    else:
-        x = int(str(x).split("_")[0])
-        player.payoff = 0
-        player.chosen_future = x
-        player.participant.vars["chosen_future"] = x
+    pass
 
 
 class Player(BasePlayer):
+
+    def set_choices(self):
+        choices = []
+        menu_a = ["menu_a_q1", "menu_a_q2", "menu_a_q3", "menu_a_q4", "menu_a_q5", "menu_a_q6"]
+        menu_b = ["menu_b_q1", "menu_b_q2", "menu_b_q3", "menu_b_q4", "menu_b_q5", "menu_b_q6"]
+        menu_c = ["menu_c_q1", "menu_c_q2", "menu_c_q3", "menu_c_q4", "menu_c_q5", "menu_c_q6"]
+        menu_d = ["menu_d_q1", "menu_d_q2", "menu_d_q3", "menu_d_q4", "menu_d_q5", "menu_d_q6"]
+
+        choice_a = random.choice(menu_a)
+        choice_b = random.choice(menu_b)
+        choice_c = random.choice(menu_c)
+        choice_d = random.choice(menu_d)
+
+        choices.append(choice_a)
+        choices.append(choice_b)
+        choices.append(choice_c)
+        choices.append(choice_d)
+
+        return choices
+
+    def select_payoff(self):
+        points = 0
+        for choice in self.set_choices():
+            menu_option = getattr(self, str(choice))
+            if "now" in menu_option:
+                now_option = int(str(menu_option).split("_")[0])
+                points += now_option
+                # self.participant.vars["game_payoff"]["time_preference"] = now_option
+            else:
+                points = 0
+                self.participant.vars["chosen_future"].append(menu_option)
+        self.payoff = points
+
+
     q1_a = (('840_now', 'A: 840 Tokens'), ('0_future', 'B: 0 Tokens'),)
     q2_a = (('672_now', 'A: 672 Tokens'), ('240_future', 'B: 240 Tokes'),)
     q3_a = (('504_now', 'A: 504 Tokens'), ('480_future', 'B: 480 Tokens'),)
@@ -104,32 +102,30 @@ class Player(BasePlayer):
     q5_d = (('224_now', 'A: 224 Tokens'), ('796_future', 'B: 796 Tokens'),)
     q6_d = (('0_now', 'A: 0 Tokens'), ('1020_future', 'B: 1020 Tokens'),)
 
-    q11 = models.CharField(choices=q1_a, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q12 = models.CharField(choices=q2_a, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q13 = models.CharField(choices=q3_a, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q14 = models.CharField(choices=q4_a, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q15 = models.CharField(choices=q5_a, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q16 = models.CharField(choices=q6_a, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_a_q1 = models.CharField(choices=q1_a, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_a_q2 = models.CharField(choices=q2_a, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_a_q3 = models.CharField(choices=q3_a, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_a_q4 = models.CharField(choices=q4_a, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_a_q5 = models.CharField(choices=q5_a, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_a_q6 = models.CharField(choices=q6_a, verbose_name="", widget=widgets.RadioSelectHorizontal())
 
-    q21 = models.CharField(choices=q1_b, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q22 = models.CharField(choices=q2_b, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q23 = models.CharField(choices=q3_b, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q24 = models.CharField(choices=q4_b, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q25 = models.CharField(choices=q5_b, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q26 = models.CharField(choices=q6_b, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_b_q1 = models.CharField(choices=q1_b, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_b_q2 = models.CharField(choices=q2_b, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_b_q3 = models.CharField(choices=q3_b, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_b_q4 = models.CharField(choices=q4_b, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_b_q5 = models.CharField(choices=q5_b, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_b_q6 = models.CharField(choices=q6_b, verbose_name="", widget=widgets.RadioSelectHorizontal())
 
-    q31 = models.CharField(choices=q1_c, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q32 = models.CharField(choices=q2_c, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q33 = models.CharField(choices=q3_c, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q34 = models.CharField(choices=q4_c, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q35 = models.CharField(choices=q5_c, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q36 = models.CharField(choices=q6_c, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_c_q1 = models.CharField(choices=q1_c, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_c_q2 = models.CharField(choices=q2_c, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_c_q3 = models.CharField(choices=q3_c, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_c_q4 = models.CharField(choices=q4_c, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_c_q5 = models.CharField(choices=q5_c, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_c_q6 = models.CharField(choices=q6_c, verbose_name="", widget=widgets.RadioSelectHorizontal())
 
-    q41 = models.CharField(choices=q1_d, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q42 = models.CharField(choices=q2_d, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q43 = models.CharField(choices=q3_d, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q44 = models.CharField(choices=q4_d, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q45 = models.CharField(choices=q5_d, verbose_name="", widget=widgets.RadioSelectHorizontal())
-    q46 = models.CharField(choices=q6_d, verbose_name="", widget=widgets.RadioSelectHorizontal())
-
-    chosen_future = models.IntegerField()
+    menu_d_q1 = models.CharField(choices=q1_d, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_d_q2 = models.CharField(choices=q2_d, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_d_q3 = models.CharField(choices=q3_d, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_d_q4 = models.CharField(choices=q4_d, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_d_q5 = models.CharField(choices=q5_d, verbose_name="", widget=widgets.RadioSelectHorizontal())
+    menu_d_q6 = models.CharField(choices=q6_d, verbose_name="", widget=widgets.RadioSelectHorizontal())

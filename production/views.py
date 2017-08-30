@@ -41,6 +41,10 @@ class PracticeSliderTwo(Page):
         }
 
 
+class ProceedScreen(Page):
+    pass
+
+
 class Wait(WaitPage):
     def after_all_players_arrive(self):
         for p in self.group.get_players():
@@ -223,6 +227,7 @@ page_sequence = [
     Introduction,
     PracticeSliderOne,
     PracticeSliderTwo,
+    ProceedScreen,
     Wait,
     SliderOne,
     SliderTwo,
