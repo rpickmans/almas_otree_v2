@@ -17,7 +17,10 @@ class Destroy(Page):
     form_fields = ["player_destroyed"]
 
     def player_destroyed_max(self):
-        return self.player.get_others_in_group()[0].participant.vars["ravens_points"]/2
+        if self.player.get_others_in_group()[0].participant.vars["ravens_points"] >= 2:
+            return self.player.get_others_in_group()[0].participant.vars["ravens_points"]/2
+        else:
+            return 0
 
     def vars_for_template(self):
         py = self.player.get_others_in_group()[0]

@@ -61,9 +61,9 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    total_contribution = models.CurrencyField()
+    total_contribution = models.IntegerField()
 
-    individual_share = models.CurrencyField()
+    individual_share = models.IntegerField()
 
     def set_payoffs(self):
 
@@ -88,7 +88,7 @@ class Player(BasePlayer):
         min=0, max=Constants.endowment,
         doc="""The amount contributed by the player""",
     )
-    question = models.CurrencyField()
+    question = models.IntegerField()
 
     guess_one = models.CharField(widget=widgets.RadioSelect(), choices=Constants.GUESS_CHOICES)
     guess_two = models.CharField(widget=widgets.RadioSelect(), choices=Constants.GUESS_CHOICES)

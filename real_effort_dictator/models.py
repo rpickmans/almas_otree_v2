@@ -38,10 +38,13 @@ class Group(BaseGroup):
         if p1.participant.vars["rank"] == "high":
             p1.payoff = p1.keep
             p2.payoff = 2400 - p1.keep
+
             points_p1 = p1.keep
-            points_p2 = p2.keep
+            points_p2 = 2400 - p1.keep
+
             p1.participant.vars["game_payoff"]["dictator"] = points_p1
             p2.participant.vars["game_payoff"]["dictator"] = points_p2
+
             p1.participant.vars["carrying_payoff"] = points_p1
             p2.participant.vars["carrying_payoff"] = points_p2
 
@@ -50,7 +53,7 @@ class Group(BaseGroup):
             p2.payoff = 1200 - p1.keep
 
             points_p1 = p1.keep
-            points_p2 = 1200 - p2.keep
+            points_p2 = 1200 - p1.keep
             p1.participant.vars["game_payoff"]["dictator"] = points_p1
             p2.participant.vars["game_payoff"]["dictator"] = points_p2
 
@@ -81,8 +84,8 @@ class Group(BaseGroup):
             points_p1 = 1200 - p2.keep
             points_p2 = p2.keep
 
-            p1.participant.vars["game_payoff"]["dictator"] = p1.payoff
-            p2.participant.vars["game_payoff"]["dictator"] = p2.payoff
+            p1.participant.vars["game_payoff"]["dictator"] = points_p1
+            p2.participant.vars["game_payoff"]["dictator"] = points_p1
 
             p1.participant.vars["carrying_payoff"] = points_p1
             p2.participant.vars["carrying_payoff"] = points_p2
