@@ -37,90 +37,67 @@ class Group(BaseGroup):
             p.random_coin_toss = random.choice(["Heads", "Tails"])
 
     def set_payoffs(self):
+        points = 0
         for p in self.get_players():
             if p.decision == "Coin 1":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 0
-                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
-                    # p.participant.vars["carrying_payoff"] += p.payoff
-                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                    points = 0
                 else:
                     p.payoff = 2880
-                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
-                    # p.participant.vars["carrying_payoff"] += p.payoff
-                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                    points = 2880
 
             elif p.decision == "Coin 2":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 240
-                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
-                    # p.participant.vars["carrying_payoff"] += p.payoff
-                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                    points = 240
                 else:
                     p.payoff = 2400
-                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
-                    # p.participant.vars["carrying_payoff"] += p.payoff
-                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                    points = 2400
 
             elif p.decision == "Coin 3":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 480
-                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
-                    # p.participant.vars["carrying_payoff"] += p.payoff
-                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                    points = 480
                 else:
                     p.payoff = 1920
-                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
-                    # p.participant.vars["carrying_payoff"] += p.payoff
-                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                    points = 1920
 
             elif p.decision == "Coin 4":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 720
-                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
-                    # p.participant.vars["carrying_payoff"] += p.payoff
-                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                    points = 720
                 else:
                     p.payoff = 1440
-                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
-                    # p.participant.vars["carrying_payoff"] += p.payoff
-                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                    points = 1440
 
             elif p.decision == "Coin 5":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 840
-                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
-                    # p.participant.vars["carrying_payoff"] += p.payoff
-                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                    points = 840
                 else:
                     p.payoff = 1200
-                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
-                    # p.participant.vars["carrying_payoff"] += p.payoff
-                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                    points = 1200
 
             elif p.decision == "Coin 6":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 960
-                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
-                    # p.participant.vars["carrying_payoff"] += p.payoff
-                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                    points = 960
                 else:
                     p.payoff = 960
-                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
-                    # p.participant.vars["carrying_payoff"] += p.payoff
-                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                    points = 960
 
             elif p.decision == "Coin 7":
                 if p.random_coin_toss == "Heads":
                     p.payoff = 1080
-                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
-                    # p.participant.vars["carrying_payoff"] += p.payoff
-                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                    points = 1080
                 else:
                     p.payoff = 720
-                    p.participant.vars["game_payoff"]["risk_game"] = p.payoff
-                    # p.participant.vars["carrying_payoff"] += p.payoff
-                    # p.participant.vars["main_carrying_payoff"] += p.payoff
+                    points = 720
+
+            p.participant.vars["game_payoff"]["risk_game"] = points
+            p.participant.vars["carrying_payoff"] += points
+
 
 
 class Player(BasePlayer):

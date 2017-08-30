@@ -26,8 +26,6 @@ class Constants(BaseConstants):
     name_in_url = 'joy_of_destruction'
     players_per_group = 2
     num_rounds = 1
-    vouchers = 6
-    points = 0
 
 
 class Subsession(BaseSubsession):

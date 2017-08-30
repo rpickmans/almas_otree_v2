@@ -46,8 +46,6 @@ class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
         for p in self.group.get_players():
             p.select_payoff()
-            print(p.participant.vars["chosen_future"], p.payoff)
-
 
 page_sequence = [
     Introduction,

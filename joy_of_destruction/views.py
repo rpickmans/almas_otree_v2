@@ -24,17 +24,16 @@ class Destroy(Page):
         return {
             "raven_points": py.participant.vars["ravens_points"],
         }
-
     def before_next_page(self):
-        self.player.vouchers = self.player.participant.vars["ravens_points"] - self.player.player_destroyed
+        self.player.computer_destroyed_points()
 
 
 class ResultsWaitPage(WaitPage):
 
     def after_all_players_arrive(self):
         for player in self.group.get_players():
-            player.set_player_destroyed()
-        self.group.set_payoffs()
+            player.participant.vars["vouchers"] = player.vouchers
+
 
 
 page_sequence = [

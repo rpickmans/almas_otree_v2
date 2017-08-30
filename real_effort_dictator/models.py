@@ -38,18 +38,25 @@ class Group(BaseGroup):
         if p1.participant.vars["rank"] == "high":
             p1.payoff = p1.keep
             p2.payoff = 2400 - p1.keep
-            p1.participant.vars["dictator_payoff"] = p1.payoff
-            p2.participant.vars["dictator_payoff"] = p2.payoff
-            p1.participant.vars["game_payoff"]["dictator"] = p1.payoff
-            p2.participant.vars["game_payoff"]["dictator"] = p2.payoff
+            points_p1 = p1.keep
+            points_p2 = p2.keep
+            p1.participant.vars["game_payoff"]["dictator"] = points_p1
+            p2.participant.vars["game_payoff"]["dictator"] = points_p2
+            p1.participant.vars["carrying_payoff"] = points_p1
+            p2.participant.vars["carrying_payoff"] = points_p2
 
         elif p1.participant.vars["rank"] == "low":
             p1.payoff = p1.keep
             p2.payoff = 1200 - p1.keep
-            p1.participant.vars["dictator_payoff"] = p1.payoff
-            p2.participant.vars["dictator_payoff"] = p2.payoff
-            p1.participant.vars["game_payoff"]["dictator"] = p1.payoff
-            p2.participant.vars["game_payoff"]["dictator"] = p2.payoff
+
+            points_p1 = p1.keep
+            points_p2 = 1200 - p2.keep
+            p1.participant.vars["game_payoff"]["dictator"] = points_p1
+            p2.participant.vars["game_payoff"]["dictator"] = points_p2
+
+            p1.participant.vars["carrying_payoff"] = points_p1
+            p2.participant.vars["carrying_payoff"] = points_p2
+
 
     def player_two_decides(self):
         p1 = self.get_player_by_id(1)
@@ -57,30 +64,31 @@ class Group(BaseGroup):
         if p2.participant.vars["rank"] == "high":
             p2.payoff = p2.keep
             p1.payoff = 2400 - p2.keep
-            p1.participant.vars["dictator_payoff"] = p1.payoff
-            p2.participant.vars["dictator_payoff"] = p2.payoff
-            p1.participant.vars["game_payoff"]["dictator"] = p1.payoff
-            p2.participant.vars["game_payoff"]["dictator"] = p2.payoff
+
+            points_p1 = 2400 - p2.keep
+            points_p2 = p2.keep
+
+            p1.participant.vars["game_payoff"]["dictator"] = points_p1
+            p2.participant.vars["game_payoff"]["dictator"] = points_p2
+
+            p1.participant.vars["carrying_payoff"] = points_p1
+            p2.participant.vars["carrying_payoff"] = points_p2
 
         elif p2.participant.vars["rank"] == "low":
             p2.payoff = p2.keep
             p1.payoff = 1200 - p2.keep
-            p1.participant.vars["dictator_payoff"] = p1.payoff
-            p2.participant.vars["dictator_payoff"] = p2.payoff
+
+            points_p1 = 1200 - p2.keep
+            points_p2 = p2.keep
 
             p1.participant.vars["game_payoff"]["dictator"] = p1.payoff
             p2.participant.vars["game_payoff"]["dictator"] = p2.payoff
 
+            p1.participant.vars["carrying_payoff"] = points_p1
+            p2.participant.vars["carrying_payoff"] = points_p2
+
     def set_payoffs(self):
         choice([self.player_one_decides, self.player_two_decides])()
-
-    def total_carrying_payoff(self):
-        for p in self.get_players():
-            if p.id_in_group == 1:
-                p.participant.vars["main_carrying_payoff"] += p.participant.vars["dictator_payoff"]
-            elif p.id_in_group == 2:
-                p.participant.vars["main_carrying_payoff"] += p.participant.vars["dictator_payoff"]
-
 
 class Player(BasePlayer):
     keep = models.IntegerField()

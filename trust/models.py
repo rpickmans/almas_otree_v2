@@ -33,7 +33,7 @@ class Constants(BaseConstants):
     num_rounds = 1
 
     # Initial amount allocated to each player
-    amount_allocated = 175
+    amount_allocated = 600
     multiplication_factor = 3
 
 
@@ -44,37 +44,12 @@ class Subsession(BaseSubsession):
 class Group(BaseGroup):
     def set_payoffs(self):
         for p in self.get_players():
-            p.payoff = int(Constants.amount_allocated) - int(p.sent_amount) + int(p.get_other_player().sent_back_amount)
-            p.participant.vars["game_payoff"]["trust_game"] = p.payoff
-            p.participant.vars["carrying_payoff"] += p.payoff
-            p.participant.vars["main_carrying_payoff"] += p.payoff
+            points = int(Constants.amount_allocated) - int(p.sent_amount) + int(p.get_other_player().sent_back_amount)
+            p.participant.vars["carrying_payoff"] += points
+            p.participant.vars["game_payoff"]["trust"] = points
+            p.payoff = points
 
 
 class Player(BasePlayer):
-    sent_amount = models.IntegerField(min=0, max=175)
-
+    sent_amount = models.IntegerField(min=0, max=600)
     sent_back_amount = models.IntegerField()
-
-    def get_other_player(self):
-        return self.get_others_in_group()[0]
-
-'''
-    def set_payoffs(self):
-        if self.subsession.round_number == 1:
-            for p in self.get_players():
-                if p.id == 1:
-                    p.payoff = int(Constants.amount_allocated) - int(self.sent_amount) + int(self.sent_back_amount)
-                    p.participant.vars["carrying_payoff"] += p.payoff
-                elif p.id == 2:
-                    p.payoff = int(self.sent_amount) * Constants.multiplication_factor - int(self.sent_back_amount)
-                    p.participant.vars["carrying_payoff"] += p.payoff
-        elif self.subsession.round_number == 2:
-            for p in self.get_players():
-                if p.in_previous_rounds()[0].id == 2:
-                    p.payoff = int(self.sent_amount) * Constants.multiplication_factor - int(self.sent_back_amount)
-                    p.participant.vars["carrying_payoff"] += p.payoff
-                elif p.in_previous_rounds()[0].id == 1:
-                    p.payoff = int(Constants.amount_allocated) - int(self.sent_amount) + int(self.sent_back_amount)
-                    p.participant.vars["carrying_payoff"] += p.payoff
-
-'''

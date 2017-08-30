@@ -13,6 +13,11 @@ class Donate(Page):
     form_model = models.Player
     form_fields = ['donated_amount']
 
+    def is_displayed(self):
+        payoff = self.participant.vars["game_payoff"]
+        print(payoff)
+        return True
+
     def donated_amount_error_message(self, value):
         if self.player.participant.vars["carrying_payoff"] < value:
             return 'Amount to donate should be less than what you have!'

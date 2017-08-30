@@ -7,13 +7,42 @@
 {% block content %}
     <div class="panel panel-default">
       <div class="panel-body">
-      <p><strong>Payment Today</strong> (A) versus <strong>Payment in 3 Weeks</strong>(B):</p>
-        {% for field in form %}
-            {% formfield field %}
-        {% endfor %}
+      <p><strong>Payment Today</strong> (A)   <strong>Payment in 3 Weeks</strong>(B):</p>
+        <div id="form-container">
+            {% for field in form %}
+                {% formfield field with label=""%}
+            {% endfor %}
+        </div>
       </div>
     </div>
     <p><strong>Please click "Next" to continue</strong></p>
     {% next_button %}
+
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var container = $("#form-container");
+        var count = container.children().length;
+        var width = parseFloat(100)/parseFloat(count);
+        $.each(container.children(), function(key, value) {
+            $(value).attr("style", "width: " + width + "%; float: left; font-weight: normal;");
+        })
+    });
+    </script>
+{% endblock %}
+ {% block styles %}
+
+     <style type="text/css">
+
+     #form-container ul li{
+         margin-top: 20px;
+     }
+
+     #form-container ul li label {
+         font-weight: normal;
+     }
+
+     </style>
 
 {% endblock %}
