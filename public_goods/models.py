@@ -41,6 +41,20 @@ class Constants(BaseConstants):
         10: [75]
     }
 
+    GUESS_CHOICES = [
+        ("1", "Ksh. 0"),
+        ("2", "Ksh. 1-10"),
+        ("3", "Ksh. 11-20"),
+        ("4", "Ksh. 21-30"),
+        ("5", "Ksh. 31-40"),
+        ("6", "Ksh. 41-49"),
+        ("7", "Ksh. 50-59"),
+        ("8", "Ksh. 60-69"),
+        ("9", "Ksh. 70-74"),
+        ("10", "Ksh. 75"),
+    ]
+
+
 
 class Subsession(BaseSubsession):
     pass
@@ -70,27 +84,14 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
 
-    GUESS_CHOICES = [
-        ("1", "Ksh. 0"),
-        ("2", "Ksh. 1-10"),
-        ("3", "Ksh. 11-20"),
-        ("4", "Ksh. 21-30"),
-        ("5", "Ksh. 31-40"),
-        ("6", "Ksh. 41-49"),
-        ("7", "Ksh. 50-59"),
-        ("8", "Ksh. 60-69"),
-        ("9", "Ksh. 70-74"),
-        ("10", "Ksh. 75"),
-    ]
-
     contribution = models.IntegerField(
         min=0, max=Constants.endowment,
         doc="""The amount contributed by the player""",
     )
     question = models.CurrencyField()
 
-    guess_one = models.CharField(widget=widgets.RadioSelect(), choices=GUESS_CHOICES)
-    guess_two = models.CharField(widget=widgets.RadioSelect(), choices=GUESS_CHOICES)
+    guess_one = models.CharField(widget=widgets.RadioSelect(), choices=Constants.GUESS_CHOICES)
+    guess_two = models.CharField(widget=widgets.RadioSelect(), choices=Constants.GUESS_CHOICES)
 
     def guess_correct(self):
         guess_choices = Constants.GUESS_CHOICE
