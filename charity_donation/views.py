@@ -7,6 +7,7 @@ from . import models
 from ._builtin import Page, WaitPage
 from .models import Constants
 import random
+import math
 
 
 class Donate(Page):
@@ -31,7 +32,7 @@ class Donate(Page):
         self.player.charity_allocated = charity
         return {
             'charity': charity,
-            'carrying_payoff': self.player.participant.vars["carrying_payoff"]
+            'carrying_payoff': math.floor(self.player.participant.vars["carrying_payoff"])
         }
 
 
