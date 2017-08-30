@@ -17,10 +17,10 @@
             youth in Kenya, <strong>{{ charity }}</strong>.
         </p>
         <p>
-        You can decide to donate  KSH 0, KSH 50, KSH 100, KSH 150, KSH 200 or KSH 250.
+        You can decide to donate  between 0 and {{ carrying_payoff }} of your tokens.
         </p>
         <p>
-             {% formfield player.donated_amount with label="Please make your donation now?" %}
+             {% formfield player.donated_amount with label="How much will you donate?" %}
         </p>
       </div>
     </div>
