@@ -14,16 +14,19 @@ class Introduction(Page):
 
 class Destroy(Page):
     form_model = models.Player
-    form_fields = ["amount_to_destroy"]
+    form_fields = ["player_destroyed"]
 
-    def amount_to_destroy_max(self):
-        return self.player.get_others_in_group()[0].participant.vars["ravens_points"]
+    def player_destroyed_max(self):
+        return self.player.get_others_in_group()[0].participant.vars["ravens_points"]/2
 
     def vars_for_template(self):
         py = self.player.get_others_in_group()[0]
         return {
             "raven_points": py.participant.vars["ravens_points"],
         }
+
+    def before_next_page(self):
+        self.player.vouchers = self.player.participant.vars["ravens_points"] - self.player.player_destroyed
 
 
 class ResultsWaitPage(WaitPage):

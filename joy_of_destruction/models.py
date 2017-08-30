@@ -35,29 +35,26 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-
-    def set_payoffs(self):
-        p1, p2 = self.get_player_by_id(1), self.get_player_by_id(2)
-        p1.points = Constants.vouchers - p1.destroyed
-        p2.points = Constants.vouchers - p2.destroyed
-
-        p1.participant.vars["ravens_points"] += p1.points
-        p2.participant.vars["ravens_points"] += p2.points
-
+    pass
 
 class Player(BasePlayer):
 
-    def set_player_destroyed(self):
-
-        points = self.get_others_in_group()[0].participant.vars["ravens_points"]
-        if points <= self.amount_to_destroy:
-            self.destroyed = self.amount_to_destroy
+    def computer_destroyed_points(self):
+        choice = random.choice([0,1])
+        if choice == 1:
+            # heads nothing
+            self.coin_toss = "Heads"
         else:
-            self.destroyed = self.amount_to_destroy + random.randrange(1, points - self.amount_to_destroy + 1)
+            # tails all
+            self.vouchers = 0
+            self.coin_toss = "Tails"
 
-    amount_to_destroy = models.IntegerField(min=0)
 
-    destroyed = models.IntegerField(default=0)
+    player_destroyed = models.IntegerField(min=0)
 
-    points = models.IntegerField(default=0)
+    computer_destroyed = models.IntegerField(default=0)
+
+    vouchers = models.IntegerField(default=0)
+
+    coin_toss = models.CharField()
 
