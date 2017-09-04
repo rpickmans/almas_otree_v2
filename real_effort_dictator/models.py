@@ -85,7 +85,7 @@ class Group(BaseGroup):
             points_p2 = p2.keep
 
             p1.participant.vars["game_payoff"]["dictator"] = points_p1
-            p2.participant.vars["game_payoff"]["dictator"] = points_p1
+            p2.participant.vars["game_payoff"]["dictator"] = points_p2
 
             p1.participant.vars["carrying_payoff"] = points_p1
             p2.participant.vars["carrying_payoff"] = points_p2
