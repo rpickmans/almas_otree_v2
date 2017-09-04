@@ -26,32 +26,27 @@ class Constants(BaseConstants):
     endowment = 75
     efficiency_factor = 2
 
+    # tokens for guessing correctly
     guess_correct = 175
 
     GUESS_CHOICE = {
         1: [0],
-        2: [list(range(1, 11))],
-        3: [list(range(11, 21))],
-        4: [list(range(21, 31))],
-        5: [list(range(31, 41))],
-        6: [list(range(41, 51))],
-        7: [list(range(51, 61))],
-        8: [list(range(61, 71))],
-        9: [list(range(71, 75))],
-        10: [75]
+        2: [list(range(1, 241))],
+        3: [list(range(241, 481))],
+        4: [list(range(481, 721))],
+        5: [list(range(721, 961))],
+        6: [list(range(961, 1200))],
+        7: [1200],
     }
 
     GUESS_CHOICES = [
-        ("1", "Ksh. 0"),
-        ("2", "Ksh. 1-10"),
-        ("3", "Ksh. 11-20"),
-        ("4", "Ksh. 21-30"),
-        ("5", "Ksh. 31-40"),
-        ("6", "Ksh. 41-49"),
-        ("7", "Ksh. 50-59"),
-        ("8", "Ksh. 60-69"),
-        ("9", "Ksh. 70-74"),
-        ("10", "Ksh. 75"),
+        ("1", "0 tokens"),
+        ("2", "1 - 240 tokens"),
+        ("3", "241 - 480 tokens"),
+        ("4", "481 - 720 tokens"),
+        ("5", "721 - 960 tokens"),
+        ("6", "961 - 1199 tokens"),
+        ("7", "1200 tokens"),
     ]
 
 
