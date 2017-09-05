@@ -32,11 +32,16 @@ class Subsession(BaseSubsession):
 
 class Group(BaseGroup):
 
-    def make_random_toss(self):
+    def make_random_toss_one(self):
         for p in self.get_players():
-            p.random_coin_toss = random.choice(["Heads", "Tails"])
+            p.random_coin_toss_one = random.choice(["Heads", "Tails"])
 
-    def set_payoffs(self):
+    def make_random_toss_two(self):
+        for p in self.get_players():
+            p.random_coin_toss_two = random.choice(["Heads", "Tails"])
+
+
+    def decision_one_payoff(self):
         points = 0
         for p in self.get_players():
             if p.decision == "Coin 1":
@@ -98,17 +103,92 @@ class Group(BaseGroup):
             p.participant.vars["game_payoff"]["risk_game"] = points
             p.participant.vars["carrying_payoff"] += points
 
+    def decision_two_payoff(self):
+        points = 0
+        for p in self.get_players():
+            if p.decision == "Coin 1":
+                if p.random_coin_toss == "Heads":
+                    p.payoff = 0
+                    points = 0
+                else:
+                    p.payoff = 2160
+                    points = 2160
+
+            elif p.decision == "Coin 2":
+                if p.random_coin_toss == "Heads":
+                    p.payoff = 240
+                    points = 240
+                else:
+                    p.payoff = 1920
+                    points = 1920
+
+            elif p.decision == "Coin 3":
+                if p.random_coin_toss == "Heads":
+                    p.payoff = 480
+                    points = 480
+                else:
+                    p.payoff = 1680
+                    points = 1680
+
+            elif p.decision == "Coin 4":
+                if p.random_coin_toss == "Heads":
+                    p.payoff = 720
+                    points = 720
+                else:
+                    p.payoff = 1440
+                    points = 1440
+
+            elif p.decision == "Coin 5":
+                if p.random_coin_toss == "Heads":
+                    p.payoff = 960
+                    points = 960
+                else:
+                    p.payoff = 1200
+                    points = 1200
+
+            elif p.decision == "Coin 6":
+                p.payoff = 1080
+                points = 1080
+
+            elif p.decision == "Coin 7":
+                if p.random_coin_toss == "Heads":
+                    p.payoff = 1200
+                    points = 1200
+                else:
+                    p.payoff = 960
+                    points = 960
+
+            p.participant.vars["game_payoff"]["risk_game"] += points
+            p.participant.vars["carrying_payoff"] += points
+
 
 
 class Player(BasePlayer):
-    decision_choices = (
-            ("Coin 1", "Coin 1: 0 Tokens if heads and 2880 Tokens if tails"),
-            ("Coin 2", "Coin 2: 240 Tokens if heads and 2400 Tokens if tails"),
-            ("Coin 3", "Coin 3: 480 Tokens if heads and 1920 Tokens if tails"),
-            ("Coin 4", "Coin 4: 720 Tokens if heads and 1440 Tokens if tails"),
-            ("Coin 5", "Coin 5: 840 Tokens if heads and 1200 Tokens if tails"),
-            ("Coin 6", "Coin 6: 960 Tokens if heads and 960 Tokens if tails"),
-            ("Coin 7", "Coin 6: 1080 Tokens if heads and 720 Tokens if tails"),
-        )
-    decision = models.CharField(choices=decision_choices, widget=widgets.RadioSelect())
-    random_coin_toss = models.CharField()
+
+
+
+    CHOICE_ONE = (
+        ("Coin 1", "Coin 1: 0 Tokens if heads and 2880 Tokens if tails"),
+        ("Coin 2", "Coin 2: 240 Tokens if heads and 2400 Tokens if tails"),
+        ("Coin 3", "Coin 3: 480 Tokens if heads and 1920 Tokens if tails"),
+        ("Coin 4", "Coin 4: 720 Tokens if heads and 1440 Tokens if tails"),
+        ("Coin 5", "Coin 5: 840 Tokens if heads and 1200 Tokens if tails"),
+        ("Coin 6", "Coin 6: 960 Tokens if heads and 960 Tokens if tails"),
+        ("Coin 7", "Coin 6: 1080 Tokens if heads and 720 Tokens if tails"),
+    )
+
+    CHOICE_TWO = (
+        ("Coin 1", "Coin 1: 0 tokens if heads and 2160 tokens if tails"),
+        ("Coin 2", "Coin 2: 240 tokens if heads and 1920 tokens if tails"),
+        ("Coin 3", "Coin 3: 480 tokens if heads and 1680 tokens if tails"),
+        ("Coin 4", "Coin 4: 720 tokens if heads and 1440 tokens if tails"),
+        ("Coin 5", "Coin 5: 960 tokens if heads and 1200 tokens if tails"),
+        ("Coin 6", "Coin 6: 1080 tokens if heads and 1080 tokens if tails"),
+        ("Coin 7", "Coin 7: 1200 tokens if heads and 960 tokens if tails"),
+    )
+
+    decision_one = models.CharField(choices=CHOICE_ONE, widget=widgets.RadioSelect())
+    random_coin_toss_one = models.CharField()
+
+    decision_two = models.CharField(choices=CHOICE_TWO, widget=widgets.RadioSelect())
+    random_coin_toss_two = models.CharField()

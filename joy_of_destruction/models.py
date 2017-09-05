@@ -44,11 +44,12 @@ class Player(BasePlayer):
             self.coin_toss = "Heads"
         else:
             # tails all
-            self.vouchers = 0
+            other = self.others_in_group()[0]
+            other.vouchers -= random.randrange(1, other.vouchers - other.other_player_destroyed)
             self.coin_toss = "Tails"
 
 
-    player_destroyed = models.IntegerField(min=0)
+    other_player_destroyed = models.IntegerField(min=0)
 
     computer_destroyed = models.IntegerField(default=0)
 

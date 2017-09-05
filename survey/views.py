@@ -5,29 +5,28 @@ from ._builtin import Page, WaitPage
 from otree.common import Currency as c, currency_range
 from .models import Constants
 
-
-class Demographics(Page):
-
-    form_model = models.Player
-    form_fields = ['q_age',
-                   'q_gender',
-                   'q_occupation',
-                   'q_income',
-                   'q_education_father',
-                   'q_education_mother',
-                   ]
-
 class CognitiveReflectionTest(Page):
 
     form_model = models.Player
-    form_fields = ['crt_bat',
-                  'crt_widget',
-                  'crt_lake']
+    form_fields = ['cognitive_reflection_one',
+                  'cognitive_reflection_two',
+                  'cognitive_reflection_three',
+                   'cognitive_reflection_four',
+                   'cognitive_reflection_five',
+                   'cognitive_reflection_six']
 
     def before_next_page(self):
         self.player.set_payoff()
 
+class Demographics(Page):
+
+    form_model = models.Player
+    form_fields = ['demographic_one_scale', 'age', 'no_age', 'height', 'no_height',
+                   'weight', 'no_weight', 'gender', 'ethnicity', 'california_residency',
+                   'father_occupation', 'mother_occupation', 'income', 'education_father',
+                   'education_mother']
+
 page_sequence = [
+    CognitiveReflectionTest,
     Demographics,
-    CognitiveReflectionTest
 ]

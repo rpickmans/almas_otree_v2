@@ -9,15 +9,50 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <p>
-                Please answer the following questions.
+                <p>
+                    How well does the following statement describe you as a person?
+                </p>
+
+                <p>
+                    “As long as I am not convinced otherwise, I assume that people have only the best Intentions.”
+                    Please use the scale from 0 to 10, where 0 means “does not describe me at all" and a 10 means “describes me perfectly".
+                    You can also use the values in-between to indicate where you fall on the scale.
+                </p>
+                {% formfield player.demographic_one_scale with label="" %}
             </p>
 
-            {% formfield player.q_age %}
-            {% formfield player.q_gender %}
-            {% formfield player.q_occupation with label="What is your parents' (guardians') main occupation?" %}
-            {% formfield player.q_income with label="What is your parents' (guardians') combined monthly income?" %}
-            {% formfield player.q_education_father with label="What is your father's highest level of education?" %}
-            {% formfield player.q_education_mother with label="What is your mother's highest level of education?" %}
+            <p>
+                What is your height?
+                {% formfield player.height with label="in cm" %}
+                {% formfield player.no_height with label="Prefer not to say" %}
+            </p>
+
+            <p>
+                What is your weight?
+                {% formfield player.weight with label="in kg" %}
+                {% formfield player.no_weight with label="Prefer not to say" %}
+            </p>
+
+            <p>
+                What is your age?
+                {% formfield player.age with label="" %}
+                {% formfield player.no_age with label="" %}
+            </p>
+
+            <p>
+                What is your gender?
+                {% formfield player.gender with label="" %}
+            </p>
+
+            <p>What is your ethnicity?
+                {% formfield player.ethnicity with label="" %}
+            </p>
+            {% formfield player.father_occupation with label="What is your father's (or guardians') main occupation?" %}
+            {% formfield player.mother_occupation with label="What is your mother's (or guardians') main occupation?" %}
+
+            {% formfield player.income with label="What is your parents' (guardians') combined monthly income?" %}
+            {% formfield player.education_father with label="What is your father's (or guardians') highest level of education?" %}
+            {% formfield player.education_mother with label="What is your mother's (or guardians') highest level of education?" %}
 
         </div>
     </div>

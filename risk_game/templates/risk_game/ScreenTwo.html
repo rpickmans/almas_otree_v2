@@ -1,0 +1,35 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>
+                You will now make a choice among a different set of 7 coins. All coins again have an equal chance of
+                landing on heads or on tails. The computer will toss another virtual coin (different from last time).
+            </p>
+            <p>
+                Your earnings from this part of the experiment depend on your choice and the result of the coin toss.
+                Therefore, it is in your interest to carefully pick the option you truly prefer.
+            </p>
+            <p>
+                These are the 7 different coins from which you will choose one:
+            </p>
+            <ul>
+                <li>Coin 1: 0 tokens if heads and 2160 tokens if tails</li>
+                <li>Coin 2: 240 tokens if heads and 1920 tokens if tails</li>
+                <li>Coin 3: 480 tokens if heads and 1680 tokens if tails</li>
+                <li>Coin 4: 720 tokens if heads and 1440 tokens if tails</li>
+                <li>Coin 5: 960 tokens if heads and 1200 tokens if tails</li>
+                <li>Coin 6: 1080 tokens if heads and 1080 tokens if tails</li>
+                <li>Coin 7: 1200 tokens if heads and 960 tokens if tails</li>
+            </ul>
+        </div>
+    </div>
+    <p><strong>Please click "Next" to continue</strong></p>
+    {% next_button %}
+{% endblock %}

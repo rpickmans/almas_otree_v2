@@ -9,16 +9,20 @@ from .models import Constants
 
 
 class Introduction(Page):
-    pass
+
+    def before_next_page(self):
+        self.player.vouchers = self.participant.vars["ravens_points"]
 
 
 class Destroy(Page):
     form_model = models.Player
-    form_fields = ["player_destroyed"]
+    form_fields = ["other_player_destroyed"]
 
     def player_destroyed_max(self):
-        if self.player.get_others_in_group()[0].participant.vars["ravens_points"] >= 2:
-            return self.player.get_others_in_group()[0].participant.vars["ravens_points"]/2
+        # 0 - 2/2 = 1
+        other_players_points = self.player.get_others_in_group()[0].participant.vars["ravens_points"]
+        if other_players_points >= 2:
+            return 0 - other_players_points/2
         else:
             return 0
 
@@ -28,6 +32,9 @@ class Destroy(Page):
             "raven_points": py.participant.vars["ravens_points"],
         }
     def before_next_page(self):
+        player_y = self.player.get_others_in_group()[0]
+        player_y.vouchers = player_y.vouchers - player_y.player_destroyed
+
         self.player.computer_destroyed_points()
 
 

@@ -8,24 +8,37 @@ from ._builtin import Page, WaitPage
 from .models import Constants
 
 
-class Introduction(Page):
+class ScreenOne(Page):
     pass
 
-
-class Decide(Page):
+class DecideOne(Page):
     form_model = models.Player
-    form_fields = ['decision']
+    form_fields = ['decision_one']
 
+    def before_next_page(self):
+        self.group.make_random_toss_one()
+
+class ScreenTwo(Page):
+    pass
+
+class DecideTwo(Page):
+    form_model = models.Player
+    form_fields = ['decision_two']
+
+    def before_next_page(self):
+        self.group.make_random_toss_one()
 
 class ResultsWaitPage(WaitPage):
 
     def after_all_players_arrive(self):
-        self.group.make_random_toss()
-        self.group.set_payoffs()
+        self.group.decision_one_payoff()
+        self.group.decision_two_payoff()
 
 
 page_sequence = [
-    Introduction,
-    Decide,
+    ScreenOne,
+    DecideOne,
+    ScreenTwo,
+    DecideTwo,
     ResultsWaitPage,
 ]
