@@ -45,7 +45,7 @@ class Player(BasePlayer):
         else:
             # tails all
             other = self.others_in_group()[0]
-            other.vouchers -= random.randrange(1, other.vouchers - other.other_player_destroyed)
+            other.vouchers -= random.randrange(1, other.vouchers)
             self.coin_toss = "Tails"
 
 

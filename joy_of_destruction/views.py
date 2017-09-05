@@ -22,7 +22,7 @@ class Destroy(Page):
         # 0 - 2/2 = 1
         other_players_points = self.player.get_others_in_group()[0].participant.vars["ravens_points"]
         if other_players_points >= 2:
-            return 0 - other_players_points/2
+            return other_players_points/2
         else:
             return 0
 
