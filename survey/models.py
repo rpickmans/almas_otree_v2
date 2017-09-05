@@ -12,7 +12,6 @@ import random
 
 from django_countries.fields import CountryField
 
-
 doc = """
 Survey questions to collect general background information about the subjects.
 """
@@ -22,6 +21,52 @@ class Constants(BaseConstants):
     name_in_url = 'survey'
     players_per_group = None
     num_rounds = 1
+    ETHNICITY = ['Bukusu',
+                 'Chonyi',
+                 'Digo',
+                 'Duruma',
+                 'Elgeyo',
+                 'Embu',
+                 'Giriama',
+                 'Isukha',
+                 'Jibana',
+                 'Kalenjin',
+                 'Kamba',
+                 'Kamba',
+                 'Kauma',
+                 'Kikuyu',
+                 'Kipsigis',
+                 'Kisii',
+                 'Kuria',
+                 'Luhya',
+                 'Luo',
+                 'Maasai',
+                 'Maragoli',
+                 'Marakwet',
+                 'Marama',
+                 'Meru',
+                 'MijiKenda',
+                 'Nandi',
+                 'Okiek',
+                 'Orma',
+                 'Oromo',
+                 'Pokomo',
+                 'Pokot',
+                 'Rabai',
+                 'Rendile',
+                 'Ribe',
+                 'Sabaot',
+                 'Samburu',
+                 'Sengwer',
+                 'Somali',
+                 'Swahili',
+                 'Tachoni',
+                 'Taita',
+                 'Taveta',
+                 'Terik',
+                 'Tugen',
+                 'Turkana',
+                 'Prefer not to say',]
 
 
 class Subsession(BaseSubsession):
@@ -33,12 +78,9 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-
     def set_payoff(self):
         """Calculate payoff, which is zero for the survey"""
         self.payoff = 0
-
-
 
     cognitive_reflection_one = models.CharField()
     cognitive_reflection_two = models.CharField()
@@ -47,70 +89,61 @@ class Player(BasePlayer):
     cognitive_reflection_five = models.CharField()
     cognitive_reflection_six = models.CharField()
 
-    demographic_one_scale = models.IntegerField(widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '10'}))
+    demographic_one_scale = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '10'}))
 
+    age = models.CharField(default="Prefer not to say", blank=True, null=True)
 
-    age = models.PositiveIntegerField()
-    no_age = models.CharField(choices=["Prefer not to say"],
-                                widget=widgets.RadioSelect()
-                                )
+    height = models.CharField(default="Prefer not to say", blank=True, null=True)
 
-
-    height = models.PositiveIntegerField()
-    no_height = models.CharField(widget=widgets.RadioSelect())
-
-    weight = models.PositiveIntegerField()
-    no_weight = models.CharField(choices=["Prefer not to say"],
-                                 widget=widgets.RadioSelect()
-                                 )
+    weight = models.CharField(default="Prefer not to say", blank=True, null=True)
 
     gender = models.CharField(choices=['Male', 'Female', "Prefer not to say"],
                               widget=widgets.RadioSelect())
 
-    ethnicity = models.CharField(choices=['Luhya', 'Luo', 'Kikuyu', 'Kamba', 'Prefer not to say'],
-                                 widget=widgets.RadioSelect())
+    ethnicity = models.CharField(choices=Constants.ETHNICITY,
+                                 widget=widgets.RadioSelectHorizontal())
 
-    california_residency = models.CharField(choices=['I am an in-state student', 'I am an out-of-state student', 'Prefer not to say'],
-                                            widget=widgets.RadioSelect())
+    california_residency = models.CharField(
+        choices=['I am an in-state student', 'I am an out-of-state student', 'Prefer not to say'],
+        widget=widgets.RadioSelect())
 
     father_occupation = models.CharField(widget=widgets.RadioSelect(),
-                                           choices=["Wage-employed", "Self-employed", "Unemployed", "Prefer not to say"]
-                                    )
+                                         choices=["Wage-employed", "Self-employed", "Unemployed", "Prefer not to say"]
+                                         )
 
     mother_occupation = models.CharField(widget=widgets.RadioSelect(),
-                                           choices=["Wage-employed", "Self-employed", "Unemployed", "Prefer not to say"]
-                                           )
+                                         choices=["Wage-employed", "Self-employed", "Unemployed", "Prefer not to say"]
+                                         )
 
     income = models.CharField(widget=widgets.RadioSelect(),
-                                choices=["Less than Ksh.10,000",
-                                         "Ksh.10,000 - Ksh. 30,000",
-                                         "Ksh. 30,000 - Ksh. 60,000",
-                                         "Ksh. 60,000 - Ksh.100,000",
-                                         "More than Ksh.100,000",
-                                         "Don’t know",
-                                         "Prefer not to say"
-                                         ])
+                              choices=["Less than Ksh.10,000",
+                                       "Ksh.10,000 - Ksh. 30,000",
+                                       "Ksh. 30,000 - Ksh. 60,000",
+                                       "Ksh. 60,000 - Ksh.100,000",
+                                       "More than Ksh.100,000",
+                                       "Don't know",
+                                       "Prefer not to say"
+                                       ])
 
     education_father = models.CharField(widget=widgets.RadioSelect(),
-                                          choices=["Completed Primary",
-                                                   "Completed Secondary",
-                                                   "Completed technical college",
-                                                   "Completed University",
-                                                   "Other",
-                                                   "Prefer not to say"
-                                                   ])
+                                        choices=["Completed Primary",
+                                                 "Completed Secondary",
+                                                 "Completed technical college",
+                                                 "Completed University",
+                                                 "Other",
+                                                 "Prefer not to say"
+                                                 ])
 
     education_mother = models.CharField(widget=widgets.RadioSelect(),
-                                          choices=["Completed Primary",
-                                                   "Completed Secondary",
-                                                   "Completed technical college",
-                                                   "Completed University",
-                                                   "Other",
-                                                   "Prefer not to say"
-                                                   ])
+                                        choices=["Completed Primary",
+                                                 "Completed Secondary",
+                                                 "Completed technical college",
+                                                 "Completed University",
+                                                 "Other",
+                                                 "Prefer not to say"
+                                                 ])
 
     crt_bat = models.PositiveIntegerField()
     crt_widget = models.PositiveIntegerField()
     crt_lake = models.PositiveIntegerField()
-
-

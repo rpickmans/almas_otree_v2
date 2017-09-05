@@ -1,0 +1,35 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Survey
+{% endblock %}
+
+{% block content %}
+    <div class="panel panel-default">
+    <div class="panel-body">
+        <div>
+            <p>
+                5) What is your ethnicity?
+                {% formfield player.ethnicity with label="" %}
+            </p>
+        </div>
+        <br>
+        <p><strong>Please click "Next" to continue</strong></p>
+        {% next_button %}
+    </div>
+{% endblock %}
+
+{% block app_styles %}
+    <style type="text/css">
+        .controls label {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            vertical-align: top;
+            padding-top: 40px;
+            padding-left: 10px;
+            margin-left: 10px;
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Survey
+{% endblock %}
+
+{% block content %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>
+                1) What is your height (in cm)?
+                <br>
+                <br>
+                <strong>Leave blank if you Prefer not to say.</strong>
+                {% formfield player.height with label="" %}
+            </p>
+
+            <p>
+                2) What is your weight (in kg)?
+                <br>
+                <br>
+                <strong>Leave blank if you Prefer not to say.</strong>
+                {% formfield player.weight with label="" %}
+            </p>
+
+            <p>
+                3) What is your age?
+                <br>
+                <br>
+                <strong>Leave blank if you Prefer not to say.</strong>
+                {% formfield player.age with label="" %}
+            </p>
+
+            <p>
+                4) What is your gender?
+                {% formfield player.gender with label="" %}
+            </p>
+            <p><strong>Please click "Next" to continue</strong></p>
+            {% next_button %}
+        </div>
+{% endblock %}
+{% block scripts %}
+
+    <!-- define a script -->
+    <script>
+        $(function () {
+            $("input[type=text]").val("");
+        });
+    </script>
+{% endblock %}

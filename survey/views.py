@@ -17,16 +17,35 @@ class CognitiveReflectionTest(Page):
 
     def before_next_page(self):
         self.player.set_payoff()
+class One(Page):
+    form_model = models.Player
+    form_fields = ['demographic_one_scale']
+
+class Two(Page):
+    form_model = models.Player
+    form_fields = ['age', 'height', 'weight', 'gender']
+
+class Three(Page):
+    form_model = models.Player
+    form_fields = ['ethnicity']
+
+class Four(Page):
+    form_model = models.Player
+    form_fields = ['california_residency']
+
+    def is_displayed(self):
+        return False
 
 class Demographics(Page):
 
     form_model = models.Player
-    form_fields = ['demographic_one_scale', 'age', 'no_age', 'height', 'no_height',
-                   'weight', 'no_weight', 'gender', 'ethnicity', 'california_residency',
-                   'father_occupation', 'mother_occupation', 'income', 'education_father',
-                   'education_mother']
+    form_fields = ['father_occupation', 'mother_occupation', 'income', 'education_father', 'education_mother']
 
 page_sequence = [
     CognitiveReflectionTest,
+    One,
+    Two,
+    Three,
+    Four,
     Demographics,
 ]
