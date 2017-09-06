@@ -75,6 +75,16 @@ class Subsession(BaseSubsession):
             g.random_slider_value_thirtyeight = random.randint(1, 100)
             g.random_slider_value_thirtynine = random.randint(1, 100)
             g.random_slider_value_fourty = random.randint(1, 100)
+            g.random_slider_value_fourtyone = random.randint(1, 100)
+            g.random_slider_value_fourtytwo = random.randint(1, 100)
+            g.random_slider_value_fourtythree = random.randint(1, 100)
+            g.random_slider_value_fourtyfour = random.randint(1, 100)
+            g.random_slider_value_fourtyfive = random.randint(1, 100)
+            g.random_slider_value_fourtysix = random.randint(1, 100)
+            g.random_slider_value_fourtyseven = random.randint(1, 100)
+            g.random_slider_value_fourtyeight = random.randint(1, 100)
+            g.random_slider_value_fourtynine = random.randint(1, 100)
+            g.random_slider_value_fifty = random.randint(1, 100)
 
 
 
@@ -204,6 +214,36 @@ class Group(BaseGroup):
             if p.player_slider_value_fourty == p.random_slider_value_fourty:
                 correct += 1
 
+            if p.player_slider_value_fourtyone == p.random_slider_value_fourtyone:
+                correct += 1
+
+            if p.player_slider_value_fourtytwo == p.random_slider_value_fourtytwo:
+                correct += 1
+
+            if p.player_slider_value_fourtythree == p.random_slider_value_fourtythree:
+                correct += 1
+
+            if p.player_slider_value_fourtyfour == p.random_slider_value_fourtyfour:
+                correct += 1
+
+            if p.player_slider_value_fourtyfive == p.random_slider_value_fourtyfive:
+                correct += 1
+
+            if p.player_slider_value_fourtysix == p.random_slider_value_fourtysix:
+                correct += 1
+
+            if p.player_slider_value_fourtyseven == p.random_slider_value_fourtyseven:
+                correct += 1
+
+            if p.player_slider_value_fourtyeight == p.random_slider_value_fourtyeight:
+                correct += 1
+
+            if p.player_slider_value_fourtynine == p.random_slider_value_fourtynine:
+                correct += 1
+
+            if p.player_slider_value_fifty == p.random_slider_value_fifty:
+                correct += 1
+
             p.correct_sliders = correct
             p.participant.vars["total_correct"] = p.correct_sliders
 
@@ -300,6 +340,26 @@ class Player(BasePlayer):
         widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
     player_slider_value_fourty = models.IntegerField(
         widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_fourtyone = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_fourtytwo = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_fourtythree = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_fourtyfour = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_fourtyfive = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_fourtysix = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_fourtyseven = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_fourtyeight = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_fourtynine = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_fifty = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
 
     # practice random value
     practice_random_slider_value_one = models.IntegerField()
@@ -346,6 +406,17 @@ class Player(BasePlayer):
     random_slider_value_thirtyeight = models.IntegerField()
     random_slider_value_thirtynine = models.IntegerField()
     random_slider_value_fourty = models.IntegerField()
+    random_slider_value_fouryone = models.IntegerField()
+    random_slider_value_fourtytwo = models.IntegerField()
+    random_slider_value_fourtythree = models.IntegerField()
+    random_slider_value_fourtyfour = models.IntegerField()
+    random_slider_value_fourtyfive = models.IntegerField()
+    random_slider_value_fourtysix = models.IntegerField()
+    random_slider_value_fourtyseven = models.IntegerField()
+    random_slider_value_fourtyeight = models.IntegerField()
+    random_slider_value_fourtynine = models.IntegerField()
+    random_slider_value_fifty = models.IntegerField()
+
 
 
 
