@@ -217,6 +217,485 @@ class SliderTen(Page):
         return self.participant.vars['expiry_timestamp'] - time.time() > 3
 
 
+class SliderEleven(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_eleven']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_eleven': self.player.random_slider_value_eleven,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderTwelve(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_twelve']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_twelve': self.player.random_slider_value_twleve,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderThirteen(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_thirteen']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_thirteen': self.player.random_slider_value_thirteen,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+class SliderFourteen(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_fourteen']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_fourteen': self.player.random_slider_value_fourteen,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderFifteen(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_fifteen']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_fifteen': self.player.random_slider_value_fifteen,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderSixteen(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_sixteen']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_sixteen': self.player.random_slider_value_sixteen,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderSeventeen(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_seventeen']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_seventeen': self.player.random_slider_value_seventeen,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderEighteen(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_eighteen']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_eighteen': self.player.random_slider_value_eighteen,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderNineteen(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_nineteen']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_nineteen': self.player.random_slider_value_nineteen,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderTwenty(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_twenty']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_twenty': self.player.random_slider_value_twenty,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderTwentyOne(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_twentyone']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_twentyone': self.player.random_slider_value_twentyone,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderTwentyTwo(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_twentytwo']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_twentytwo': self.player.random_slider_value_twentytwo,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderTwentyThree(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_twentythree']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_twentythree': self.player.random_slider_value_twentythree,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderTwentyFour(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_twentyfour']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_twentyfour': self.player.random_slider_value_twentyfour,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderTwentyFive(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_twentyfive']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_twentyfive': self.player.random_slider_value_twentyfive,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderTwentySix(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_twentysix']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_twentysix': self.player.random_slider_value_twentysix,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderTwentySeven(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_twentyseven']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_twentyseven': self.player.random_slider_value_twentyseven,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderTwentyEight(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_twentyeight']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_twentyeight': self.player.random_slider_value_twentyeight,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderTwentyNine(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_twentynine']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_twentynine': self.player.random_slider_value_twentynine,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderThirty(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_thirty']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_thirty': self.player.random_slider_value_thirty,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderThirtyOne(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_thirtyone']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_thirtyone': self.player.random_slider_value_thirtyone,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderThirtyTwo(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_thirtytwo']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_thirtytwo': self.player.random_slider_value_thirtytwo,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderThirtyThree(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_thirtythree']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_thirtythree': self.player.random_slider_value_thirtythree,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderThirtyFour(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_thirtyfour']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_thirtyfour': self.player.random_slider_value_thirtyfour,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderThirtyFive(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_thirtyfive']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_thirtyfive': self.player.random_slider_value_thirtyfive,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderThirtySix(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_thirtysix']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_thirtysix': self.player.random_slider_value_thirtysix,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderThirtySeven(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_thirtyseven']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_thirtyseven': self.player.random_slider_value_thirtyseven,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderThirtyEight(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_thirtyeight']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_thirtyeight': self.player.random_slider_value_thirtyeight,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderThirtyNine(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_thirtynine']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_thirtynine': self.player.random_slider_value_thirtynine,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
+class SliderFourty(Page):
+    form_model = models.Player
+    form_fields = ['player_slider_value_fourty']
+
+    def vars_for_template(self):
+        return {
+            'random_slider_value_fourty': self.player.random_slider_value_fourty,
+        }
+
+    def get_timeout_seconds(self):
+        return self.participant.vars['expiry_timestamp'] - time.time()
+
+    def is_displayed(self):
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+
+
 class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
         self.group.set_correct_sliders()
@@ -239,5 +718,35 @@ page_sequence = [
     SliderEight,
     SliderNine,
     SliderTen,
+    SliderEleven,
+    SliderTwelve,
+    SliderThirteen,
+    SliderFourteen,
+    SliderFifteen,
+    SliderSixteen,
+    SliderSeventeen,
+    SliderEighteen,
+    SliderNineteen,
+    SliderTwenty,
+    SliderTwentyOne,
+    SliderTwentyTwo,
+    SliderTwentyThree,
+    SliderTwentyFour,
+    SliderTwentyFive,
+    SliderTwentySix,
+    SliderTwentySeven,
+    SliderTwentyEight,
+    SliderTwentyNine,
+    SliderThirty,
+    SliderThirtyOne,
+    SliderThirtyTwo,
+    SliderThirtyThree,
+    SliderThirtyFour,
+    SliderThirtyFive,
+    SliderThirtySix,
+    SliderThirtySeven,
+    SliderThirtyEight,
+    SliderThirtyNine,
+    SliderFourty,
     ResultsWaitPage,
 ]

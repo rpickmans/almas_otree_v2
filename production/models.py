@@ -31,6 +31,10 @@ class Subsession(BaseSubsession):
         for g in self.get_players():
             g.participant.vars["game_payoff"] = dict()
             g.participant.vars["carrying_payoff"] = 0
+            g.practice_random_slider_value_one = random.randint(1, 100)
+            g.practice_random_slider_value_two = random.randint(1, 100)
+
+
             g.random_slider_value_one = random.randint(1, 100)
             g.random_slider_value_two = random.randint(1, 100)
             g.random_slider_value_three = random.randint(1, 100)
@@ -41,8 +45,39 @@ class Subsession(BaseSubsession):
             g.random_slider_value_eight = random.randint(1, 100)
             g.random_slider_value_nine = random.randint(1, 100)
             g.random_slider_value_ten = random.randint(1, 100)
-            g.practice_random_slider_value_one = random.randint(1, 100)
-            g.practice_random_slider_value_two = random.randint(1, 100)
+            g.random_slider_value_eleven = random.randint(1, 100)
+            g.random_slider_value_twelve = random.randint(1, 100)
+            g.random_slider_value_thirteen = random.randint(1, 100)
+            g.random_slider_value_fourteen = random.randint(1, 100)
+            g.random_slider_value_fifteen = random.randint(1, 100)
+            g.random_slider_value_sixteen = random.randint(1, 100)
+            g.random_slider_value_seventeen = random.randint(1, 100)
+            g.random_slider_value_eighteen = random.randint(1, 100)
+            g.random_slider_value_nineteen = random.randint(1, 100)
+            g.random_slider_value_twenty = random.randint(1, 100)
+            g.random_slider_value_twentyone = random.randint(1, 100)
+            g.random_slider_value_twentytwo = random.randint(1, 100)
+            g.random_slider_value_twentythree = random.randint(1, 100)
+            g.random_slider_value_twentyfour = random.randint(1, 100)
+            g.random_slider_value_twentyfive = random.randint(1, 100)
+            g.random_slider_value_twentysix = random.randint(1, 100)
+            g.random_slider_value_twentyseven = random.randint(1, 100)
+            g.random_slider_value_twentyeight = random.randint(1, 100)
+            g.random_slider_value_twentynine = random.randint(1, 100)
+            g.random_slider_value_thirty = random.randint(1, 100)
+            g.random_slider_value_thirtyone = random.randint(1, 100)
+            g.random_slider_value_thirtytwo = random.randint(1, 100)
+            g.random_slider_value_thirtythree = random.randint(1, 100)
+            g.random_slider_value_thirtyfour = random.randint(1, 100)
+            g.random_slider_value_thirtyfive = random.randint(1, 100)
+            g.random_slider_value_thirtysix = random.randint(1, 100)
+            g.random_slider_value_thirtyseven = random.randint(1, 100)
+            g.random_slider_value_thirtyeight = random.randint(1, 100)
+            g.random_slider_value_thirtynine = random.randint(1, 100)
+            g.random_slider_value_fourty = random.randint(1, 100)
+
+
+
 
 
 class Group(BaseGroup):
@@ -77,6 +112,96 @@ class Group(BaseGroup):
                 correct += 1
 
             if p.player_slider_value_ten == p.random_slider_value_ten:
+                correct += 1
+
+            if p.player_slider_value_eleven == p.random_slider_value_eleven:
+                correct += 1
+
+            if p.player_slider_value_twelve == p.random_slider_value_twelve:
+                correct += 1
+
+            if p.player_slider_value_thirteen == p.random_slider_value_thirteen:
+                correct += 1
+
+            if p.player_slider_value_fourteen == p.random_slider_value_fourteen:
+                correct += 1
+
+            if p.player_slider_value_fifteen == p.random_slider_value_fifteen:
+                correct += 1
+
+            if p.player_slider_value_sixteen == p.random_slider_value_sixteen:
+                correct += 1
+
+            if p.player_slider_value_seventeen == p.random_slider_value_seventeen:
+                correct += 1
+
+            if p.player_slider_value_eighteen == p.random_slider_value_eighteen:
+                correct += 1
+
+            if p.player_slider_value_nineteen == p.random_slider_value_nineteen:
+                correct += 1
+
+            if p.player_slider_value_twenty == p.random_slider_value_twenty:
+                correct += 1
+
+            if p.player_slider_value_twentyone == p.random_slider_value_twentyone:
+                correct += 1
+
+            if p.player_slider_value_twentytwo == p.random_slider_value_twentytwo:
+                correct += 1
+
+            if p.player_slider_value_twentythree == p.random_slider_value_twentythree:
+                correct += 1
+
+            if p.player_slider_value_twentyfour == p.random_slider_value_twentyfour:
+                correct += 1
+
+            if p.player_slider_value_twentyfive == p.random_slider_value_twentyfive:
+                correct += 1
+
+            if p.player_slider_value_twentysix == p.random_slider_value_twentysix:
+                correct += 1
+
+            if p.player_slider_value_twentyseven == p.random_slider_value_twentyseven:
+                correct += 1
+
+            if p.player_slider_value_twentyeight == p.random_slider_value_twentyeight:
+                correct += 1
+
+            if p.player_slider_value_twentynine == p.random_slider_value_twentynine:
+                correct += 1
+
+            if p.player_slider_value_thirty == p.random_slider_value_thirty:
+                correct += 1
+
+            if p.player_slider_value_thirtyone == p.random_slider_value_thirtyone:
+                correct += 1
+
+            if p.player_slider_value_thirtytwo == p.random_slider_value_thirtytwo:
+                correct += 1
+
+            if p.player_slider_value_thirtythree == p.random_slider_value_thirtythree:
+                correct += 1
+
+            if p.player_slider_value_thirtyfour == p.random_slider_value_thirtyfour:
+                correct += 1
+
+            if p.player_slider_value_thirtyfive == p.random_slider_value_thirtyfive:
+                correct += 1
+
+            if p.player_slider_value_thirtysix == p.random_slider_value_thirtysix:
+                correct += 1
+
+            if p.player_slider_value_thirtyseven == p.random_slider_value_thirtyseven:
+                correct += 1
+
+            if p.player_slider_value_thirtyeight == p.random_slider_value_thirtyeight:
+                correct += 1
+
+            if p.player_slider_value_thirtynine == p.random_slider_value_thirtynine:
+                correct += 1
+
+            if p.player_slider_value_fourty == p.random_slider_value_fourty:
                 correct += 1
 
             p.correct_sliders = correct
@@ -115,6 +240,66 @@ class Player(BasePlayer):
         widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
     player_slider_value_ten = models.IntegerField(
         widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_eleven = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_twelve = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_thirteen = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_fourteen = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_fifteen = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_sixteen = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_seventeen = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_eighteen = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_nineteen = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_twenty = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_twentyone = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_twentytwo = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_twentythree = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_twentyfour = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_twentyfive = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_twentysix = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_twentyseven = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_twentyeight = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_twentynine = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_thirty = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_thirtyone = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_thirtytwo = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_thirtythree = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_thirtyfour = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_thirtyfive = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_thirtysix = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_thirtyseven = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_thirtyeight = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_thirtynine = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
+    player_slider_value_fourty = models.IntegerField(
+        widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
 
     # practice random value
     practice_random_slider_value_one = models.IntegerField()
@@ -126,11 +311,43 @@ class Player(BasePlayer):
     random_slider_value_three = models.IntegerField()
     random_slider_value_four = models.IntegerField()
     random_slider_value_five = models.IntegerField()
-
     random_slider_value_six = models.IntegerField()
     random_slider_value_seven = models.IntegerField()
     random_slider_value_eight = models.IntegerField()
     random_slider_value_nine = models.IntegerField()
     random_slider_value_ten = models.IntegerField()
+    random_slider_value_eleven = models.IntegerField()
+    random_slider_value_twelve = models.IntegerField()
+    random_slider_value_thirteen = models.IntegerField()
+    random_slider_value_fourteen = models.IntegerField()
+    random_slider_value_fifteen = models.IntegerField()
+    random_slider_value_sixteen = models.IntegerField()
+    random_slider_value_seventeen = models.IntegerField()
+    random_slider_value_eighteen = models.IntegerField()
+    random_slider_value_nineteen = models.IntegerField()
+    random_slider_value_twenty = models.IntegerField()
+    random_slider_value_twentyone = models.IntegerField()
+    random_slider_value_twentytwo = models.IntegerField()
+    random_slider_value_twentythree = models.IntegerField()
+    random_slider_value_twentyfour = models.IntegerField()
+    random_slider_value_twentyfive = models.IntegerField()
+    random_slider_value_twentysix = models.IntegerField()
+    random_slider_value_twentyseven = models.IntegerField()
+    random_slider_value_twentyeight = models.IntegerField()
+    random_slider_value_twentynine = models.IntegerField()
+    random_slider_value_thirty = models.IntegerField()
+    random_slider_value_thirtyone = models.IntegerField()
+    random_slider_value_thirtytwo = models.IntegerField()
+    random_slider_value_thirtythree = models.IntegerField()
+    random_slider_value_thirtyfour = models.IntegerField()
+    random_slider_value_thirtyfive = models.IntegerField()
+    random_slider_value_thirtysix = models.IntegerField()
+    random_slider_value_thirtyseven = models.IntegerField()
+    random_slider_value_thirtyeight = models.IntegerField()
+    random_slider_value_thirtynine = models.IntegerField()
+    random_slider_value_fourty = models.IntegerField()
+
+
+
 
     correct_sliders = models.IntegerField()
