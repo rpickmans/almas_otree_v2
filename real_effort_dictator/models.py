@@ -77,6 +77,9 @@ class Group(BaseGroup):
             p1.participant.vars["carrying_payoff"] = points_p1
             p2.participant.vars["carrying_payoff"] = points_p2
 
+            p1.real_effort_dictator_points = points_p1
+            p2.real_effort_dictator_points = points_p2
+
         elif p2.participant.vars["rank"] == "low":
             p2.payoff = p2.keep
             p1.payoff = 1200 - p2.keep
@@ -90,9 +93,13 @@ class Group(BaseGroup):
             p1.participant.vars["carrying_payoff"] = points_p1
             p2.participant.vars["carrying_payoff"] = points_p2
 
+            p1.real_effort_dictator_points = points_p1
+            p2.real_effort_dictator_points = points_p2
+
     def set_payoffs(self):
         choice([self.player_one_decides, self.player_two_decides])()
 
 class Player(BasePlayer):
     keep = models.IntegerField()
     real_effort_dictator_endowment = models.IntegerField(initial=0)
+    real_effort_dictator_points = models.IntegerField(initial=0)

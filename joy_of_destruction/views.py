@@ -33,7 +33,7 @@ class Destroy(Page):
         }
     def before_next_page(self):
         player_y = self.player.get_others_in_group()[0]
-        player_y.vouchers = player_y.vouchers - player_y.player_destroyed
+        player_y.vouchers = player_y.vouchers - player_y.other_player_destroyed
 
         self.player.computer_destroyed_points()
 

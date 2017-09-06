@@ -48,8 +48,10 @@ class Group(BaseGroup):
             p.participant.vars["carrying_payoff"] += points
             p.participant.vars["game_payoff"]["trust"] = points
             p.payoff = points
+            p.trust_points = points
 
 
 class Player(BasePlayer):
     sent_amount = models.IntegerField(min=0, max=600)
     sent_back_amount = models.IntegerField()
+    trust_points = models.IntegerField(initial=0)

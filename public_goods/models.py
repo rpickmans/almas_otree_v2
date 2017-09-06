@@ -70,11 +70,13 @@ class Group(BaseGroup):
                 p.participant.vars["game_payoff"]["public_goods_game"] = points
                 p.participant.vars["carrying_payoff"] += points
                 p.payoff = points
+                p.public_goods_game = points
             else:
                 points = (Constants.endowment - p.contribution) + self.individual_share
                 p.participant.vars["game_payoff"]["public_goods_game"] = points
                 p.participant.vars["carrying_payoff"] += points
                 p.payoff = points
+                p.public_goods_game = points
 
 
 class Player(BasePlayer):
@@ -87,6 +89,7 @@ class Player(BasePlayer):
 
     guess_one = models.CharField(widget=widgets.RadioSelect(), choices=Constants.GUESS_CHOICES)
     guess_two = models.CharField(widget=widgets.RadioSelect(), choices=Constants.GUESS_CHOICES)
+    public_goods_game = models.IntegerField(initial=0)
 
     def guess_correct(self):
         guess_choices = Constants.GUESS_CHOICE

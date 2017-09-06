@@ -26,7 +26,7 @@ class DecideTwo(Page):
     form_fields = ['decision_two']
 
     def before_next_page(self):
-        self.group.make_random_toss_one()
+        self.group.make_random_toss_two()
 
 class ResultsWaitPage(WaitPage):
 

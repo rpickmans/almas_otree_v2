@@ -74,6 +74,7 @@ class Player(BasePlayer):
         self.payoff = points
         self.participant.vars["carrying_payoff"] = points
         self.participant.vars["game_payoff"]["time_preference"] = points
+        self.time_preference_points = points
 
 
     q1_a = (('840_now', 'A: 840 Tokens'), ('0_future', 'B: 0 Tokens'),)
@@ -131,3 +132,5 @@ class Player(BasePlayer):
     menu_d_q4 = models.CharField(choices=q4_d, verbose_name="", widget=widgets.RadioSelect())
     menu_d_q5 = models.CharField(choices=q5_d, verbose_name="", widget=widgets.RadioSelect())
     menu_d_q6 = models.CharField(choices=q6_d, verbose_name="", widget=widgets.RadioSelect())
+
+    time_preference_points = models.IntegerField(initial=0)
