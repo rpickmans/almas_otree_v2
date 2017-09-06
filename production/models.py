@@ -418,7 +418,7 @@ class Player(BasePlayer):
         widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
     player_slider_value_fiftynine = models.IntegerField(
         widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
-    player_slider_value_fiftysixty = models.IntegerField(
+    player_slider_value_sixty = models.IntegerField(
         widget=widgets.SliderInput(attrs={'step': '1', 'min': '0', 'max': '100'}))
 
     # practice random value
@@ -466,7 +466,7 @@ class Player(BasePlayer):
     random_slider_value_thirtyeight = models.IntegerField()
     random_slider_value_thirtynine = models.IntegerField()
     random_slider_value_fourty = models.IntegerField()
-    random_slider_value_fouryone = models.IntegerField()
+    random_slider_value_fourtyone = models.IntegerField()
     random_slider_value_fourtytwo = models.IntegerField()
     random_slider_value_fourtythree = models.IntegerField()
     random_slider_value_fourtyfour = models.IntegerField()
@@ -479,6 +479,8 @@ class Player(BasePlayer):
     random_slider_value_fiftyone = models.IntegerField()
     random_slider_value_fiftytwo = models.IntegerField()
     random_slider_value_fiftythree = models.IntegerField()
+    random_slider_value_fiftyfour = models.IntegerField()
+    random_slider_value_fiftyfive = models.IntegerField()
     random_slider_value_fiftysix = models.IntegerField()
     random_slider_value_fiftyseven = models.IntegerField()
     random_slider_value_fiftyeight = models.IntegerField()

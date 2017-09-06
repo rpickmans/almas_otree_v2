@@ -239,7 +239,7 @@ class SliderTwelve(Page):
 
     def vars_for_template(self):
         return {
-            'random_slider_value_twelve': self.player.random_slider_value_twleve,
+            'random_slider_value_twelve': self.player.random_slider_value_twelve,
         }
 
     def get_timeout_seconds(self):
@@ -927,7 +927,7 @@ class SliderFiftyFive(Page):
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fiftyfive': self.player.random_slider_value_fiftyive,
+            'random_slider_value_fiftyfive': self.player.random_slider_value_fiftyfive,
         }
 
     def get_timeout_seconds(self):
