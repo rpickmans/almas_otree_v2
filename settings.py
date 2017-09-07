@@ -107,11 +107,28 @@ SESSION_CONFIG_DEFAULTS = {
 
 STATIC_URL = "/static/"
 
+SESSION_CONFIGS = [
+    {
+        "name": "full_exp",
+        "display_name": "Almas Temparature Experiment",
+        "num_demo_participants": 6,
+        "app_sequence": ["production", "real_effort_dictator", "risk_game", "time_preference", "trust", "public_goods",
+                         "ravens", "joy_of_destruction", "charity_donation", "survey", "payment_info"],
+    },
+]
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+    )
+}
+
 try:
     from local_settings import *
-except:
+except Exception as e:
     # if on server import prod settings
-    from local_settings_prod import *
+    # from local_settings_prod import *
+    pass
 
 # anything you put after the below line will override
 # oTree's default settings. Use with caution.
