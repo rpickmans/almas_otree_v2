@@ -22,6 +22,9 @@ if environ.get('OTREE_PRODUCTION') not in {None, '', '0'}:
 
     db_from_env = dj_database_url.config()
     DATABASES['default'].update(db_from_env)
+    DEBUG = False
+else:
+    DEBUG = True
 
 ADMIN_USERNAME = 'admin'
 ADMIN_PASSWORD = 'Bus@r@1'
@@ -125,7 +128,7 @@ STATIC_URL = "/static/"
 
 try:
     from local_settings import *
-except:
+except ImportError:
     # if on server import prod settings
     pass
 

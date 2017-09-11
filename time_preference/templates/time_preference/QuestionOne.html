@@ -6,18 +6,17 @@
 
 {% block content %}
     <div class="panel panel-default">
-      <div class="panel-body">
-      <table>
-
-      </table>
-      <p><strong>Payment Today <span>&nbsp&nbsp&nbsp&nbsp</span> Payment in Three Weeks</strong></p>
-        <div id="form-container">
-            {% for field in form %}
-                {% formfield field with label=""%}
-            {% endfor %}
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <p><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>Payment today<span>&nbsp&nbsp&nbsp&nbsp</span>Payment in 3 weeks</p>
+                    <br>
+                    {% for field in form %}
+                        {% formfield field with label="" %}
+                    {% endfor %}
+                </div>
+            </div>
         </div>
-
-      </div>
     </div>
 
     <p><strong>Please click "Next" to continue</strong></p>
@@ -26,28 +25,28 @@
 {% endblock %}
 {% block scripts %}
     <script type="text/javascript">
-    $(document).ready(function() {
-        var container = $("#form-container");
-        var count = container.children().length;
-        var width = parseFloat(100)/parseFloat(count);
-        $.each(container.children(), function(key, value) {
-            $(value).attr("style", "width: " + width + "%; float: left; font-weight: normal;");
-        })
-    });
+        $(document).ready(function () {
+            var container = $(".field-menu_a");
+            var count = container.children().length;
+            var width = parseFloat(100) / parseFloat(count);
+            $.each(container.children(), function (key, value) {
+                $(value).attr("style", "width: " + width + "%; float: left; font-weight: normal;");
+            })
+        });
     </script>
 {% endblock %}
- {% block styles %}
+{% block styles %}
 
-     <style type="text/css">
+    <style type="text/css">
 
-     #form-container ul li{
-         margin-top: 20px;
-     }
+        #form-container ul li {
+            margin-top: 20px;
+        }
 
-     #form-container ul li label {
-         font-weight: normal;
-     }
+        #form-container ul li label {
+            font-weight: normal;
+        }
 
-     </style>
+    </style>
 
 {% endblock %}

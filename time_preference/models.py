@@ -48,12 +48,14 @@ class Player(BasePlayer):
     def select_payoff(self):
         points = 0
         menu_option = getattr(self, str(self.set_choice()))
-        if "now" in menu_option:
-            now_option = int(str(menu_option).split("_")[0])
-            points += now_option
+
+        now, future = str(menu_option).split('-')
+        if "now" in now:
+            self.payment_now = int(str(now).split("_")[0])
+            points += int(str(now).split("_")[0])
         else:
             points = 0
-            self.payment_future = int(str(menu_option).split("_")[0])
+            self.payment_future = int(str(future).split("_")[0])
             self.participant.vars["chosen_future"].append(menu_option)
 
         self.payoff = points
@@ -62,40 +64,39 @@ class Player(BasePlayer):
         self.time_preference_points = points
 
     q1 = [
-        ('840_now', 'A: 840 Tokens'), ('0_future', 'B: 0 Tokens'),
-        ('672_now', 'A: 672 Tokens'), ('240_future', 'B: 240 Tokes'),
-        ('504_now', 'A: 504 Tokens'), ('480_future', 'B: 480 Tokens'),
-        ('336_now', 'A: 336 Tokens'), ('720_future', 'B: 720 Tokens'),
-        ('168_now', 'A: 168 Tokens'), ('960_future', 'B: 960 Tokens'),
-        ('0_now', 'A: 0 Tokens'), ('1200_future', 'B: 1200 Tokens'),
+        ('840_now-0_future', 'A: 840 Tokens B: 0 Tokens'),
+        ('672_now-240_future', 'A: 672 Tokens B: 240 Tokes'),
+        ('504_now-504_future', 'A: 504 Tokens B: 480 Tokens'),
+        ('336_now-720_future', 'A: 336 Tokens B: 720 Tokens'),
+        ('168_now-960_future', 'A: 168 Tokens B: 960 Tokens'),
+        ('0_now-1200_future', 'A: 0 Tokens B: 1200 Tokens'),
     ]
 
     q2 = [
-        ('1020_now', 'A: 1020 Tokens'), ('0_future', 'B: 0 Tokens'),
-        ('836_now', 'A: 836 Tokens'), ('184_future', 'B: 184 Tokens'),
-        ('632_now', 'A: 632 Tokens'), ('388_future', 'B: 388 Tokens'),
-        ('428_now', 'A: 428 Tokens'), ('592_future', 'B: 592 Tokens'),
-        ('224_now', 'A: 224 Tokens'), ('796_future', 'B: 796 Tokens'),
-        ('0_now', 'A: 0 Tokens'), ('1020_future', 'B: 1020 Tokens'),
+        ('1020_now-0_future', 'A: 1020 Tokens B: 0 Tokens'),
+        ('836_now-184_future', 'A: 836 Tokens B: 184 Tokens'),
+        ('632_now-388_future', 'A: 632 Tokens B: 388 Tokens'),
+        ('428_now-592_future', 'A: 428 Tokens B: 592 Tokens'),
+        ('224_now-796_future', 'A: 224 Tokens B: 796 Tokens'),
+        ('0_now-1020_future', 'A: 0 Tokens B: 1020 Tokens'),
     ]
 
     q3 = [
-        ('840_now', 'A: 840 Tokens'), ('0_future', 'B: 0 Tokens'),
-        ('672_now', 'A: 672 Tokens'), ('240_future', 'B: 240 Tokes'),
-        ('504_now', 'A: 504 Tokens'), ('480_future', 'B: 480 Tokens'),
-        ('336_now', 'A: 336 Tokens'), ('720_future', 'B: 720 Tokens'),
-        ('168_now', 'A: 168 Tokens'), ('960_future', 'B: 960 Tokens'),
-        ('0_now', 'A: 0 Tokens'), ('1200_future', 'B: 1200 Tokens'),
+        ('840_now-0_future', 'A: 840 Tokens B: 0 Tokens'),
+        ('672_now-240_future', 'A: 672 Tokens B: 240 Tokes'),
+        ('504_now-480_future', 'A: 504 Tokens B: 480 Tokens'),
+        ('336_now-720_future', 'A: 336 Tokens B: 720 Tokens'),
+        ('168_now-960_future', 'A: 168 Tokens B: 960 Tokens'),
+        ('0_now-1200_future', 'A: 0 Tokens B: 1200 Tokens'),
     ]
 
     q4 = [
-
-        ('1020_now', 'A: 1020 Tokens'), ('0_future', 'B: 0 Tokens'),
-        ('836_now', 'A: 836 Tokens'), ('184_future', 'B: 184 Tokens'),
-        ('632_now', 'A: 632 Tokens'), ('388_future', 'B: 388 Tokens'),
-        ('428_now', 'A: 428 Tokens'), ('592_future', 'B: 592 Tokens'),
-        ('224_now', 'A: 224 Tokens'), ('796_future', 'B: 796 Tokens'),
-        ('0_now', 'A: 0 Tokens'), ('1020_future', 'B: 1020 Tokens'),
+        ('1020_now-0_future', 'A: 1020 Tokens B: 0 Tokens'),
+        ('836_now-184_future', 'A: 836 Tokens B: 184 Tokens'),
+        ('632_now-388_future', 'A: 632 Tokens B: 388 Tokens'),
+        ('428_now-592_future', 'A: 428 Tokens B: 592 Tokens'),
+        ('224_now-796_future', 'A: 224 Tokens B: 796 Tokens'),
+        ('0_now-1020_future', 'A: 0 Tokens B: 1020 Tokens'),
     ]
 
     menu_a = models.CharField(choices=q1, verbose_name="", widget=widgets.RadioSelect())
@@ -107,5 +108,7 @@ class Player(BasePlayer):
     menu_d = models.CharField(choices=q4, verbose_name="", widget=widgets.RadioSelect())
 
     payment_future = models.IntegerField(initial=0)
+
+    payment_now = models.IntegerField(initial=0)
 
     time_preference_points = models.IntegerField(initial=0)
