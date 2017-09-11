@@ -20,10 +20,10 @@ class PaymentInfo(Page):
         participant = self.player.participant
         return {
             'redemption_code': participant.label or participant.code,
-            'payoff': math.floor(participant.vars["carrying_payoff"]),
-            'time_preference_future_points': participant.vars["chosen_future_tp"],
-            'date_to_pay_tp': participant.vars["time_preference_date_to_pay"],
-            'vouchers': participant.vars["vouchers"],
+            'payoff': math.floor(participant.vars.get("carrying_payoff", None)),
+            'time_preference_future_points': participant.vars.get("chosen_future_tp", None),
+            'date_to_pay_tp': participant.vars.get("time_preference_date_to_pay", None),
+            'vouchers': participant.vars.get("vouchers", None)
         }
 
 
