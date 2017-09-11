@@ -128,7 +128,7 @@ try:
     from local_settings import *
 except:
     # if on server import prod settings
-    from local_settings_prod import *
+    pass
 
 # anything you put after the below line will override
 # oTree's default settings. Use with caution.
