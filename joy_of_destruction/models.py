@@ -10,6 +10,7 @@ from otree import widgets
 from otree.common import Currency as c, currency_range, safe_json
 from otree.constants import BaseConstants
 from otree.models import BaseSubsession, BaseGroup, BasePlayer
+
 # </standard imports>
 
 author = 'Your name here'
@@ -35,25 +36,31 @@ class Subsession(BaseSubsession):
 class Group(BaseGroup):
     pass
 
-class Player(BasePlayer):
 
+class Player(BasePlayer):
     def computer_destroyed_points(self):
-        choice = random.choice([0,1])
-        if choice == 1:
+        choice = random.choice([0, 1])
+        if choice == 0:
             # heads nothing
-            self.coin_toss = "Heads"
+            other = self.get_others_in_group()[0]
+            other.coin_toss = "Heads"
         else:
             # tails all
             other = self.get_others_in_group()[0]
-            other.vouchers -= random.randrange(1, other.vouchers)
-            self.coin_toss = "Tails"
+            if other.vouchers > 1:
+                other.computer_destroyed = random.randrange(1, other.vouchers)
+                other.coin_toss = "Tails"
+            else:
+                other.coin_toss = "Tails"
 
+    def set_vouchers(self):
+        other = self.get_others_in_group()[0]
+        other.vouchers = other.vouchers - other.computer_destroyed
 
-    other_player_destroyed = models.IntegerField(min=0)
+    player_destroyed = models.IntegerField(min=0)
 
     computer_destroyed = models.IntegerField(default=0)
 
     vouchers = models.IntegerField(default=0)
 
     coin_toss = models.CharField()
-

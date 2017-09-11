@@ -9,7 +9,6 @@ from .models import Constants
 
 
 class Introduction(Page):
-
     def before_next_page(self):
         self.player.vouchers = self.participant.vars["ravens_points"]
 
@@ -21,8 +20,8 @@ class Destroy(Page):
     def player_destroyed_max(self):
         # 0 - 2/2 = 1
         other_players_points = self.player.get_others_in_group()[0].participant.vars["ravens_points"]
-        if other_players_points >= 2:
-            return other_players_points/2
+        if other_players_points > 0:
+            return other_players_points
         else:
             return 0
 
@@ -31,19 +30,18 @@ class Destroy(Page):
         return {
             "raven_points": py.participant.vars["ravens_points"],
         }
+
     def before_next_page(self):
         player_y = self.player.get_others_in_group()[0]
-        player_y.vouchers = player_y.vouchers - player_y.other_player_destroyed
-
+        player_y.vouchers = player_y.vouchers - self.player.player_destroyed
         self.player.computer_destroyed_points()
+        self.player.set_vouchers()
 
 
 class ResultsWaitPage(WaitPage):
-
     def after_all_players_arrive(self):
         for player in self.group.get_players():
             player.participant.vars["vouchers"] = player.vouchers
-
 
 
 page_sequence = [
