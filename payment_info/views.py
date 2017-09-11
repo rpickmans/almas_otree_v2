@@ -22,7 +22,7 @@ class PaymentInfo(Page):
             'redemption_code': participant.label or participant.code,
             'payoff': math.floor(participant.vars.get("carrying_payoff", None)),
             'chosen_future_tp': participant.vars.get("chosen_future_tp", None),
-            'date_to_pay_tp': participant.vars.get("time_preference_date_to_pay", None),
+            'date_to_pay_tp': participant.vars.get("date_to_pay_tp", None),
             'vouchers': participant.vars.get("vouchers", None)
         }
 
