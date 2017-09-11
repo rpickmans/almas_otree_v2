@@ -7,18 +7,24 @@ from .models import Constants
 import math
 
 
+class Wait(WaitPage):
+    def after_all_players_arrive(self):
+        for p in self.group.get_players():
+            p.payoff = self.player.participant.vars["carrying_payoff"]
+            p.total_points = self.player.participant.vars["carrying_payoff"]
+
+
 class PaymentInfo(Page):
-    def is_displayed(self):
-        self.player.payoff = self.player.participant.vars["carrying_payoff"]
-        return True
 
     def vars_for_template(self):
         participant = self.player.participant
         return {
             'redemption_code': participant.label or participant.code,
             'payoff': math.floor(participant.vars["carrying_payoff"]),
-            'apoints': participant.vars["vouchers"]
+            'time_preference_future_points': participant.vars["chosen_future_tp"],
+            'date_to_pay_tp': participant.vars["time_preference_date_to_pay"],
+            'vouchers': participant.vars["vouchers"],
         }
 
 
-page_sequence = [PaymentInfo]
+page_sequence = [Wait, PaymentInfo]

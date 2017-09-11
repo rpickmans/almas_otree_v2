@@ -15,7 +15,7 @@ class Introduction(Page):
 
 class Destroy(Page):
     form_model = models.Player
-    form_fields = ["other_player_destroyed"]
+    form_fields = ["player_destroyed"]
 
     def player_destroyed_max(self):
         # 0 - 2/2 = 1

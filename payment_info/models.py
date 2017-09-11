@@ -34,6 +34,6 @@ class Group(BaseGroup):
     pass
 
 class Player(BasePlayer):
-    pass
+    total_points = models.IntegerField(initial=0)
 
 

@@ -23,30 +23,3 @@
     {% next_button %}
 
 {% endblock %}
-{% block scripts %}
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var container = $(".field-menu_a");
-            var count = container.children().length;
-            var width = parseFloat(100) / parseFloat(count);
-            $.each(container.children(), function (key, value) {
-                $(value).attr("style", "width: " + width + "%; float: left; font-weight: normal;");
-            })
-        });
-    </script>
-{% endblock %}
-{% block styles %}
-
-    <style type="text/css">
-
-        #form-container ul li {
-            margin-top: 20px;
-        }
-
-        #form-container ul li label {
-            font-weight: normal;
-        }
-
-    </style>
-
-{% endblock %}

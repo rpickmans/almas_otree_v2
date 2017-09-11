@@ -47,6 +47,16 @@ class Player(BasePlayer):
 
     def select_payoff(self):
         points = 0
+        date_to_pay_future = ""
+        if self.set_choice() == "menu_a":
+            date_to_pay_future = "3 weeks"
+        if self.set_choice() == "menu_b":
+            date_to_pay_future = "3 weeks"
+        if self.set_choice() == "menu_c":
+            date_to_pay_future = "7 weeks"
+        if self.set_choice() == "menu_d":
+            date_to_pay_future = "7 weeks"
+
         menu_option = getattr(self, str(self.set_choice()))
 
         now, future = str(menu_option).split('-')
@@ -56,10 +66,11 @@ class Player(BasePlayer):
         else:
             points = 0
             self.payment_future = int(str(future).split("_")[0])
-            self.participant.vars["chosen_future"].append(menu_option)
+            self.participant.vars["chosen_future_tp"].append(menu_option)
 
         self.payoff = points
         self.participant.vars["carrying_payoff"] = points
+        self.participant.vars["date_to_pay_tp"] = date_to_pay_future
         self.participant.vars["game_payoff"]["time_preference"] = points
         self.time_preference_points = points
 
