@@ -7,15 +7,15 @@
 
 {% block content %}
     <div class="panel panel-default">
-    <div class="panel-body">
-        <div>
-            <p>
-                5) What is your California Residency?
-                {% formfield player.california_residency with label="" %}
-            </p>
+        <div class="panel-body">
+            <div>
+                <p>
+                    5) What is your California Residency?
+                    {% formfield player.california_residency with label="" %}
+                </p>
+            </div>
         </div>
     </div>
-
     <p><strong>Please click "Next" to continue</strong></p>
     {% next_button %}
 {% endblock %}

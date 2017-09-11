@@ -7,17 +7,18 @@
 
 {% block content %}
     <div class="panel panel-default">
-    <div class="panel-body">
-        <div>
-            <p>
-                5) What is your ethnicity?
-                {% formfield player.ethnicity with label="" %}
-            </p>
+        <div class="panel-body">
+            <div>
+                <p>
+                    5) What is your ethnicity?
+                    {% formfield player.ethnicity with label="" %}
+                </p>
+            </div>
+            <br>
         </div>
-        <br>
-        <p><strong>Please click "Next" to continue</strong></p>
-        {% next_button %}
     </div>
+    <p><strong>Please click "Next" to continue</strong></p>
+    {% next_button %}
 {% endblock %}
 
 {% block app_styles %}
