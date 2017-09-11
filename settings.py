@@ -6,20 +6,20 @@ from boto.mturk import qualification
 
 import otree.settings
 
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # the environment variable OTREE_PRODUCTION controls whether Django runs in
 # DEBUG mode. If OTREE_PRODUCTION==1, then DEBUG=False
 
 DATABASES = {
-        'default': dj_database_url.config(
-            default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-        )
-    }
+    'default': dj_database_url.config(
+        default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+    )
+}
 
 if environ.get('OTREE_PRODUCTION') not in {None, '', '0'}:
     import dj_database_url
+
     db_from_env = dj_database_url.config()
     DATABASES['default'].update(db_from_env)
 
@@ -54,11 +54,9 @@ AUTH_LEVEL = environ.get('OTREE_AUTH_LEVEL')
 AWS_ACCESS_KEY_ID = environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY')
 
-
 # e.g. EUR, CAD, GBP, CHF, CNY, JPY
 REAL_WORLD_CURRENCY_CODE = 'KSH '
 USE_POINTS = False
-
 
 # e.g. en-gb, de-de, it-it, fr-fr.
 # see: https://docs.djangoproject.com/en/1.6/topics/i18n/
@@ -88,8 +86,9 @@ mturk_hit_settings = {
     'frame_height': 500,
     'preview_template': 'global/MTurkPreview.html',
     'minutes_allotted_per_assignment': 60,
-    'expiration_hours': 7*24, # 7 days
-    #'grant_qualification_id': 'YOUR_QUALIFICATION_ID_HERE',# to prevent retakes
+    'expiration_hours': 7 * 24,
+    # 7 days
+    # 'grant_qualification_id': 'YOUR_QUALIFICATION_ID_HERE',# to prevent retakes
     'qualification_requirements': [
         # qualification.LocaleRequirement("EqualTo", "US"),
         # qualification.PercentAssignmentsApprovedRequirement("GreaterThanOrEqualTo", 50),
