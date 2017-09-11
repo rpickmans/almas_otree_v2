@@ -10,8 +10,8 @@ import math
 class Wait(WaitPage):
     def after_all_players_arrive(self):
         for p in self.group.get_players():
-            p.payoff = self.participant.vars["carrying_payoff"]
-            p.total_points = self.participant.vars["carrying_payoff"]
+            p.payoff = p.participant.vars["carrying_payoff"]
+            p.total_points = p.participant.vars["carrying_payoff"]
 
 
 class PaymentInfo(Page):
