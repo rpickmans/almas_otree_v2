@@ -11,10 +11,17 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # the environment variable OTREE_PRODUCTION controls whether Django runs in
 # DEBUG mode. If OTREE_PRODUCTION==1, then DEBUG=False
+
+DATABASES = {
+        'default': dj_database_url.config(
+            default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+        )
+    }
+
 if environ.get('OTREE_PRODUCTION') not in {None, '', '0'}:
-    DEBUG = False
-else:
-    DEBUG = True
+    import dj_database_url
+    db_from_env = dj_database_url.config()
+    DATABASES['default'].update(db_from_env)
 
 ADMIN_USERNAME = 'admin'
 ADMIN_PASSWORD = 'Bus@r@1'
@@ -58,7 +65,7 @@ USE_POINTS = False
 LANGUAGE_CODE = 'en-us'
 
 # if an app is included in SESSION_CONFIGS, you don't need to list it here
-INSTALLED_APPS = []
+INSTALLED_APPS = ['otree']
 
 # SENTRY_DSN = ''
 
@@ -105,8 +112,6 @@ SESSION_CONFIG_DEFAULTS = {
     # 'random_start_order': True,
 }
 
-STATIC_URL = "/static/"
-
 SESSION_CONFIGS = [
     {
         "name": "full_exp",
@@ -117,22 +122,14 @@ SESSION_CONFIGS = [
     },
 ]
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-    )
-}
+STATIC_URL = "/static/"
 
 try:
     from local_settings import *
-except Exception as e:
+except:
     # if on server import prod settings
-    # from local_settings_prod import *
-    pass
+    from local_settings_prod import *
 
 # anything you put after the below line will override
 # oTree's default settings. Use with caution.
 otree.settings.augment_settings(globals())
-
-
-
