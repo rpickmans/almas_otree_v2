@@ -60,13 +60,13 @@ class Player(BasePlayer):
         menu_option = getattr(self, str(self.set_choice()))
 
         now, future = str(menu_option).split('-')
-        if "now" in now:
-            self.payment_now = int(str(now).split("_")[0])
-            points += int(str(now).split("_")[0])
-        else:
-            points = 0
-            self.payment_future = int(str(future).split("_")[0])
-            self.participant.vars["chosen_future_tp"].append(menu_option)
+        # now payment
+        self.payment_now = int(str(now).split("_")[0])
+        points += int(str(now).split("_")[0])
+
+        # future payment
+        self.payment_future = int(str(future).split("_")[0])
+        self.participant.vars["chosen_future_tp"] = int(str(future).split("_")[0])
 
         self.payoff = points
         self.participant.vars["carrying_payoff"] = points
