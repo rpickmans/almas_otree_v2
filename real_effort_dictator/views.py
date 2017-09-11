@@ -24,6 +24,7 @@ class ShuffleWaitPage(WaitPage):
         else:
             # assuming 6, 12, 0r 18 players
             median_sort = len(sorted_players) / 2
+
             for i in sorted_players:
                 if sorted_players.index(i) > median_sort:
                     i.participant.vars["rank"] = "high"
