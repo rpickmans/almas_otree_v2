@@ -10,6 +10,7 @@ from otree import widgets
 from otree.common import Currency as c, currency_range, safe_json
 from otree.constants import BaseConstants
 from otree.models import BaseSubsession, BaseGroup, BasePlayer
+
 # </standard imports>
 
 author = 'Benson'
@@ -31,7 +32,6 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-
     def make_random_toss_one(self):
         for p in self.get_players():
             p.random_coin_toss_one = random.choice(["Heads", "Tails"])
@@ -39,7 +39,6 @@ class Group(BaseGroup):
     def make_random_toss_two(self):
         for p in self.get_players():
             p.random_coin_toss_two = random.choice(["Heads", "Tails"])
-
 
     def decision_one_payoff(self):
         points = 0
@@ -164,11 +163,7 @@ class Group(BaseGroup):
             p.risk_games_points = points
 
 
-
 class Player(BasePlayer):
-
-
-
     CHOICE_ONE = (
         ("Coin 1", "Coin 1: 0 Tokens if heads and 2880 Tokens if tails"),
         ("Coin 2", "Coin 2: 240 Tokens if heads and 2400 Tokens if tails"),
