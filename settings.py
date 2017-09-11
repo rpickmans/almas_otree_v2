@@ -25,6 +25,11 @@ if environ.get('OTREE_PRODUCTION') not in {None, '', '0'}:
     DEBUG = False
 else:
     DEBUG = False
+    import dj_database_url
+
+    db_from_env = dj_database_url.config()
+    DATABASES['default'].update(db_from_env)
+    DEBUG = False
 
 ADMIN_USERNAME = 'admin'
 ADMIN_PASSWORD = 'Bus@r@1'
