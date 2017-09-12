@@ -285,7 +285,7 @@ class Group(BaseGroup):
                 correct += 1
 
             p.correct_sliders = correct
-            p.participant.vars["total_correct"] = p.correct_sliders
+            p.participant.vars["total_correct"] = correct
 
     def set_sliders_total(self):
         for p in self.get_players():
