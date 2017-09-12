@@ -46,9 +46,10 @@ class ProceedScreen(Page):
 
 
 class Wait(WaitPage):
+    wait_for_all_groups = True
+
     def after_all_players_arrive(self):
-        for p in self.group.get_players():
-            p.participant.vars["expiry_timestamp"] = time.time() + 3 * 60
+        pass
 
 
 class SliderOne(Page):
@@ -64,7 +65,8 @@ class SliderOne(Page):
         return self.participant.vars['expiry_timestamp'] - time.time()
 
     def is_displayed(self):
-        return self.participant.vars['expiry_timestamp'] - time.time() > 3
+        self.participant.vars["expiry_timestamp"] = time.time() + 3 * 60
+        return True
 
 
 class SliderTwo(Page):
