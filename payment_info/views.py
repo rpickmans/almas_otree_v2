@@ -20,10 +20,13 @@ class PaymentInfo(Page):
         participant = self.player.participant
         return {
             'redemption_code': participant.label or participant.code,
-            'payoff': math.floor(participant.vars.get("carrying_payoff", None)),
+            'payoff': int(math.floor(participant.vars.get("carrying_payoff", None))),
+            'payoff_ksh': int(math.floor(participant.vars.get("carrying_payoff", None) / 0.5)),
             'chosen_future_tp': participant.vars.get("chosen_future_tp", None),
+            'to_tokens_ksh': int(participant.vars.get("chosen_future_tp", None) / 0.5),
             'date_to_pay_tp': participant.vars.get("date_to_pay_tp", None),
-            'vouchers': participant.vars.get("vouchers", None)
+            'vouchers': participant.vars.get("vouchers", None),
+            'airtime_worth': 50 * participant.vars.get("vouchers", None),
         }
 
 
