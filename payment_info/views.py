@@ -27,34 +27,34 @@ class PaymentInfo(Page):
             return {
                 'redemption_code': participant.label or participant.code,
                 'payoff': int(math.floor(participant.vars.get("carrying_payoff", None))),
-                'payoff_ksh': int(math.floor(participant.vars.get("carrying_payoff", None) / 5.0)),
+                'payoff_ksh': int(math.floor(participant.vars.get("carrying_payoff", None) / 3.5)),
                 'airtime_worth': 50 * participant.vars.get("vouchers", None),
 
                 'menu_a_b_today': participant.vars.get("menu_a_b_today", None)["today"],
-                'menu_a_b_today_ksh': int(participant.vars.get("menu_a_b_today", None)["today"] / 5.0),
+                'menu_a_b_today_ksh': int(participant.vars.get("menu_a_b_today", None)["today"] / 3.5),
 
                 'menu_a_b_3weeks': participant.vars.get("menu_a_b_3weeks", None)["weeks3"],
-                'menu_a_b_3weeks_ksh': int(participant.vars.get("menu_a_b_3weeks", None)["weeks3"] / 5.0)
+                'menu_a_b_3weeks_ksh': int(participant.vars.get("menu_a_b_3weeks", None)["weeks3"] / 3.5)
             }
 
         elif menu_c_d_3weeks and menu_c_d_7weeks:
             return {
                 'redemption_code': participant.label or participant.code,
                 'payoff': int(math.floor(participant.vars.get("carrying_payoff", None))),
-                'payoff_ksh': int(math.floor(participant.vars.get("carrying_payoff", None) / 5.0)),
+                'payoff_ksh': int(math.floor(participant.vars.get("carrying_payoff", None) / 3.5)),
                 'airtime_worth': 50 * participant.vars.get("vouchers", None),
 
                 'menu_c_d_3weeks': participant.vars.get("menu_c_d_3weeks", None)["weeks3"],
-                'menu_c_d_3weeks_ksh': int(participant.vars.get("menu_c_d_3weeks", None)["weeks3"] / 5.0),
+                'menu_c_d_3weeks_ksh': int(participant.vars.get("menu_c_d_3weeks", None)["weeks3"] / 3.5),
 
                 'menu_c_d_7weeks': participant.vars.get("menu_c_d_7weeks", None)["weeks7"],
-                'menu_c_d_7weeks_ksh': int(participant.vars.get("menu_c_d_7weeks", None)["weeks7"] / 5.0)
+                'menu_c_d_7weeks_ksh': int(participant.vars.get("menu_c_d_7weeks", None)["weeks7"] / 3.5)
             }
         else:
             return {
                 'redemption_code': participant.label or participant.code,
                 'payoff': int(math.floor(participant.vars.get("carrying_payoff", None))),
-                'payoff_ksh': int(math.floor(participant.vars.get("carrying_payoff", None) / 5.0)),
+                'payoff_ksh': int(math.floor(participant.vars.get("carrying_payoff", None) / 3.5)),
                 'airtime_worth': 50 * participant.vars.get("vouchers", None),
             }
 
