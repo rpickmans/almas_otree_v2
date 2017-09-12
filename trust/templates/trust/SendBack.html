@@ -10,7 +10,7 @@
             <p>
                 Second round (Participant B): You are now randomly matched with another participant (not yourself) from
                 the first round, Participant A. In the first round Participant A chose to send
-                you {{ player.get_other_player.sent_amount }}. This
+                you <strong>{{ player.get_others_in_group.0.sent_amount }}</strong>. This
                 amount has been multiplied by 3, to make a total of {{ tripled_amount }}. You can now choose to send
                 back
                 some of this total to Participant A. Any amount not sent to Participant A, will be yours to keep.
