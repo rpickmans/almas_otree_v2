@@ -40,74 +40,79 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-
     def set_choice(self):
         menus = ["menu_a", "menu_b", "menu_c", "menu_d"]
         return random.choice(menus)
 
-    def select_payoff(self):
-        points = 0
-        date_to_pay_future = ""
-        if self.set_choice() == "menu_a":
-            date_to_pay_future = "3 weeks"
-        if self.set_choice() == "menu_b":
-            date_to_pay_future = "3 weeks"
-        if self.set_choice() == "menu_c":
-            date_to_pay_future = "7 weeks"
-        if self.set_choice() == "menu_d":
-            date_to_pay_future = "7 weeks"
-
-        menu_option = getattr(self, str(self.set_choice()))
-
+    def select_menu_a_b(self, str_choice):
+        menu_option = getattr(self, str(str_choice))
         now, future = str(menu_option).split('-')
-        # now payment
         self.payment_now = int(str(now).split("_")[0])
-        points += int(str(now).split("_")[0])
-
-        # future payment
         self.payment_future = int(str(future).split("_")[0])
-        self.participant.vars["chosen_future_tp"] = int(str(future).split("_")[0])
+        self.participant.vars["menu_a_b_today"] = {"today": int(str(now).split("_")[0])}
+        self.participant.vars["menu_a_b_3weeks"] = {"weeks3": int(str(future).split("_")[0])}
 
-        self.payoff = points
-        self.participant.vars["carrying_payoff"] = points
-        self.participant.vars["date_to_pay_tp"] = date_to_pay_future
-        self.participant.vars["game_payoff"]["time_preference"] = points
-        self.time_preference_points = points
+    def select_menu_c_d(self, str_choice):
+        menu_option = getattr(self, str(str_choice))
+        three_weeks, seven_weeks = str(menu_option).split('-')
+        self.payment_3weeks = int(str(three_weeks).split("_")[0])
+        self.payment_7weeks = int(str(seven_weeks).split("_")[0])
+        self.participant.vars["menu_c_d_3weeks"] = {"weeks3": int(str(three_weeks).split("_")[0])}
+        self.participant.vars["menu_c_d_7weeks"] = {"weeks7": int(str(seven_weeks).split("_")[0])}
+
+    def set_preference(self):
+        if self.set_choice() == "menu_a":
+            self.select_menu_a_b(self.set_choice())
+
+        if self.set_choice() == "menu_b":
+            self.select_menu_a_b(self.set_choice())
+
+        if self.set_choice() == "menu_c":
+            self.select_menu_c_d(self.set_choice())
+        if self.set_choice() == "menu_d":
+            self.select_menu_c_d(self.set_choice())
+
+    def set_payoff(self):
+
+        self.payoff = self.payment_today
+        self.participant.vars["carrying_payoff"] = self.payment_today
+        self.participant.vars["game_payoff"]["time_preference"] = self.payment_today
+        self.time_preference_points = self.payment_today
 
     q1 = [
-        ('840_now-0_future', 'A: 840 Tokens B: 0 Tokens'),
-        ('672_now-240_future', 'A: 672 Tokens B: 240 Tokes'),
-        ('504_now-504_future', 'A: 504 Tokens B: 480 Tokens'),
-        ('336_now-720_future', 'A: 336 Tokens B: 720 Tokens'),
-        ('168_now-960_future', 'A: 168 Tokens B: 960 Tokens'),
-        ('0_now-1200_future', 'A: 0 Tokens B: 1200 Tokens'),
+        ('840_now-0_3weeks', '840 Tokens Today AND 0 Tokens in 3 Weeks'),
+        ('672_now-240_3weeks', '672 Tokens Today AND 240 Tokes in 3 Weeks'),
+        ('504_now-480_3weeks', '504 Tokens Today AND 480 Tokens in 3 Weeks'),
+        ('336_now-720_3weeks', '336 Tokens Today AND 720 Tokens in 3 Weeks'),
+        ('168_now-960_3weeks', '168 Tokens Today AND 960 Tokens in 3 Weeks'),
+        ('0_now-1200_3weeks', '0 Tokens Today AND 1200 Tokens in 3 Weeks'),
     ]
 
     q2 = [
-        ('1020_now-0_future', 'A: 1020 Tokens B: 0 Tokens'),
-        ('836_now-184_future', 'A: 836 Tokens B: 184 Tokens'),
-        ('632_now-388_future', 'A: 632 Tokens B: 388 Tokens'),
-        ('428_now-592_future', 'A: 428 Tokens B: 592 Tokens'),
-        ('224_now-796_future', 'A: 224 Tokens B: 796 Tokens'),
-        ('0_now-1020_future', 'A: 0 Tokens B: 1020 Tokens'),
+        ('1020_now-0_3weeks', '1020 Tokens Today AND 0 Tokens in 3 Weeks'),
+        ('836_now-184_3weeks', '836 Tokens Today AND 184 Tokens in 3 Weeks'),
+        ('632_now-388_3weeks', '632 Tokens Today AND 388 Tokens in 3 Weeks'),
+        ('428_now-592_3weeks', '428 Tokens Today AND 592 Tokens in 3 Weeks'),
+        ('224_now-796_3weeks', '224 Tokens Today AND 796 Tokens in 3 Weeks'),
+        ('0_now-1020_3weeks', '0 Tokens Today And 1020 Tokens in 3 Weeks'),
     ]
 
     q3 = [
-        ('840_now-0_future', 'A: 840 Tokens B: 0 Tokens'),
-        ('672_now-240_future', 'A: 672 Tokens B: 240 Tokes'),
-        ('504_now-480_future', 'A: 504 Tokens B: 480 Tokens'),
-        ('336_now-720_future', 'A: 336 Tokens B: 720 Tokens'),
-        ('168_now-960_future', 'A: 168 Tokens B: 960 Tokens'),
-        ('0_now-1200_future', 'A: 0 Tokens B: 1200 Tokens'),
+        ('840_3weeks-0_7weeks', '840 Tokens in 3 Weeks AND 0 Tokens in 7 Weeks'),
+        ('672_3weeks-240_7weeks', '672 Tokens in 3 Weeks AND 240 Tokens in 7 Weeks'),
+        ('504_3weeks-480_7weeks', '504 Tokens in 3 Weeks AND 480 Tokens in 7 Weeks'),
+        ('336_3weeks-720_7weeks', '336 Tokens in 3 Weeks AND 720 Tokens in 7 Weeks'),
+        ('168_3weeks-960_7weeks', '168 Tokens in 3 Weeks AND 960 Tokens in 7 Weeks'),
+        ('0_3weeks-1200_7weeks', '0 Tokens in 3 Weeks AND 1200 Tokens in 7 Weeks'),
     ]
 
     q4 = [
-        ('1020_now-0_future', 'A: 1020 Tokens B: 0 Tokens'),
-        ('836_now-184_future', 'A: 836 Tokens B: 184 Tokens'),
-        ('632_now-388_future', 'A: 632 Tokens B: 388 Tokens'),
-        ('428_now-592_future', 'A: 428 Tokens B: 592 Tokens'),
-        ('224_now-796_future', 'A: 224 Tokens B: 796 Tokens'),
-        ('0_now-1020_future', 'A: 0 Tokens B: 1020 Tokens'),
+        ('1020_3weeks-0_7weeks', '1020 Tokens in 3 Weeks AND 0 Tokens in 7 Weeks'),
+        ('836_3weeks-184_7weeks', '836 Tokens in 3 Weeks AND 184 Tokens in 7 Weeks'),
+        ('632_3weeks-388_7weeks', '632 Tokens in 3 Weeks AND 388 Tokens in 7 Weeks'),
+        ('428_3weeks-592_7weeks', '428 Tokens in 3 Weeks AND 592 Tokens in 7 Weeks'),
+        ('224_3weeks-796_7weeks', '224 Tokens in 3 Weeks AND 796 Tokens in 7 Weeks'),
+        ('0_3weeks-1020_7weeks', '0 Tokens in 3 Weeks AND 1020 Tokens in 7 Weeks'),
     ]
 
     menu_a = models.CharField(choices=q1, verbose_name="", widget=widgets.RadioSelect())
@@ -118,8 +123,10 @@ class Player(BasePlayer):
 
     menu_d = models.CharField(choices=q4, verbose_name="", widget=widgets.RadioSelect())
 
-    payment_future = models.IntegerField(initial=0)
+    payment_today = models.IntegerField(initial=0)
 
-    payment_now = models.IntegerField(initial=0)
+    payment_3weeks = models.IntegerField(initial=0)
+
+    payment_7weeks = models.IntegerField(initial=0)
 
     time_preference_points = models.IntegerField(initial=0)

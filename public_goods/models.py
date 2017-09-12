@@ -23,7 +23,7 @@ class Constants(BaseConstants):
     num_rounds = 1
 
     """Amount allocated to each player"""
-    endowment = 75
+    endowment = 1200
     efficiency_factor = 2
 
     # tokens for guessing correctly

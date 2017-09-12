@@ -41,7 +41,8 @@ class QuestionFour(Page):
 class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
         for p in self.group.get_players():
-            p.select_payoff()
+            p.set_preference()
+            p.set_payoff()
 
 page_sequence = [
     Introduction,

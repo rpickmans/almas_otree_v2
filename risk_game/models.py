@@ -171,7 +171,7 @@ class Player(BasePlayer):
         ("Coin 4", "Coin 4: 720 Tokens if heads and 1440 Tokens if tails"),
         ("Coin 5", "Coin 5: 840 Tokens if heads and 1200 Tokens if tails"),
         ("Coin 6", "Coin 6: 960 Tokens if heads and 960 Tokens if tails"),
-        ("Coin 7", "Coin 6: 1080 Tokens if heads and 720 Tokens if tails"),
+        ("Coin 7", "Coin 7: 1080 Tokens if heads and 720 Tokens if tails"),
     )
 
     CHOICE_TWO = (

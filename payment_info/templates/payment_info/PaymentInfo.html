@@ -10,11 +10,22 @@
     <div class="panel panel-default" style="margin-bottom:10px">
         <div class="panel-body">
             <p>Your earned {{ payoff }} Tokens worth {{ payoff_ksh }} KSH.</p>
-            <br>
             <p>Your earned {{ vouchers }} Airtime vouchers worth {{ airtime_worth }}.</p>
-            <br>
-            <p>You will be paid {{ chosen_future_tp }} Tokens amounting to {{ tp_tokens_ksh }} KSH {{ date_to_pay_tp }} from <strong>Today</strong>.</p>
-            <br>
+            {% if menu_a_b_today %}
+                <p>You will be paid {{ menu_a_b_today }} Tokens  amounting to {{ menu_a_b_today_ksh }} KSH Today.</p>
+            {% endif %}
+
+            {% if menu_a_b_3weeks %}
+                <p>You will be paid {{ menu_a_b_3weeks }} Tokens  amounting to {{ menu_a_b_3weeks_ksh }} KSH in 3 Weeks.</p>
+            {% endif %}
+
+            {% if menu_c_d_3weeks %}
+                <p>You will be paid {{ menu_c_d_3weeks }} Tokens  amounting to {{ menu_c_d_3weeks_ksh }} KSH in 3 Weeks.</p>
+            {% endif %}
+
+            {% if menu_c_d_7weeks %}
+                <p>You will be paid {{ menu_c_d_7weeks }} Tokens  amounting to {{ menu_c_d_7weeks_ksh }} KSH in 7 Weeks.</p>
+            {% endif %}
             <p>
                 Please remain seated until your number is called. Then take your number card, and proceed to a lab manager for the final short interview and to collect your payment.
             </p>
