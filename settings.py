@@ -126,6 +126,16 @@ SESSION_CONFIGS = [
 
 STATIC_URL = "/static/"
 
+ROOM_DEFAULTS = {}
+
+ROOMS = [
+    {
+        'name': 'Almas',
+        'display_name': 'Almas Experiment',
+        'participant_label_file': 'rooms.txt',
+    },
+]
+
 try:
     from local_settings import *
 except ImportError:
