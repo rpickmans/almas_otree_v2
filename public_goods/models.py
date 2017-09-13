@@ -94,6 +94,8 @@ class Player(BasePlayer):
     def guess_correct(self):
         guess_choices = Constants.GUESS_CHOICE
         px, py = self.get_others_in_group()
-        return px.contribution in guess_choices[int(self.guess_one)] and py.contribution in guess_choices[int(self.guess_two)]
+        if self.guess_one and self.guess_two:
+            return px.contribution in guess_choices[int(self.guess_one)] and py.contribution in guess_choices[int(self.guess_two)]
+        return False
 
 

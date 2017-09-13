@@ -46,19 +46,21 @@ class Player(BasePlayer):
 
     def select_menu_a_b(self, str_choice):
         menu_option = getattr(self, str(str_choice))
-        now, future = str(menu_option).split('-')
-        self.payment_now = int(str(now).split("_")[0])
-        self.payment_future = int(str(future).split("_")[0])
-        self.participant.vars["menu_a_b_today"] = {"today": int(str(now).split("_")[0])}
-        self.participant.vars["menu_a_b_3weeks"] = {"weeks3": int(str(future).split("_")[0])}
+        if menu_option:
+            now, future = str(menu_option).split('-')
+            self.payment_now = int(str(now).split("_")[0])
+            self.payment_future = int(str(future).split("_")[0])
+            self.participant.vars["menu_a_b_today"] = {"today": int(str(now).split("_")[0])}
+            self.participant.vars["menu_a_b_3weeks"] = {"weeks3": int(str(future).split("_")[0])}
 
     def select_menu_c_d(self, str_choice):
         menu_option = getattr(self, str(str_choice))
-        three_weeks, seven_weeks = str(menu_option).split('-')
-        self.payment_3weeks = int(str(three_weeks).split("_")[0])
-        self.payment_7weeks = int(str(seven_weeks).split("_")[0])
-        self.participant.vars["menu_c_d_3weeks"] = {"weeks3": int(str(three_weeks).split("_")[0])}
-        self.participant.vars["menu_c_d_7weeks"] = {"weeks7": int(str(seven_weeks).split("_")[0])}
+        if menu_option:
+            three_weeks, seven_weeks = str(menu_option).split('-')
+            self.payment_3weeks = int(str(three_weeks).split("_")[0])
+            self.payment_7weeks = int(str(seven_weeks).split("_")[0])
+            self.participant.vars["menu_c_d_3weeks"] = {"weeks3": int(str(three_weeks).split("_")[0])}
+            self.participant.vars["menu_c_d_7weeks"] = {"weeks7": int(str(seven_weeks).split("_")[0])}
 
     def set_preference(self):
         if self.set_choice() == "menu_a":
