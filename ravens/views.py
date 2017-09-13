@@ -23,7 +23,7 @@ class PracticeTwo(Page):
 
 
 class Wait(WaitPage):
-    body_text = "Please wait"
+    body_text = "Please wait."
 
     def after_all_players_arrive(self):
         pass

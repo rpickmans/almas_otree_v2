@@ -47,7 +47,7 @@ class ProceedScreen(Page):
 
 class Wait(WaitPage):
     title_text = ""
-    body_text = "Please Wait"
+    body_text = "Please wait."
     wait_for_all_groups = True
 
     def after_all_players_arrive(self):
@@ -1023,7 +1023,7 @@ class SliderSixty(Page):
 
 class ResultsWaitPage(WaitPage):
     title_text = ""
-    body_text = "Please Wait"
+    body_text = "Please wait."
 
     def after_all_players_arrive(self):
         self.group.set_correct_sliders()

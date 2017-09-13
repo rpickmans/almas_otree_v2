@@ -22,6 +22,7 @@ class Contribute(Page):
 
 
 class ContributeWaitPage(WaitPage):
+    body_text = "Please wait."
     pass
 
 

@@ -8,6 +8,8 @@ import math
 
 
 class Wait(WaitPage):
+    body_text = "Please wait."
+
     def after_all_players_arrive(self):
         for p in self.group.get_players():
             p.payoff = p.participant.vars["carrying_payoff"] / 3.5
