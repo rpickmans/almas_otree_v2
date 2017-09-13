@@ -23,19 +23,15 @@ class Contribute(Page):
 
 class ContributeWaitPage(WaitPage):
     body_text = "Please wait."
-    pass
 
 
 class Guess(Page):
     form_model = models.Player
     form_fields = ["guess_one", "guess_two"]
 
-    def is_displayed(self):
-        return True
-
 
 class GuessWaitPage(WaitPage):
-    pass
+    body_text = "Please wait."
 
 
 class ResultsWaitPage(WaitPage):

@@ -71,6 +71,7 @@ class WaitEnd(WaitPage):
 
     wait_for_all_groups = True
 
+
 page_sequence = [
     Introduction,
     PracticeOne,

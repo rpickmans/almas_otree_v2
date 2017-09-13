@@ -24,7 +24,7 @@ class ShuffleWaitPage(WaitPage):
             self.subsession.get_players(),
             key=lambda player: player.participant.vars['total_correct']
         )
-        print("sorted ::", [(p, p.participant.vars['total_correct']) for p in sorted_players])
+
         if len(sorted_players) > 3:
 
             pairs = list(self.pair_up(sorted_players))
@@ -33,17 +33,14 @@ class ShuffleWaitPage(WaitPage):
 
             for pair in pairs:
                 if pairs.index(pair) > median_sort:
-                    print("p1 p2::", pair)
                     for player in pair:
                         player.participant.vars["rank"] = "high"
 
                 elif pairs.index(pair) == median_sort:
-                    print("p3 p4::", pair)
                     for player in pair:
                         player.participant.vars["rank"] = random.choice(["high", "low"])
 
                 else:
-                    print("p5 p6::", pair)
                     for player in pair:
                         player.participant.vars["rank"] = "low"
 
@@ -53,28 +50,6 @@ class ShuffleWaitPage(WaitPage):
         for i in range(0, len(sorted_players), players_per_group):
             group_matrix.append(sorted_players[i: i + players_per_group])
         self.subsession.set_group_matrix(group_matrix)
-
-
-        # if len(sorted_players) == 3:
-        #     pass
-        # else:
-        #     # assuming 6, 12, 0r 18 players
-        #     median_sort = len(sorted_players) / 2
-        #
-        #     for i in sorted_players:
-        #         if sorted_players.index(i) > median_sort:
-        #             i.participant.vars["rank"] = "high"
-        #         else:
-        #             i.participant.vars["rank"] = "low"
-        #
-        # # chunk players into groups
-        # group_matrix = []
-        # ppg = Constants.players_per_group
-        # for i in range(0, len(sorted_players), ppg):
-        #     group_matrix.append(sorted_players[i:i+ppg])
-        #
-        # # set new groups
-        # self.subsession.set_group_matrix(group_matrix)
 
 
 class Intro(Page):
