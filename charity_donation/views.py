@@ -15,7 +15,7 @@ class Donate(Page):
     form_fields = ['donated_amount']
 
     def donated_amount_error_message(self, value):
-        if int(math.floor(self.player.participant.vars["carrying_payoff"]) * 0.4) <= value:
+        if value <= int(math.floor(self.player.participant.vars["carrying_payoff"]) * 0.4):
             return 'Amount to donate should be less than or equal to what you have!'
 
     def vars_for_template(self):
@@ -31,11 +31,14 @@ class Donate(Page):
         self.player.charity_allocated = charity
         return {
             'charity': charity,
-            'max_donation': int(math.floor(self.player.participant.vars["carrying_payoff"]))
+            'earnings': int(math.floor(self.player.participant.vars["carrying_payoff"])),
+            'max_donation': int(math.floor(self.player.participant.vars["carrying_payoff"]) * 0.4)
         }
 
 
 class ResultsWaitPage(WaitPage):
+    body_text = "Pleas wait."
+
     def after_all_players_arrive(self):
         self.group.set_payoff()
 
@@ -47,8 +50,14 @@ class Results(Page):
         }
 
 
+class Wait(WaitPage):
+    body_text = "Please wait."
+
+    wait_for_all_groups = True
+
 page_sequence = [
     Donate,
     ResultsWaitPage,
-    Results
+    Results,
+    Wait,
 ]

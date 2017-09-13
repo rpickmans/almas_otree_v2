@@ -33,9 +33,17 @@ class DecideTwo(Page):
 
 
 class ResultsWaitPage(WaitPage):
+    body_text = "Please wait."
+
     def after_all_players_arrive(self):
         self.group.decision_one_payoff()
         self.group.decision_two_payoff()
+
+
+class Wait(WaitPage):
+    body_text = "Please wait."
+
+    wait_for_all_groups = True
 
 
 page_sequence = [
@@ -44,4 +52,5 @@ page_sequence = [
     ScreenTwo,
     DecideTwo,
     ResultsWaitPage,
+    Wait,
 ]

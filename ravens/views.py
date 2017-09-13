@@ -17,13 +17,14 @@ class PracticeOne(Page):
     form_fields = ["practise_one"]
 
 
-
 class PracticeTwo(Page):
     form_model = models.Player
     form_fields = ["practise_two"]
 
 
 class Wait(WaitPage):
+    body_text = "Please wait"
+
     def after_all_players_arrive(self):
         pass
 
@@ -33,11 +34,9 @@ class RavenOne(Page):
     form_fields = ["raven_1"]
 
 
-
 class RavenTwo(Page):
     form_model = models.Player
     form_fields = ["raven_2"]
-
 
 
 class RavenThree(Page):
@@ -45,11 +44,9 @@ class RavenThree(Page):
     form_fields = ["raven_3"]
 
 
-
 class RavenFour(Page):
     form_model = models.Player
     form_fields = ["raven_4"]
-
 
 
 class RavenFive(Page):
@@ -63,9 +60,16 @@ class RavenSix(Page):
 
 
 class ResultsWaitPage(WaitPage):
+    body_text = "Please wait."
+
     def after_all_players_arrive(self):
         self.group.set_payoffs()
 
+
+class WaitEnd(WaitPage):
+    body_text = "Please wait."
+
+    wait_for_all_groups = True
 
 page_sequence = [
     Introduction,
@@ -79,4 +83,5 @@ page_sequence = [
     RavenFive,
     RavenSix,
     ResultsWaitPage,
+    WaitEnd,
 ]

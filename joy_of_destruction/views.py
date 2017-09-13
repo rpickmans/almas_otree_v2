@@ -39,13 +39,22 @@ class Destroy(Page):
 
 
 class ResultsWaitPage(WaitPage):
+    body_text = "Please wait."
+
     def after_all_players_arrive(self):
         for player in self.group.get_players():
             player.participant.vars["vouchers"] = player.vouchers
+
+
+class Wait(WaitPage):
+    body_text = "Please wait."
+
+    wait_for_all_groups = True
 
 
 page_sequence = [
     Introduction,
     Destroy,
     ResultsWaitPage,
+    Wait,
 ]

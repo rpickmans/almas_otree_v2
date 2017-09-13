@@ -39,10 +39,18 @@ class QuestionFour(Page):
 
 
 class ResultsWaitPage(WaitPage):
+    body_text = "Please wait."
+
     def after_all_players_arrive(self):
         for p in self.group.get_players():
             p.set_preference()
             p.set_payoff()
+
+
+class Wait(WaitPage):
+    body_text = "Please wait."
+
+    wait_for_all_groups = True
 
 page_sequence = [
     Introduction,
@@ -51,4 +59,5 @@ page_sequence = [
     QuestionThree,
     QuestionFour,
     ResultsWaitPage,
+    Wait
 ]

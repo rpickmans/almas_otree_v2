@@ -69,6 +69,7 @@ class Player(BasePlayer):
 
         if self.set_choice() == "menu_c":
             self.select_menu_c_d(self.set_choice())
+
         if self.set_choice() == "menu_d":
             self.select_menu_c_d(self.set_choice())
 

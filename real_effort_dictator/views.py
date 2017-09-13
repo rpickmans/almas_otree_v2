@@ -12,13 +12,13 @@ import random
 
 class ShuffleWaitPage(WaitPage):
     wait_for_all_groups = True
+    body_text = "Please wait."
 
     def pair_up(self, lst):
         pair = iter(lst)
         return zip(pair, pair)
 
     def after_all_players_arrive(self):
-
         # sort players by correct sliders from previous rounds
         sorted_players = sorted(
             self.subsession.get_players(),
@@ -108,14 +108,21 @@ class Offer(Page):
 
 
 class ResultsWaitPage(WaitPage):
+    body_text = "Please wait."
 
     def after_all_players_arrive(self):
         self.group.set_payoffs()
 
+
+class Wait(WaitPage):
+    body_text = "Please wait."
+
+    wait_for_all_groups = True
 
 page_sequence = [
     ShuffleWaitPage,
     Intro,
     Offer,
     ResultsWaitPage,
+    Wait,
 ]

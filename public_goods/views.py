@@ -42,7 +42,13 @@ class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
         self.group.set_payoffs()
 
-    body_text = "Waiting for other participants to contribute."
+    body_text = "Please wait."
+
+
+class Wait(WaitPage):
+    body_text = "Please wait."
+
+    wait_for_all_groups = True
 
 
 page_sequence = [Introduction,
@@ -51,4 +57,5 @@ page_sequence = [Introduction,
                  Guess,
                  GuessWaitPage,
                  ResultsWaitPage,
+                 Wait,
                  ]

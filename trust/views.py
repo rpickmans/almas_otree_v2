@@ -24,6 +24,7 @@ class Send(Page):
 
 
 class ShuffleWaitPage(WaitPage):
+    body_text = "Please wait."
     wait_for_all_groups = True
 
     def after_all_players_arrive(self):
@@ -55,9 +56,16 @@ class SendBack(Page):
 
 
 class ResultsWaitPage(WaitPage):
+    body_text = "Please wait."
 
     def after_all_players_arrive(self):
         self.group.set_payoffs()
+
+
+class Wait(WaitPage):
+    body_text = "Please wait."
+
+    wait_for_all_groups = True
 
 
 page_sequence = [
@@ -66,4 +74,5 @@ page_sequence = [
         ShuffleWaitPage,
         SendBack,
         ResultsWaitPage,
+        Wait,
     ]
