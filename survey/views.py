@@ -12,7 +12,6 @@ class CognitiveReflectionTest(Page):
     form_model = models.Player
     form_fields = ['cognitive_reflection_one',
                    'cognitive_reflection_two',
-                   'cognitive_reflection_three',
                    'cognitive_reflection_four',
                    'cognitive_reflection_five',
                    'cognitive_reflection_six']
