@@ -50,7 +50,6 @@ class Constants(BaseConstants):
     ]
 
 
-
 class Subsession(BaseSubsession):
     pass
 
@@ -68,20 +67,19 @@ class Group(BaseGroup):
             if p.guess_correct():
                 p.guess_points = Constants.guess_value
                 points = (Constants.endowment - p.contribution) + self.individual_share + Constants.guess_value
-                # p.participant.vars["game_payoff"]["public_goods_game"] = points
-                # p.participant.vars["carrying_payoff"] += points
+                p.participant.vars["game_payoff"]["public_goods_game"] = points
+                p.participant.vars["carrying_payoff"] += points
                 p.payoff = points
                 p.public_goods_game = points
             else:
                 points = (Constants.endowment - p.contribution) + self.individual_share
-                # p.participant.vars["game_payoff"]["public_goods_game"] = points
-                # p.participant.vars["carrying_payoff"] += points
+                p.participant.vars["game_payoff"]["public_goods_game"] = points
+                p.participant.vars["carrying_payoff"] += points
                 p.payoff = points
                 p.public_goods_game = points
 
 
 class Player(BasePlayer):
-
     contribution = models.IntegerField(
         min=0, max=Constants.endowment,
         doc="""The amount contributed by the player""",
@@ -98,7 +96,4 @@ class Player(BasePlayer):
         px, py = self.get_others_in_group()
         player = random.choice([px, py])
         if self.guess:
-            print(player.contribution, guess_choices[str(self.guess)])
             return player.contribution in guess_choices[str(self.guess)]
-
-
