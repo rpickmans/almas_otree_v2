@@ -27,7 +27,7 @@ class ContributeWaitPage(WaitPage):
 
 class Guess(Page):
     form_model = models.Player
-    form_fields = ["guess_one", "guess_two"]
+    form_fields = ["guess"]
 
 
 class GuessWaitPage(WaitPage):

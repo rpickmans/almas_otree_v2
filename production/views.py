@@ -20,11 +20,11 @@ class PracticeSliderOne(Page):
         return self.subsession.round_number == 1
 
     form_model = models.Player
-    form_fields = ['practice_slider_value_one']
+    form_fields = ['pr_sv_1']
 
     def vars_for_template(self):
         return {
-            'practice_random_slider_value_one': self.player.practice_random_slider_value_one,
+            'pr_rsv_1': self.player.pr_rsv_1,
         }
 
 
@@ -33,11 +33,11 @@ class PracticeSliderTwo(Page):
         return self.subsession.round_number == 1
 
     form_model = models.Player
-    form_fields = ['practice_slider_value_two']
+    form_fields = ['pr_sv_2']
 
     def vars_for_template(self):
         return {
-            'practice_random_slider_value_two': self.player.practice_random_slider_value_two,
+            'pr_rsv_2': self.player.pr_rsv_2,
         }
 
 
@@ -56,11 +56,11 @@ class Wait(WaitPage):
 
 class SliderOne(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_one']
+    form_fields = ['psv_1']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_one': self.player.random_slider_value_one
+            'rsv_1': self.player.rsv_1
         }
 
     def get_timeout_seconds(self):
@@ -73,11 +73,11 @@ class SliderOne(Page):
 
 class SliderTwo(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_two']
+    form_fields = ['psv_2']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_two': self.player.random_slider_value_two,
+            'rsv_2': self.player.rsv_2,
         }
 
     timer_text = 'Time left to complete this section:'
@@ -91,11 +91,11 @@ class SliderTwo(Page):
 
 class SliderThree(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_three']
+    form_fields = ['psv_3']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_three': self.player.random_slider_value_three
+            'rsv_3': self.player.rsv_3
         }
 
     timer_text = 'Time left to complete this section:'
@@ -109,11 +109,11 @@ class SliderThree(Page):
 
 class SliderFour(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_four']
+    form_fields = ['psv_4']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_four': self.player.random_slider_value_four
+            'rsv_4': self.player.rsv_4
         }
 
     timer_text = 'Time left to complete this section:'
@@ -127,11 +127,11 @@ class SliderFour(Page):
 
 class SliderFive(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_five']
+    form_fields = ['psv_5']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_five': self.player.random_slider_value_five
+            'rsv_5': self.player.rsv_5
         }
 
     def get_timeout_seconds(self):
@@ -143,11 +143,11 @@ class SliderFive(Page):
 
 class SliderSix(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_six']
+    form_fields = ['psv_6']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_six': self.player.random_slider_value_six
+            'rsv_6': self.player.rsv_6
         }
 
     def get_timeout_seconds(self):
@@ -159,11 +159,11 @@ class SliderSix(Page):
 
 class SliderSeven(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_seven']
+    form_fields = ['psv_7']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_seven': self.player.random_slider_value_seven,
+            'rsv_7': self.player.rsv_7,
         }
 
     def get_timeout_seconds(self):
@@ -175,11 +175,11 @@ class SliderSeven(Page):
 
 class SliderEight(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_eight']
+    form_fields = ['psv_8']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_eight': self.player.random_slider_value_eight,
+            'rsv_8': self.player.rsv_8,
         }
 
     def get_timeout_seconds(self):
@@ -191,11 +191,11 @@ class SliderEight(Page):
 
 class SliderNine(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_nine']
+    form_fields = ['psv_9']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_nine': self.player.random_slider_value_nine,
+            'rsv_9': self.player.rsv_9,
         }
 
     def get_timeout_seconds(self):
@@ -207,11 +207,11 @@ class SliderNine(Page):
 
 class SliderTen(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_ten']
+    form_fields = ['psv_10']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_ten': self.player.random_slider_value_ten,
+            'rsv_10': self.player.rsv_10,
         }
 
     def get_timeout_seconds(self):
@@ -223,11 +223,11 @@ class SliderTen(Page):
 
 class SliderEleven(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_eleven']
+    form_fields = ['psv_11']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_eleven': self.player.random_slider_value_eleven,
+            'rsv_11': self.player.rsv_11,
         }
 
     def get_timeout_seconds(self):
@@ -239,11 +239,11 @@ class SliderEleven(Page):
 
 class SliderTwelve(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_twelve']
+    form_fields = ['psv_12']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_twelve': self.player.random_slider_value_twelve,
+            'rsv_12': self.player.rsv_12,
         }
 
     def get_timeout_seconds(self):
@@ -255,11 +255,11 @@ class SliderTwelve(Page):
 
 class SliderThirteen(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_thirteen']
+    form_fields = ['psv_13']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_thirteen': self.player.random_slider_value_thirteen,
+            'rsv_13': self.player.rsv_13,
         }
 
     def get_timeout_seconds(self):
@@ -271,11 +271,11 @@ class SliderThirteen(Page):
 
 class SliderFourteen(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fourteen']
+    form_fields = ['psv_14']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fourteen': self.player.random_slider_value_fourteen,
+            'rsv_14': self.player.rsv_14,
         }
 
     def get_timeout_seconds(self):
@@ -287,11 +287,11 @@ class SliderFourteen(Page):
 
 class SliderFifteen(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fifteen']
+    form_fields = ['psv_15']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fifteen': self.player.random_slider_value_fifteen,
+            'rsv_15': self.player.rsv_15,
         }
 
     def get_timeout_seconds(self):
@@ -303,11 +303,11 @@ class SliderFifteen(Page):
 
 class SliderSixteen(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_sixteen']
+    form_fields = ['psv_16']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_sixteen': self.player.random_slider_value_sixteen,
+            'rsv_16': self.player.rsv_16,
         }
 
     def get_timeout_seconds(self):
@@ -319,11 +319,11 @@ class SliderSixteen(Page):
 
 class SliderSeventeen(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_seventeen']
+    form_fields = ['psv_17']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_seventeen': self.player.random_slider_value_seventeen,
+            'rsv_17': self.player.rsv_17,
         }
 
     def get_timeout_seconds(self):
@@ -335,11 +335,11 @@ class SliderSeventeen(Page):
 
 class SliderEighteen(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_eighteen']
+    form_fields = ['psv_18']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_eighteen': self.player.random_slider_value_eighteen,
+            'rsv_18': self.player.rsv_18,
         }
 
     def get_timeout_seconds(self):
@@ -351,11 +351,11 @@ class SliderEighteen(Page):
 
 class SliderNineteen(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_nineteen']
+    form_fields = ['psv_19']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_nineteen': self.player.random_slider_value_nineteen,
+            'rsv_19': self.player.rsv_19,
         }
 
     def get_timeout_seconds(self):
@@ -367,11 +367,11 @@ class SliderNineteen(Page):
 
 class SliderTwenty(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_twenty']
+    form_fields = ['psv_20']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_twenty': self.player.random_slider_value_twenty,
+            'rsv_20': self.player.rsv_20,
         }
 
     def get_timeout_seconds(self):
@@ -383,11 +383,11 @@ class SliderTwenty(Page):
 
 class SliderTwentyOne(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_twentyone']
+    form_fields = ['psv_21']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_twentyone': self.player.random_slider_value_twentyone,
+            'rsv_21': self.player.rsv_21,
         }
 
     def get_timeout_seconds(self):
@@ -399,11 +399,11 @@ class SliderTwentyOne(Page):
 
 class SliderTwentyTwo(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_twentytwo']
+    form_fields = ['psv_22']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_twentytwo': self.player.random_slider_value_twentytwo,
+            'rsv_22': self.player.rsv_22,
         }
 
     def get_timeout_seconds(self):
@@ -415,11 +415,11 @@ class SliderTwentyTwo(Page):
 
 class SliderTwentyThree(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_twentythree']
+    form_fields = ['psv_23']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_twentythree': self.player.random_slider_value_twentythree,
+            'rsv_23': self.player.rsv_23,
         }
 
     def get_timeout_seconds(self):
@@ -431,11 +431,11 @@ class SliderTwentyThree(Page):
 
 class SliderTwentyFour(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_twentyfour']
+    form_fields = ['psv_24']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_twentyfour': self.player.random_slider_value_twentyfour,
+            'rsv_24': self.player.rsv_24,
         }
 
     def get_timeout_seconds(self):
@@ -447,11 +447,11 @@ class SliderTwentyFour(Page):
 
 class SliderTwentyFive(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_twentyfive']
+    form_fields = ['psv_25']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_twentyfive': self.player.random_slider_value_twentyfive,
+            'rsv_25': self.player.rsv_25,
         }
 
     def get_timeout_seconds(self):
@@ -463,11 +463,11 @@ class SliderTwentyFive(Page):
 
 class SliderTwentySix(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_twentysix']
+    form_fields = ['psv_26']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_twentysix': self.player.random_slider_value_twentysix,
+            'rsv_26': self.player.rsv_26,
         }
 
     def get_timeout_seconds(self):
@@ -479,11 +479,11 @@ class SliderTwentySix(Page):
 
 class SliderTwentySeven(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_twentyseven']
+    form_fields = ['psv_27']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_twentyseven': self.player.random_slider_value_twentyseven,
+            'rsv_27': self.player.rsv_27,
         }
 
     def get_timeout_seconds(self):
@@ -495,11 +495,11 @@ class SliderTwentySeven(Page):
 
 class SliderTwentyEight(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_twentyeight']
+    form_fields = ['psv_28']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_twentyeight': self.player.random_slider_value_twentyeight,
+            'rsv_28': self.player.rsv_28,
         }
 
     def get_timeout_seconds(self):
@@ -511,11 +511,11 @@ class SliderTwentyEight(Page):
 
 class SliderTwentyNine(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_twentynine']
+    form_fields = ['psv_29']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_twentynine': self.player.random_slider_value_twentynine,
+            'rsv_29': self.player.rsv_29,
         }
 
     def get_timeout_seconds(self):
@@ -527,11 +527,11 @@ class SliderTwentyNine(Page):
 
 class SliderThirty(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_thirty']
+    form_fields = ['psv_30']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_thirty': self.player.random_slider_value_thirty,
+            'rsv_30': self.player.rsv_30,
         }
 
     def get_timeout_seconds(self):
@@ -543,11 +543,11 @@ class SliderThirty(Page):
 
 class SliderThirtyOne(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_thirtyone']
+    form_fields = ['psv_31']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_thirtyone': self.player.random_slider_value_thirtyone,
+            'rsv_thirtyone': self.player.rsv_31,
         }
 
     def get_timeout_seconds(self):
@@ -559,11 +559,11 @@ class SliderThirtyOne(Page):
 
 class SliderThirtyTwo(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_thirtytwo']
+    form_fields = ['psv_32']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_thirtytwo': self.player.random_slider_value_thirtytwo,
+            'rsv_32': self.player.rsv_32,
         }
 
     def get_timeout_seconds(self):
@@ -575,11 +575,11 @@ class SliderThirtyTwo(Page):
 
 class SliderThirtyThree(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_thirtythree']
+    form_fields = ['psv_33']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_thirtythree': self.player.random_slider_value_thirtythree,
+            'rsv_33': self.player.rsv_33,
         }
 
     def get_timeout_seconds(self):
@@ -591,11 +591,11 @@ class SliderThirtyThree(Page):
 
 class SliderThirtyFour(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_thirtyfour']
+    form_fields = ['psv_34']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_thirtyfour': self.player.random_slider_value_thirtyfour,
+            'rsv_34': self.player.rsv_34,
         }
 
     def get_timeout_seconds(self):
@@ -607,11 +607,11 @@ class SliderThirtyFour(Page):
 
 class SliderThirtyFive(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_thirtyfive']
+    form_fields = ['psv_35']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_thirtyfive': self.player.random_slider_value_thirtyfive,
+            'rsv_35': self.player.rsv_35,
         }
 
     def get_timeout_seconds(self):
@@ -623,11 +623,11 @@ class SliderThirtyFive(Page):
 
 class SliderThirtySix(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_thirtysix']
+    form_fields = ['psv_36']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_thirtysix': self.player.random_slider_value_thirtysix,
+            'rsv_36': self.player.rsv_36,
         }
 
     def get_timeout_seconds(self):
@@ -639,11 +639,11 @@ class SliderThirtySix(Page):
 
 class SliderThirtySeven(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_thirtyseven']
+    form_fields = ['psv_37']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_thirtyseven': self.player.random_slider_value_thirtyseven,
+            'rsv_37': self.player.rsv_37,
         }
 
     def get_timeout_seconds(self):
@@ -655,11 +655,11 @@ class SliderThirtySeven(Page):
 
 class SliderThirtyEight(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_thirtyeight']
+    form_fields = ['psv_38']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_thirtyeight': self.player.random_slider_value_thirtyeight,
+            'rsv_38': self.player.rsv_38,
         }
 
     def get_timeout_seconds(self):
@@ -671,11 +671,11 @@ class SliderThirtyEight(Page):
 
 class SliderThirtyNine(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_thirtynine']
+    form_fields = ['psv_39']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_thirtynine': self.player.random_slider_value_thirtynine,
+            'rsv_39': self.player.rsv_39,
         }
 
     def get_timeout_seconds(self):
@@ -687,11 +687,11 @@ class SliderThirtyNine(Page):
 
 class SliderFourty(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fourty']
+    form_fields = ['psv_40']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fourty': self.player.random_slider_value_fourty,
+            'rsv_40': self.player.rsv_40,
         }
 
     def get_timeout_seconds(self):
@@ -703,11 +703,11 @@ class SliderFourty(Page):
 
 class SliderFourtyOne(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fourtyone']
+    form_fields = ['psv_41']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fourtyone': self.player.random_slider_value_fourtyone,
+            'rsv_42': self.player.rsv_41,
         }
 
     def get_timeout_seconds(self):
@@ -719,11 +719,11 @@ class SliderFourtyOne(Page):
 
 class SliderFourtyTwo(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fourtytwo']
+    form_fields = ['psv_42']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fourtytwo': self.player.random_slider_value_fourtytwo,
+            'rsv_42': self.player.rsv_42,
         }
 
     def get_timeout_seconds(self):
@@ -735,11 +735,11 @@ class SliderFourtyTwo(Page):
 
 class SliderFourtyThree(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fourtythree']
+    form_fields = ['psv_43']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fourtythree': self.player.random_slider_value_fourtythree,
+            'rsv_43': self.player.rsv_43,
         }
 
     def get_timeout_seconds(self):
@@ -751,11 +751,11 @@ class SliderFourtyThree(Page):
 
 class SliderFourtyFour(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fourtyfour']
+    form_fields = ['psv_44']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fourtyfour': self.player.random_slider_value_fourtyfour,
+            'rsv_44': self.player.rsv_44,
         }
 
     def get_timeout_seconds(self):
@@ -767,11 +767,11 @@ class SliderFourtyFour(Page):
 
 class SliderFourtyFive(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fourtyfive']
+    form_fields = ['psv_45']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fourtyfive': self.player.random_slider_value_fourtyfive,
+            'rsv_46': self.player.rsv_45,
         }
 
     def get_timeout_seconds(self):
@@ -783,11 +783,11 @@ class SliderFourtyFive(Page):
 
 class SliderFourtySix(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fourtysix']
+    form_fields = ['psv_46']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fourtysix': self.player.random_slider_value_fourtysix,
+            'rsv_46': self.player.rsv_46,
         }
 
     def get_timeout_seconds(self):
@@ -799,11 +799,11 @@ class SliderFourtySix(Page):
 
 class SliderFourtySeven(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fourtyseven']
+    form_fields = ['psv_47']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fourtyseven': self.player.random_slider_value_fourtyseven,
+            'rsv_47': self.player.rsv_47,
         }
 
     def get_timeout_seconds(self):
@@ -815,11 +815,11 @@ class SliderFourtySeven(Page):
 
 class SliderFourtyEight(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fourtyeight']
+    form_fields = ['psv_48']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fourtyeight': self.player.random_slider_value_fourtyeight,
+            'rsv_48': self.player.rsv_48,
         }
 
     def get_timeout_seconds(self):
@@ -831,11 +831,11 @@ class SliderFourtyEight(Page):
 
 class SliderFourtyNine(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fourtynine']
+    form_fields = ['psv_49']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fourtynine': self.player.random_slider_value_fourtynine,
+            'rsv_49': self.player.rsv_49,
         }
 
     def get_timeout_seconds(self):
@@ -847,11 +847,11 @@ class SliderFourtyNine(Page):
 
 class SliderFifty(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fifty']
+    form_fields = ['psv_50']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fifty': self.player.random_slider_value_fifty,
+            'rsv_50': self.player.rsv_50,
         }
 
     def get_timeout_seconds(self):
@@ -863,11 +863,11 @@ class SliderFifty(Page):
 
 class SliderFiftyOne(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fiftyone']
+    form_fields = ['psv_51']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fiftyone': self.player.random_slider_value_fiftyone,
+            'rsv_51': self.player.rsv_51,
         }
 
     def get_timeout_seconds(self):
@@ -879,11 +879,11 @@ class SliderFiftyOne(Page):
 
 class SliderFiftyTwo(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fiftytwo']
+    form_fields = ['psv_52']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fiftytwo': self.player.random_slider_value_fiftytwo,
+            'rsv_52': self.player.rsv_52,
         }
 
     def get_timeout_seconds(self):
@@ -895,11 +895,11 @@ class SliderFiftyTwo(Page):
 
 class SliderFiftyThree(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fiftythree']
+    form_fields = ['psv_53']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fiftythree': self.player.random_slider_value_fiftythree,
+            'rsv_53': self.player.rsv_53,
         }
 
     def get_timeout_seconds(self):
@@ -911,11 +911,11 @@ class SliderFiftyThree(Page):
 
 class SliderFiftyFour(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fiftyfour']
+    form_fields = ['psv_54']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fiftyfour': self.player.random_slider_value_fiftyfour,
+            'rsv_54': self.player.rsv_54,
         }
 
     def get_timeout_seconds(self):
@@ -927,11 +927,11 @@ class SliderFiftyFour(Page):
 
 class SliderFiftyFive(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fiftyfive']
+    form_fields = ['psv_55']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fiftyfive': self.player.random_slider_value_fiftyfive,
+            'rsv_55': self.player.rsv_55,
         }
 
     def get_timeout_seconds(self):
@@ -943,11 +943,11 @@ class SliderFiftyFive(Page):
 
 class SliderFiftySix(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fiftysix']
+    form_fields = ['psv_56']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fiftysix': self.player.random_slider_value_fiftysix,
+            'rsv_56': self.player.rsv_56,
         }
 
     def get_timeout_seconds(self):
@@ -959,11 +959,11 @@ class SliderFiftySix(Page):
 
 class SliderFiftySeven(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fiftyseven']
+    form_fields = ['psv_57']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fiftyseven': self.player.random_slider_value_fiftyseven,
+            'rsv_57': self.player.rsv_57,
         }
 
     def get_timeout_seconds(self):
@@ -975,11 +975,11 @@ class SliderFiftySeven(Page):
 
 class SliderFiftyEight(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fiftyeight']
+    form_fields = ['psv_58']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fiftyeight': self.player.random_slider_value_fiftyeight,
+            'rsv_59': self.player.rsv_58,
         }
 
     def get_timeout_seconds(self):
@@ -991,11 +991,11 @@ class SliderFiftyEight(Page):
 
 class SliderFiftyNine(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_fiftynine']
+    form_fields = ['psv_59']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_fiftynine': self.player.random_slider_value_fiftynine,
+            'rsv_59': self.player.rsv_59,
         }
 
     def get_timeout_seconds(self):
@@ -1007,11 +1007,11 @@ class SliderFiftyNine(Page):
 
 class SliderSixty(Page):
     form_model = models.Player
-    form_fields = ['player_slider_value_sixty']
+    form_fields = ['psv_60']
 
     def vars_for_template(self):
         return {
-            'random_slider_value_sixty': self.player.random_slider_value_sixty,
+            'rsv_60': self.player.rsv_60,
         }
 
     def get_timeout_seconds(self):

@@ -27,16 +27,16 @@ class Constants(BaseConstants):
     efficiency_factor = 2
 
     # tokens for guessing correctly
-    guess_correct = 175
+    guess_value = 175
 
     GUESS_CHOICE = {
-        1: [0],
-        2: [list(range(1, 241))],
-        3: [list(range(241, 481))],
-        4: [list(range(481, 721))],
-        5: [list(range(721, 961))],
-        6: [list(range(961, 1200))],
-        7: [1200],
+        "1": [0],
+        "2": list(range(1, 241)),
+        "3:": list(range(241, 481)),
+        "4": list(range(481, 721)),
+        "5": list(range(721, 961)),
+        "6": list(range(961, 1200)),
+        "7": [1200],
     }
 
     GUESS_CHOICES = [
@@ -66,15 +66,16 @@ class Group(BaseGroup):
         self.individual_share = self.total_contribution * Constants.efficiency_factor / Constants.players_per_group
         for p in self.get_players():
             if p.guess_correct():
-                points = (Constants.endowment - p.contribution) + self.individual_share + Constants.guess_correct
-                p.participant.vars["game_payoff"]["public_goods_game"] = points
-                p.participant.vars["carrying_payoff"] += points
+                p.guess_points = Constants.guess_value
+                points = (Constants.endowment - p.contribution) + self.individual_share + Constants.guess_value
+                # p.participant.vars["game_payoff"]["public_goods_game"] = points
+                # p.participant.vars["carrying_payoff"] += points
                 p.payoff = points
                 p.public_goods_game = points
             else:
                 points = (Constants.endowment - p.contribution) + self.individual_share
-                p.participant.vars["game_payoff"]["public_goods_game"] = points
-                p.participant.vars["carrying_payoff"] += points
+                # p.participant.vars["game_payoff"]["public_goods_game"] = points
+                # p.participant.vars["carrying_payoff"] += points
                 p.payoff = points
                 p.public_goods_game = points
 
@@ -87,15 +88,17 @@ class Player(BasePlayer):
     )
     question = models.IntegerField()
 
-    guess_one = models.CharField(widget=widgets.RadioSelect(), choices=Constants.GUESS_CHOICES)
-    guess_two = models.CharField(widget=widgets.RadioSelect(), choices=Constants.GUESS_CHOICES)
+    guess = models.CharField(widget=widgets.RadioSelect(), choices=Constants.GUESS_CHOICES)
+    guess_points = models.IntegerField(initial=0)
+    # guess_two = models.CharField(widget=widgets.RadioSelect(), choices=Constants.GUESS_CHOICES)
     public_goods_game = models.IntegerField(initial=0)
 
     def guess_correct(self):
         guess_choices = Constants.GUESS_CHOICE
         px, py = self.get_others_in_group()
-        if self.guess_one and self.guess_two:
-            return px.contribution in guess_choices[int(self.guess_one)] and py.contribution in guess_choices[int(self.guess_two)]
-        return False
+        player = random.choice([px, py])
+        if self.guess:
+            print(player.contribution, guess_choices[str(self.guess)])
+            return player.contribution in guess_choices[str(self.guess)]
 
 

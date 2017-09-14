@@ -14,66 +14,24 @@
             {% if player.id_in_group == 1 %}
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
-                            {% formfield player.guess_one with label="I believe that player 2 contributed:" %}
-                        </div>
-                        <div class="col-md-4">
-                            {% formfield player.guess_two with label="I believe that player 3 contributed:" %}
+                        <div class="col-md-12">
+                            {% formfield player.guess with label="I believe that the other player contributed:" %}
                         </div>
                     </div>
                 </div>
             {% elif player.id_in_group == 2 %}
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
-                            {% formfield player.guess_one with label="I believe that player 1 contributed:" %}
-                        </div>
-                        <div class="col-md-4">
-                            {% formfield player.guess_two with label="I believe that player 3 contributed:" %}
+                        <div class="col-md-12">
+                            {% formfield player.guess with label="I believe that the other player contributed:" %}
                         </div>
                     </div>
                 </div>
             {% elif player.id_in_group == 3 %}
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
-                            {% formfield player.guess_one with label="I believe that player 1 contributed:" %}
-                        </div>
-                        <div class="col-md-4">
-                            {% formfield player.guess_two with label="I believe that player 2 contributed:" %}
-                        </div>
-                    </div>
-                </div>
-            {% elif player.id_in_group == 4 %}
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            {% formfield player.guess_one with label="I believe that player 1 contributed:" %}
-                        </div>
-                        <div class="col-md-4">
-                            {% formfield player.guess_two with label="I believe that player 2 contributed:" %}
-                        </div>
-                    </div>
-                </div>
-            {% elif player.id_in_group == 5 %}
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            {% formfield player.guess_one with label="I believe that player 1 contributed:" %}
-                        </div>
-                        <div class="col-md-4">
-                            {% formfield player.guess_two with label="I believe that player 3 contributed:" %}
-                        </div>
-                    </div>
-                </div>
-            {% elif player.id_in_group == 6 %}
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            {% formfield player.guess_one with label="I believe that player 2 contributed:" %}
-                        </div>
-                        <div class="col-md-4">
-                            {% formfield player.guess_two with label="I believe that player 3 contributed:" %}
+                        <div class="col-md-12">
+                            {% formfield player.guess with label="I believe that the other player contributed:" %}
                         </div>
                     </div>
                 </div>
