@@ -48,8 +48,8 @@ class Player(BasePlayer):
         menu_option = getattr(self, str(str_choice))
         if menu_option:
             now, future = str(menu_option).split('-')
-            self.payment_now = int(str(now).split("_")[0])
-            self.payment_future = int(str(future).split("_")[0])
+            self.payment_today = int(str(now).split("_")[0])
+            self.payment_3weeks = int(str(future).split("_")[0])
             self.participant.vars["menu_a_b_today"] = {"today": int(str(now).split("_")[0])}
             self.participant.vars["menu_a_b_3weeks"] = {"weeks3": int(str(future).split("_")[0])}
 
@@ -57,7 +57,7 @@ class Player(BasePlayer):
         menu_option = getattr(self, str(str_choice))
         if menu_option:
             three_weeks, seven_weeks = str(menu_option).split('-')
-            self.payment_3weeks = int(str(three_weeks).split("_")[0])
+            self.payment_3weeks_cd = int(str(three_weeks).split("_")[0])
             self.payment_7weeks = int(str(seven_weeks).split("_")[0])
             self.participant.vars["menu_c_d_3weeks"] = {"weeks3": int(str(three_weeks).split("_")[0])}
             self.participant.vars["menu_c_d_7weeks"] = {"weeks7": int(str(seven_weeks).split("_")[0])}
@@ -129,6 +129,8 @@ class Player(BasePlayer):
     payment_today = models.IntegerField(initial=0)
 
     payment_3weeks = models.IntegerField(initial=0)
+
+    payment_3weeks_cd = models.IntegerField(initial=0)
 
     payment_7weeks = models.IntegerField(initial=0)
 

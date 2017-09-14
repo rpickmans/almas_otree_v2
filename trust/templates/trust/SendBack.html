@@ -8,20 +8,17 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <p>
-                Second round (Participant B): You are now randomly matched with another participant (not yourself) from
-                the first round, Participant A. In the first round Participant A chose to send
-                you <strong>{{ player.get_others_in_group.0.sent_amount }}</strong>. This
-                amount has been multiplied by 3, to make a total of {{ tripled_amount }}. You can now choose to send
-                back
-                some of this total to Participant A. Any amount not sent to Participant A, will be yours to keep.
+                Second round (Participant B): You are now randomly matched with another participant (not yourself) from the first round, Participant A.
+                In the first round Participant A chose to send you <strong>{{ player.get_others_in_group.0.sent_amount }}</strong>.
+                This amount has been multiplied by 3, to make a total of {{ tripled_amount }}.
+                You can now choose to send back some of this total to Participant A. Any amount not sent to Participant A, will be yours to keep.
             </p>
             <p>
                 Your earnings from this part of the experiment depend only on the choice you make in this round.
             </p>
             <p>
-                Please note that the other participant will not be able to know that you are paired with them, nor will
-                you know
-                which other participant is paired with you. Your choice is anonymous.
+                Please note that the other participant will not be able to know that you are paired with them, nor will you know which other participant is paired with you.
+                Your choice is anonymous.
             </p>
             {% formfield player.sent_back_amount with label=prompt %}
         </div>
