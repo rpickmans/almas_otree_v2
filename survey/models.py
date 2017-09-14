@@ -83,7 +83,7 @@ class Player(BasePlayer):
 
     cognitive_reflection_one = models.CharField()
     cognitive_reflection_two = models.CharField()
-    cognitive_reflection_three = models.CharField()
+    # cognitive_reflection_three = models.CharField()
     cognitive_reflection_four = models.CharField()
     cognitive_reflection_five = models.CharField()
     cognitive_reflection_six = models.CharField()
