@@ -126,12 +126,12 @@ class Player(BasePlayer):
 
     menu_d = models.CharField(choices=q4, verbose_name="", widget=widgets.RadioSelect())
 
-    payment_today = models.IntegerField(initial=0)
+    payment_today_ab = models.IntegerField(initial=0)
 
-    payment_3weeks = models.IntegerField(initial=0)
+    payment_3weeks_ab = models.IntegerField(initial=0)
 
     payment_3weeks_cd = models.IntegerField(initial=0)
 
-    payment_7weeks = models.IntegerField(initial=0)
+    payment_7weeks_cd = models.IntegerField(initial=0)
 
     time_preference_points = models.IntegerField(initial=0)
