@@ -48,7 +48,7 @@ class Player(BasePlayer):
         menu_option = getattr(self, str(str_choice))
         if menu_option:
             now, future = str(menu_option).split('-')
-            self.payment_today = int(str(now).split("_")[0])
+            self.payment_today_ab = int(str(now).split("_")[0])
             self.payment_3weeks = int(str(future).split("_")[0])
             self.participant.vars["menu_a_b_today"] = {"today": int(str(now).split("_")[0])}
             self.participant.vars["menu_a_b_3weeks"] = {"weeks3": int(str(future).split("_")[0])}
@@ -77,10 +77,10 @@ class Player(BasePlayer):
 
     def set_payoff(self):
 
-        self.payoff = self.payment_today
-        self.participant.vars["carrying_payoff"] = self.payment_today
-        self.participant.vars["game_payoff"]["time_preference"] = self.payment_today
-        self.time_preference_points = self.payment_today
+        self.payoff = self.payment_today_ab
+        self.participant.vars["carrying_payoff"] = self.payment_today_ab
+        self.participant.vars["game_payoff"]["time_preference"] = self.payment_today_ab
+        self.time_preference_points = self.payment_today_ab
 
     q1 = [
         ('840_now-0_3weeks', '840 Tokens Today AND 0 Tokens in 3 Weeks'),
