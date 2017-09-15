@@ -31,8 +31,8 @@ class Subsession(BaseSubsession):
         for g in self.get_players():
             g.participant.vars["game_payoff"] = dict()
             g.participant.vars["carrying_payoff"] = 0
-            g.p_rsv_1 = random.randint(1, 100)
-            g.p_rsv_2 = random.randint(1, 100)
+            g.pr_rsv_1 = random.randint(1, 100)
+            g.pr_rsv_2 = random.randint(1, 100)
 
             g.rsv_1 = random.randint(1, 100)
             g.rsv_2 = random.randint(1, 100)
