@@ -32,7 +32,7 @@ class Constants(BaseConstants):
     GUESS_CHOICE = {
         "1": [0],
         "2": list(range(1, 241)),
-        "3:": list(range(241, 481)),
+        "3": list(range(241, 481)),
         "4": list(range(481, 721)),
         "5": list(range(721, 961)),
         "6": list(range(961, 1200)),
