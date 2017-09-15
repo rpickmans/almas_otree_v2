@@ -84,7 +84,7 @@ class Player(BasePlayer):
 
     q1 = [
         ('840_now-0_3weeks', '840 Tokens Today AND 0 Tokens in 3 Weeks'),
-        ('672_now-240_3weeks', '672 Tokens Today AND 240 Tokes in 3 Weeks'),
+        ('672_now-240_3weeks', '672 Tokens Today AND 240 Tokens in 3 Weeks'),
         ('504_now-480_3weeks', '504 Tokens Today AND 480 Tokens in 3 Weeks'),
         ('336_now-720_3weeks', '336 Tokens Today AND 720 Tokens in 3 Weeks'),
         ('168_now-960_3weeks', '168 Tokens Today AND 960 Tokens in 3 Weeks'),
