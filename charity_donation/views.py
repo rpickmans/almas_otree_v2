@@ -36,7 +36,7 @@ class Donate(Page):
 
 
 class ResultsWaitPage(WaitPage):
-    body_text = "Pleas wait."
+    body_text = "Please wait."
 
     def after_all_players_arrive(self):
         self.group.set_payoff()
