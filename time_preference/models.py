@@ -42,14 +42,15 @@ class Group(BaseGroup):
 class Player(BasePlayer):
     def set_choice(self):
         menus = ["menu_a", "menu_b", "menu_c", "menu_d"]
-        return random.choice(menus)
+        menu = (random.choice(menus),)
+        return menu[0]
 
     def select_menu_a_b(self, str_choice):
         menu_option = getattr(self, str(str_choice))
         if menu_option:
             now, future = str(menu_option).split('-')
             self.payment_today_ab = int(str(now).split("_")[0])
-            self.payment_3weeks = int(str(future).split("_")[0])
+            self.payment_3weeks_ab = int(str(future).split("_")[0])
             self.participant.vars["menu_a_b_today"] = {"today": int(str(now).split("_")[0])}
             self.participant.vars["menu_a_b_3weeks"] = {"weeks3": int(str(future).split("_")[0])}
 
@@ -58,22 +59,17 @@ class Player(BasePlayer):
         if menu_option:
             three_weeks, seven_weeks = str(menu_option).split('-')
             self.payment_3weeks_cd = int(str(three_weeks).split("_")[0])
-            self.payment_7weeks = int(str(seven_weeks).split("_")[0])
+            self.payment_7weeks_cd = int(str(seven_weeks).split("_")[0])
             self.participant.vars["menu_c_d_3weeks"] = {"weeks3": int(str(three_weeks).split("_")[0])}
             self.participant.vars["menu_c_d_7weeks"] = {"weeks7": int(str(seven_weeks).split("_")[0])}
 
     def set_preference(self):
-        if self.set_choice() == "menu_a":
-            self.select_menu_a_b(self.set_choice())
+        choice = self.set_choice()
+        if choice in ["menu_a", "menu_b"]:
+            self.select_menu_a_b(choice)
 
-        if self.set_choice() == "menu_b":
-            self.select_menu_a_b(self.set_choice())
-
-        if self.set_choice() == "menu_c":
-            self.select_menu_c_d(self.set_choice())
-
-        if self.set_choice() == "menu_d":
-            self.select_menu_c_d(self.set_choice())
+        elif choice in ["menu_c", "menu_d"]:
+            self.select_menu_c_d(choice)
 
     def set_payoff(self):
 
