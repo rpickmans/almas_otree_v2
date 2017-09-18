@@ -51,7 +51,8 @@ class Wait(WaitPage):
     wait_for_all_groups = True
 
     def after_all_players_arrive(self):
-        pass
+        for p in self.subsession.get_players():
+            p.participant.vars["expiry_timestamp"] = time.time() + 3 * 60
 
 
 class SliderOne(Page):
@@ -63,12 +64,13 @@ class SliderOne(Page):
             'rsv_1': self.player.rsv_1
         }
 
+    timer_text = 'Time left to complete this section:'
+
     def get_timeout_seconds(self):
         return self.participant.vars['expiry_timestamp'] - time.time()
 
     def is_displayed(self):
-        self.participant.vars["expiry_timestamp"] = time.time() + 3 * 60
-        return True
+        return self.participant.vars['expiry_timestamp'] - time.time() > 3
 
 
 class SliderTwo(Page):
