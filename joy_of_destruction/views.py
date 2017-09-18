@@ -38,6 +38,15 @@ class Destroy(Page):
         self.player.set_vouchers()
 
 
+class Destroyed(Page):
+    def vars_for_template(self):
+        py = self.player.get_others_in_group()[0]
+        total_destroyed = py.player_destroyed + self.player.computer_destroyed
+        return {
+            "destroyed": total_destroyed
+        }
+
+
 class ResultsWaitPage(WaitPage):
     body_text = "Please wait."
 
@@ -54,7 +63,10 @@ class Wait(WaitPage):
 
 page_sequence = [
     Introduction,
+    Wait,
     Destroy,
+    Wait,
+    Destroyed,
     ResultsWaitPage,
     Wait,
 ]

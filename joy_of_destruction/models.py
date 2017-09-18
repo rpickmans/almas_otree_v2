@@ -57,6 +57,7 @@ class Player(BasePlayer):
         other = self.get_others_in_group()[0]
         other.vouchers = other.vouchers - other.computer_destroyed
 
+
     player_destroyed = models.IntegerField(min=0)
 
     computer_destroyed = models.IntegerField(default=0)

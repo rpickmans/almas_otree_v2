@@ -42,6 +42,7 @@ class Group(BaseGroup):
                 p.points += 1
             if p.raven_6 == "six":
                 p.points += 1
+            p.correct_ravens = p.points
             p.participant.vars["ravens_points"] = p.points
 
 
@@ -61,3 +62,4 @@ class Player(BasePlayer):
     raven_5 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES_8)
     raven_6 = models.CharField(widget=widgets.RadioSelectHorizontal(), choices=CHOICES_8)
 
+    correct_ravens = models.IntegerField(initial=0)
