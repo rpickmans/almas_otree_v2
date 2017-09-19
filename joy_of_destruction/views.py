@@ -53,6 +53,8 @@ class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
         for player in self.group.get_players():
             player.participant.vars["vouchers"] = player.vouchers
+            # save what the other player destroyed.
+            player.other_destroyed = player.get_others_in_group()[0].player_destroyed
 
 
 class Wait(WaitPage):
