@@ -32,13 +32,13 @@ class Group(BaseGroup):
         for p in self.get_players():
             if p.raven_1 == "four":
                 p.points += 1
-            if p.raven_2 == "four":
+            if p.raven_2 == "six":
                 p.points += 1
             if p.raven_3 == "one":
                 p.points += 1
             if p.raven_4 == "three":
                 p.points += 1
-            if p.raven_5 == "eight":
+            if p.raven_5 == "four":
                 p.points += 1
             if p.raven_6 == "six":
                 p.points += 1
