@@ -10,7 +10,7 @@
     <div class="panel panel-default" style="margin-bottom:10px">
         <div class="panel-body">
             <p>Your total earning is {{ payoff }} Tokens worth {{ payoff_usd }}.</p>
-            {% if voucher <= 0 %}
+            {% if vouchers <= 0 %}
                 <p>You have earned 0 Amazon gift cards.“</p>
             {% else %}
                 <p>Your earned {{ vouchers }} Amazon gift vouchers worth ${{ airtime_worth }}.</p>
