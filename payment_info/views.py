@@ -29,6 +29,7 @@ class PaymentInfo(Page):
                 'redemption_code': participant.label or participant.code,
                 'payoff': "{0:.2f}".format(participant.vars.get("carrying_payoff", None)),
                 'payoff_usd': c(participant.vars.get("carrying_payoff", None)).to_real_world_currency(self.session),
+                'vouchers': participant.vars.get("vouchers", None),
                 'airtime_worth': 1 * participant.vars.get("vouchers", None),
 
                 'menu_a_b_today': "{0:.2f}".format(participant.vars.get("menu_a_b_today", None)["today"]),
@@ -45,6 +46,7 @@ class PaymentInfo(Page):
                 'redemption_code': participant.label or participant.code,
                 'payoff': "{0:.2f}".format(participant.vars.get("carrying_payoff", None)),
                 'payoff_usd': c(participant.vars.get("carrying_payoff", None)).to_real_world_currency(self.session),
+                'vouchers': participant.vars.get("vouchers", None),
                 'airtime_worth': 1 * participant.vars.get("vouchers", None),
 
                 'menu_c_d_3weeks': "{0:.2f}".format(participant.vars.get("menu_c_d_3weeks", None)["weeks3"]),
@@ -60,6 +62,7 @@ class PaymentInfo(Page):
                 'redemption_code': participant.label or participant.code,
                 'payoff': "{0:.2f}".format(participant.vars.get("carrying_payoff", None)),
                 'payoff_usd': c(participant.vars.get("carrying_payoff", None)).to_real_world_currency(self.session),
+                'vouchers': participant.vars.get("vouchers", None),
                 'airtime_worth': 1 * participant.vars.get("vouchers", None),
             }
 
