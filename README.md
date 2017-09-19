@@ -1,4 +1,4 @@
-# Temparature Otree
+# Temperature Otree
 
 - production
 - real_effort_dictator
