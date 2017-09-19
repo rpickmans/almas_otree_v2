@@ -12,8 +12,8 @@ class Wait(WaitPage):
 
     def after_all_players_arrive(self):
         for p in self.group.get_players():
-            p.participant.payoff = p.participant.vars["carrying_payoff"] / 3.5
-            p.payoff = p.participant.vars["carrying_payoff"] / 3.5
+            p.participant.payoff = c(p.participant.vars["carrying_payoff"]).to_real_world_currency(self.session)
+            p.payoff = p.participant.vars["carrying_payoff"]
             p.total_points = p.participant.vars["carrying_payoff"]
 
 
@@ -29,35 +29,35 @@ class PaymentInfo(Page):
         if menu_a_b_3weeks and menu_a_b_today:
             return {
                 'redemption_code': participant.label or participant.code,
-                'payoff': int(math.floor(participant.vars.get("carrying_payoff", None))),
-                'payoff_usd': int(math.floor(participant.vars.get("carrying_payoff", None) / 3.5)),
+                'payoff': participant.vars.get("carrying_payoff", None),
+                'payoff_usd': c(participant.vars.get("carrying_payoff", None)).to_real_world_currency(self.session),
                 'airtime_worth': 50 * participant.vars.get("vouchers", None),
 
                 'menu_a_b_today': participant.vars.get("menu_a_b_today", None)["today"],
-                'menu_a_b_today_usd': int(participant.vars.get("menu_a_b_today", None)["today"] / 3.5),
+                'menu_a_b_today_usd': c(participant.vars.get("menu_a_b_today", None)["today"]).to_real_world_currency(self.session),
 
                 'menu_a_b_3weeks': participant.vars.get("menu_a_b_3weeks", None)["weeks3"],
-                'menu_a_b_3weeks_usd': int(participant.vars.get("menu_a_b_3weeks", None)["weeks3"] / 3.5)
+                'menu_a_b_3weeks_usd': c(participant.vars.get("menu_a_b_3weeks", None)["weeks3"]).to_real_world_currency(self.session)
             }
 
         elif menu_c_d_3weeks and menu_c_d_7weeks:
             return {
                 'redemption_code': participant.label or participant.code,
-                'payoff': int(math.floor(participant.vars.get("carrying_payoff", None))),
-                'payoff_usd': int(math.floor(participant.vars.get("carrying_payoff", None) / 3.5)),
+                'payoff': participant.vars.get("carrying_payoff", None),
+                'payoff_usd': c(participant.vars.get("carrying_payoff", None)).to_real_world_currency(self.session),
                 'airtime_worth': 50 * participant.vars.get("vouchers", None),
 
                 'menu_c_d_3weeks': participant.vars.get("menu_c_d_3weeks", None)["weeks3"],
-                'menu_c_d_3weeks_usd': int(participant.vars.get("menu_c_d_3weeks", None)["weeks3"] / 3.5),
+                'menu_c_d_3weeks_usd': c(participant.vars.get("menu_c_d_3weeks", None)["weeks3"]).to_real_world_currency(self.session),
 
                 'menu_c_d_7weeks': participant.vars.get("menu_c_d_7weeks", None)["weeks7"],
-                'menu_c_d_7weeks_usd': int(participant.vars.get("menu_c_d_7weeks", None)["weeks7"] / 3.5)
+                'menu_c_d_7weeks_usd': c(participant.vars.get("menu_c_d_7weeks", None)["weeks7"]).to_real_world_currency(self.session)
             }
         else:
             return {
                 'redemption_code': participant.label or participant.code,
-                'payoff': int(math.floor(participant.vars.get("carrying_payoff", None))),
-                'payoff_usd': int(math.floor(participant.vars.get("carrying_payoff", None) / 3.5)),
+                'payoff': participant.vars.get("carrying_payoff", None),
+                'payoff_usd': c(participant.vars.get("carrying_payoff", None)).to_real_world_currency(self.session),
                 'airtime_worth': 50 * participant.vars.get("vouchers", None),
             }
 

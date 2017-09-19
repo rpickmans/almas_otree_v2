@@ -9,22 +9,22 @@
 
     <div class="panel panel-default" style="margin-bottom:10px">
         <div class="panel-body">
-            <p>Your total earning is {{ payoff }} Tokens worth ${{ payoff_usd }}.</p>
-            <p>Your earned {{ vouchers }} Airtime vouchers worth ${{ airtime_worth }}.</p>
+            <p>Your total earning is {{ payoff }} Tokens worth {{ payoff_usd }}.</p>
+            <p>Your earned {{ vouchers }} Airtime vouchers worth {{ airtime_worth }}.</p>
             {% if menu_a_b_today %}
-                <p>You will be paid {{ menu_a_b_today }} Tokens  amounting to ${{ menu_a_b_today_usd }} Today. <strong>Note: that this is included in your total earnings.</strong></p>
+                <p>You will be paid {{ menu_a_b_today }} Tokens  amounting to {{ menu_a_b_today_usd }} Today. <strong>Note: that this is included in your total earnings.</strong></p>
             {% endif %}
 
             {% if menu_a_b_3weeks %}
-                <p>You will be paid {{ menu_a_b_3weeks }} Tokens  amounting to ${{ menu_a_b_3weeks_usd }} in 3 Weeks.</p>
+                <p>You will be paid {{ menu_a_b_3weeks }} Tokens  amounting to {{ menu_a_b_3weeks_usd }} in 3 Weeks.</p>
             {% endif %}
 
             {% if menu_c_d_3weeks %}
-                <p>You will be paid {{ menu_c_d_3weeks }} Tokens  amounting to ${{ menu_c_d_3weeks_usd }} in 3 Weeks.</p>
+                <p>You will be paid {{ menu_c_d_3weeks }} Tokens  amounting to {{ menu_c_d_3weeks_usd }} in 3 Weeks.</p>
             {% endif %}
 
             {% if menu_c_d_7weeks %}
-                <p>You will be paid {{ menu_c_d_7weeks }} Tokens  amounting to ${{ menu_c_d_7weeks_usd }} in 7 Weeks.</p>
+                <p>You will be paid {{ menu_c_d_7weeks }} Tokens  amounting to {{ menu_c_d_7weeks_usd }} in 7 Weeks.</p>
             {% endif %}
             <p>
                 Please remain seated until your number is called. Then take your number card, and proceed to a lab manager for the final short interview and to collect your payment.
