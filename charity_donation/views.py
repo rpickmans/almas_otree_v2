@@ -18,13 +18,12 @@ class Donate(Page):
         return int(math.floor(self.player.participant.vars["carrying_payoff"]) * 0.4)
 
     def vars_for_template(self):
-        charities = ["Kiambu Orphans Initiative",
-                     "Kanyawegi childrens home",
-                     "Destined Childrens Home Kikuyu",
-                     "Kakamega Orphans Care Centre",
-                     "Upendo Childrens Centre Nyeri",
-                     "Huruma Childrens Home Ngong",
-                     "Baraka Childrens Home Mombasa"]
+        charities = ["First Book (National office)",
+                     "Kids In Need Foundation (National office)",
+                     "National Academy Foundation (National office)",
+                     "Silicon Valley Education Foundation (Silicon Valley office)",
+                     "Resource Area for Teaching (Bay Area office)",
+                     "College Track (Oakland office)"]
 
         charity = random.choice(charities)
         self.player.charity_allocated = charity
