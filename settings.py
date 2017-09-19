@@ -59,7 +59,8 @@ AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY')
 
 # e.g. EUR, CAD, GBP, CHF, CNY, JPY
 REAL_WORLD_CURRENCY_CODE = 'USD'
-USE_POINTS = False
+USE_POINTS = True
+POINTS_CUSTOM_NAME = 'tokens'
 
 # e.g. en-gb, de-de, it-it, fr-fr.
 # see: https://docs.djangoproject.com/en/1.6/topics/i18n/
@@ -106,8 +107,8 @@ mturk_hit_settings = {
 # e.g. self.session.config['participation_fee']
 
 SESSION_CONFIG_DEFAULTS = {
-    'real_world_currency_per_point': 0.01,
-    'participation_fee':0,
+    'real_world_currency_per_point': 0.005714,
+    'participation_fee': 0,
     'num_bots': 12,
     'doc': "",
     'mturk_hit_settings': mturk_hit_settings,
