@@ -104,7 +104,7 @@ class Player(BasePlayer):
                                  widget=widgets.RadioSelectHorizontal())
 
     california_residency = models.CharField(
-        choices=['I am an in-state student', 'I am an out-of-state student', 'Prefer not to say'],
+        choices=['No', 'Yes, for 5 years or more', 'Yes, for less than 5 years', 'Prefer not to say'],
         widget=widgets.RadioSelect())
 
     father_occupation = models.CharField(widget=widgets.RadioSelect(),
