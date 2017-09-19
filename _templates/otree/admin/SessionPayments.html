@@ -31,6 +31,7 @@
 
     <table class="table table-striped">
         <tr>
+            <th>Participant ID</th>
             <th>Participant code</th>
             <th>Participant label</th>
             <th>Progress</th>
@@ -40,6 +41,7 @@
 
         {% for p in participants %}
         <tr>
+            <td>{{ p.id_in_session }}</td>
             <td style="font-family: 'Courier New'">{{ p.code }}</td>
             <td>{{ p.label|default_if_none:"" }}</td>
             <td>{{ p.current_page_ }}</td>

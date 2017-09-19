@@ -30,8 +30,8 @@ class Donate(Page):
         self.player.charity_allocated = charity
         return {
             'charity': charity,
-            'earnings': "0:.2f".format(self.player.participant.vars["carrying_payoff"]),
-            'max_donation': "0:.2f".format((self.player.participant.vars["carrying_payoff"] * 0.4))
+            'earnings': "{0:.2f}".format(self.player.participant.vars["carrying_payoff"]),
+            'max_donation': "{0:.2f}".format((self.player.participant.vars["carrying_payoff"] * 0.4))
         }
 
 
