@@ -116,11 +116,11 @@ class Player(BasePlayer):
                                          )
 
     income = models.CharField(widget=widgets.RadioSelect(),
-                              choices=["Less than Ksh.10,000",
-                                       "Ksh.10,000 - Ksh. 30,000",
-                                       "Ksh. 30,000 - Ksh. 60,000",
-                                       "Ksh. 60,000 - Ksh.100,000",
-                                       "More than Ksh.100,000",
+                              choices=["Less than $24,000",
+                                       "$24,000 - $45,000",
+                                       "$45,000 - $75,000",
+                                       "$75,000 - $121,000",
+                                       "More than $121,000",
                                        "Don't know",
                                        "Prefer not to say"
                                        ])
