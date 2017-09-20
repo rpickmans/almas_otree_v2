@@ -61,18 +61,18 @@ class Player(BasePlayer):
                                          ])
 
     q_education_father = models.CharField(widget=widgets.RadioSelect(),
-                                          choices=["Completed Primary",
-                                                   "Completed Secondary",
-                                                   "Completed technical college",
-                                                   "Completed University",
+                                          choices=["Completed High School",
+                                                   "Completed Vocational College",
+                                                   "Completed University (Bachelor)",
+                                                   "Completed University (Advanced)",
                                                    "Other",
                                                    ])
 
     q_education_mother = models.CharField(widget=widgets.RadioSelect(),
-                                          choices=["Completed Primary",
-                                                   "Completed Secondary",
-                                                   "Completed technical college",
-                                                   "Completed University",
+                                          choices=["Completed High School",
+                                                   "Completed Vocational College",
+                                                   "Completed University (Bachelor)",
+                                                   "Completed University (Advanced)",
                                                    "Other",
                                                    ])
 
